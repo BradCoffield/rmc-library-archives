@@ -3,6 +3,7 @@ const bodyParser = require('body-parser')
 const app = express()
 const db = require('./queries')
 const port = process.env.PORT || 3000;
+const { pool } = require("./config");
 
 app.use(bodyParser.json())
 app.use(
@@ -14,6 +15,21 @@ app.use(
 app.get('/', (request, response) => {
   response.json({ info: 'Node.js, Express, and Postgres API' })
 })
+
+.get('/db', async (req, res) => {
+  try {
+    const client = await pool.connect();
+    const result = await client.query('SELECT * FROM personalCollections');
+    const results = { 'results': (result) ? result.rows : null};
+    res.json(results)
+    // res.render('pages/db', results );
+    client.release();
+  } catch (err) {
+    console.error(err);
+    res.send("Error " + err);
+  }
+})
+
 
 app.get('/personal-collection', db.getPersonalCollection)
 app.get('/personal-collection/:id', db.getPersonalCollectionById)
