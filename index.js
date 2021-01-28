@@ -3,7 +3,13 @@ const bodyParser = require('body-parser')
 const app = express()
 const db = require('./queries')
 const port = process.env.PORT || 3000;
-const { pool } = require("./config");
+// const { pool } = require("./config");
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false
+  }
+});
 
 app.use(bodyParser.json())
 app.use(
@@ -19,7 +25,7 @@ app.get('/', (request, response) => {
 .get('/db', async (req, res) => {
   try {
     const client = await pool.connect();
-    const result = await client.query('SELECT * FROM personalCollections');
+    const result = await client.query('SELECT * FROM personalcollections');
     const results = { 'results': (result) ? result.rows : null};
     res.json(results)
     // res.render('pages/db', results );
