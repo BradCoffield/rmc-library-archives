@@ -1,7 +1,4 @@
 {
-    "workbench.colorCustomizations": {
-        "activityBar.background": "#3E290A",
-        "titleBar.activeBackground": "#573A0F",
-        "titleBar.activeForeground": "#FDF9F3"
-    }
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "vetur.experimental.templateInterpolationService": true
 }

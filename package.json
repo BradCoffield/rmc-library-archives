@@ -1,34 +1,42 @@
 {
   "name": "rmc-library-archives",
-  "version": "1.0.0",
-  "description": "",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/BradCoffield/rmc-library-archives.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/BradCoffield/rmc-library-archives/issues"
-  },
-  "homepage": "https://github.com/BradCoffield/rmc-library-archives#readme",
-  "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "pg": "^8.5.1"
-  },
-  "main": "index.js",
-  "engines": {
-    "node": "11.x"
-  },
+  "version": "0.0.1",
+  "description": "A new archive.rocky.edu",
+  "productName": "RMC Library Archives",
+  "author": "Brad Coffield <bcoffield@gmail.com>",
+  "private": true,
   "scripts": {
-    "start": "node index.js",
-    "start:dev": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"No test specified\" && exit 0"
+  },
+  "dependencies": {
+    "@quasar/extras": "^1.0.0",
+    "axios": "^0.21.1",
+    "core-js": "^3.6.5",
+    "dotenv": "^8.2.0",
+    "pg": "^8.5.1",
+    "quasar": "^1.0.0",
+    "serve-static": "^1.14.1",
+    "vue-class-component": "^7.2.2",
+    "vue-property-decorator": "^8.3.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.7"
+    "@quasar/app": "^2.0.0",
+    "@types/node": "^10.17.15"
+  },
+  "browserslist": [
+    "last 10 Chrome versions",
+    "last 10 Firefox versions",
+    "last 4 Edge versions",
+    "last 7 Safari versions",
+    "last 8 Android versions",
+    "last 8 ChromeAndroid versions",
+    "last 8 FirefoxAndroid versions",
+    "last 10 iOS versions",
+    "last 5 Opera versions"
+  ],
+  "engines": {
+    "node": ">= 10.18.1",
+    "npm": ">= 6.13.4",
+    "yarn": ">= 1.21.1"
   }
 }
