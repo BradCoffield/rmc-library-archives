@@ -2,8 +2,10 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const app = express()
 const db = require('./queries')
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8000;
 const { pool } = require("./config");
+const serveStatic = require("serve-static")
+const path = require('path');
 // const {Pool} = require('pg')
 // const pool = new Pool({
 //   connectionString: process.env.DATABASE_URL,
@@ -18,6 +20,8 @@ app.use(
     extended: true,
   })
 )
+app.use(serveStatic(path.join(__dirname, '/dist/spa')));
+
 
 app.get('/', (request, response) => {
   response.json({ info: 'Node.js, Express, and Postgres API' })
