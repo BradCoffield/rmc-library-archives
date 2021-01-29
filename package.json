@@ -6,7 +6,10 @@
   "author": "Brad Coffield <bcoffield@gmail.com>",
   "private": true,
   "scripts": {
-    "test": "echo \"No test specified\" && exit 0"
+    "dev": "quasar dev",
+    "build": "quasar build",
+    "postinstall": "npm run build",
+    "start": "node index.js"
   },
   "dependencies": {
     "@quasar/extras": "^1.0.0",
