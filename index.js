@@ -46,7 +46,7 @@ app.get('/', (request, response) => {
 
 
 app.get('/personal-collection', db.getPersonalCollection)
-app.get('/full-collection/:name', db.getPersonalCollection)
+app.get('/collection/:name', db.getCollection)
 app.get('/personal-collection/:id', db.getPersonalCollectionById)
 app.post('/personal-collection', db.createPersonalCollection)
 app.put('/personal-collection/:id', db.updatePersonalCollection)

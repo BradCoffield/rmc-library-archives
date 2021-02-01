@@ -1,6 +1,7 @@
 const { pool } = require("./config");
 
 const getPersonalCollection = (request, response) => {
+  console.log("oys");
   pool.query(
     "SELECT * FROM personalCollections ORDER BY id ASC",
     (error, results) => {
@@ -12,7 +13,9 @@ const getPersonalCollection = (request, response) => {
   );
 };
 const getCollection = (request, response) => {
-  const name = parseInt(request.params.name);
+  console.log("oy");
+  const name = request.params.name
+  // console.log(req)
   pool.query(
     `SELECT * FROM ${name} ORDER BY id ASC`,
     (error, results) => {
