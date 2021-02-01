@@ -2,8 +2,10 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const app = express()
 const db = require('./queries')
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8000;
 const { pool } = require("./config");
+const serveStatic = require("serve-static")
+const path = require('path');
 // const {Pool} = require('pg')
 // const pool = new Pool({
 //   connectionString: process.env.DATABASE_URL,
@@ -12,12 +14,17 @@ const { pool } = require("./config");
 //   }
 // });
 
+const cors = require("cors")
+app.use(cors())
+
 app.use(bodyParser.json())
 app.use(
   bodyParser.urlencoded({
     extended: true,
   })
 )
+app.use(serveStatic(path.join(__dirname, '/dist/spa')));
+
 
 app.get('/', (request, response) => {
   response.json({ info: 'Node.js, Express, and Postgres API' })
@@ -39,6 +46,7 @@ app.get('/', (request, response) => {
 
 
 app.get('/personal-collection', db.getPersonalCollection)
+app.get('/collection/:name', db.getCollection)
 app.get('/personal-collection/:id', db.getPersonalCollectionById)
 app.post('/personal-collection', db.createPersonalCollection)
 app.put('/personal-collection/:id', db.updatePersonalCollection)
