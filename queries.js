@@ -1,23 +1,42 @@
 const { pool } = require("./config");
 
 const getPersonalCollection = (request, response) => {
-  pool.query("SELECT * FROM personalCollections ORDER BY id ASC", (error, results) => {
-    if (error) {
-      throw error;
+  pool.query(
+    "SELECT * FROM personalCollections ORDER BY id ASC",
+    (error, results) => {
+      if (error) {
+        throw error;
+      }
+      response.status(200).json(results.rows);
     }
-    response.status(200).json(results.rows);
-  });
+  );
+};
+const getCollection = (request, response) => {
+  const name = parseInt(request.params.name);
+  pool.query(
+    `SELECT * FROM ${name} ORDER BY id ASC`,
+    (error, results) => {
+      if (error) {
+        throw error;
+      }
+      response.status(200).json(results.rows);
+    }
+  );
 };
 
 const getPersonalCollectionById = (request, response) => {
   const id = parseInt(request.params.id);
 
-  pool.query("SELECT * FROM personalCollections WHERE id = $1", [id], (error, results) => {
-    if (error) {
-      throw error;
+  pool.query(
+    "SELECT * FROM personalCollections WHERE id = $1",
+    [id],
+    (error, results) => {
+      if (error) {
+        throw error;
+      }
+      response.status(200).json(results.rows);
     }
-    response.status(200).json(results.rows);
-  });
+  );
 };
 
 const createPersonalCollection = (request, response) => {
@@ -30,7 +49,7 @@ const createPersonalCollection = (request, response) => {
       if (error) {
         throw error;
       }
-      console.log(results)
+      console.log(results);
       response.status(201).send(`Personal Collection added.`);
     }
   );
@@ -55,12 +74,16 @@ const updatePersonalCollection = (request, response) => {
 const deletePersonalCollection = (request, response) => {
   const id = parseInt(request.params.id);
 
-  pool.query("DELETE FROM personalCollections WHERE id = $1", [id], (error, results) => {
-    if (error) {
-      throw error;
+  pool.query(
+    "DELETE FROM personalCollections WHERE id = $1",
+    [id],
+    (error, results) => {
+      if (error) {
+        throw error;
+      }
+      response.status(200).send(`User deleted with ID: ${id}`);
     }
-    response.status(200).send(`User deleted with ID: ${id}`);
-  });
+  );
 };
 
 module.exports = {
@@ -69,4 +92,5 @@ module.exports = {
   createPersonalCollection,
   updatePersonalCollection,
   deletePersonalCollection,
+  getCollection
 };
