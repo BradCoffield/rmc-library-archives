@@ -45,9 +45,10 @@ app.get('/', (request, response) => {
 })
 
 
-app.get('/personal-collection', db.getPersonalCollection)
+// app.get('/personal-collection', db.getPersonalCollection)
 app.get('/collection/:name', db.getCollection)
 app.get('/personal-collection/:id', db.getPersonalCollectionById)
+app.get('/collection/:name/:id', db.getCollectionItemById)
 app.post('/personal-collection', db.createPersonalCollection)
 app.put('/personal-collection/:id', db.updatePersonalCollection)
 app.delete('/personal-collection/:id', db.deletePersonalCollection)

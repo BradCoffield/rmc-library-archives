@@ -1,17 +1,17 @@
 const { pool } = require("./config");
 
-const getPersonalCollection = (request, response) => {
-  console.log("oys");
-  pool.query(
-    "SELECT * FROM personalCollections ORDER BY id ASC",
-    (error, results) => {
-      if (error) {
-        throw error;
-      }
-      response.status(200).json(results.rows);
-    }
-  );
-};
+// const getPersonalCollection = (request, response) => {
+//   console.log("oys");
+//   pool.query(
+//     "SELECT * FROM personalCollections ORDER BY id ASC",
+//     (error, results) => {
+//       if (error) {
+//         throw error;
+//       }
+//       response.status(200).json(results.rows);
+//     }
+//   );
+// };
 const getCollection = (request, response) => {
   console.log("oy");
   const name = request.params.name
@@ -27,11 +27,12 @@ const getCollection = (request, response) => {
   );
 };
 
-const getPersonalCollectionById = (request, response) => {
+const getCollectionItemById = (request, response) => {
   const id = parseInt(request.params.id);
+  const name = request.params.name
 
   pool.query(
-    "SELECT * FROM personalCollections WHERE id = $1",
+    "SELECT * FROM ${name} WHERE id = $1",
     [id],
     (error, results) => {
       if (error) {
@@ -41,6 +42,20 @@ const getPersonalCollectionById = (request, response) => {
     }
   );
 };
+// const getPersonalCollectionById = (request, response) => {
+//   const id = parseInt(request.params.id);
+
+//   pool.query(
+//     "SELECT * FROM personalCollections WHERE id = $1",
+//     [id],
+//     (error, results) => {
+//       if (error) {
+//         throw error;
+//       }
+//       response.status(200).json(results.rows);
+//     }
+//   );
+// };
 
 const createPersonalCollection = (request, response) => {
   const { number, lastname, firstname } = request.body;
@@ -95,5 +110,6 @@ module.exports = {
   createPersonalCollection,
   updatePersonalCollection,
   deletePersonalCollection,
-  getCollection
+  getCollection,
+  getCollectionItemById
 };
