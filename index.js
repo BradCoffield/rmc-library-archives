@@ -47,11 +47,12 @@ app.get('/', (request, response) => {
 
 // app.get('/personal-collection', db.getPersonalCollection)
 app.get('/collection/:name', db.getCollection)
-app.get('/personal-collection/:id', db.getPersonalCollectionById)
+// app.get('/personal-collection/:id', db.getPersonalCollectionById)
 app.get('/collection/:name/:id', db.getCollectionItemById)
-app.post('/personal-collection', db.createPersonalCollection)
-app.put('/personal-collection/:id', db.updatePersonalCollection)
-app.delete('/personal-collection/:id', db.deletePersonalCollection)
+app.post('/collection/:name', db.addToCollection)
+// app.put('/personal-collection/:id', db.updatePersonalCollection)
+app.put('/collection/:name/:id', db.updateCollectionItem)
+app.delete('/collection/:name/:id', db.deleteCollectionItem)
 
 app.listen(port, () => {
   console.log(`App running on port ${port}.`)
