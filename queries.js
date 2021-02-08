@@ -1,8 +1,20 @@
 const { pool } = require("./config");
 
 
-//I feel like write routes that do the populate heroku. 4 different ones and include the json in the file itself. or actually should be able to require it as above
-
+const testGet = async (req, res) => {
+  try {
+    const name = req.params.name;
+    const client = await pool.connect();
+    const result = await client.query(`SELECT * FROM ${name} ORDER BY id ASC`);
+    const results = { 'results': (result) ? result.rows : null};
+    res.json(results)
+    // res.render('pages/db', results );
+    client.release();
+  } catch (err) {
+    console.error(err);
+    res.send("Error " + err);
+  }
+}
 
 const getCollection = (request, response) => {
   console.log("oy");
@@ -226,10 +238,10 @@ const deleteCollectionItem = (request, response) => {
 };
 
 module.exports = {
- 
   getCollection,
   getCollectionItemById,
   addToCollection,
   deleteCollectionItem,
-  updateCollectionItem
+  updateCollectionItem,
+  testGet
 };
