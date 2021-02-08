@@ -1,20 +1,6 @@
 const { pool } = require("./config");
 
 
-const testGet = async (req, res) => {
-  try {
-    const name = req.params.name;
-    const client = await pool.connect();
-    const result = await client.query(`SELECT * FROM ${name} ORDER BY id ASC`);
-    const results = { 'results': (result) ? result.rows : null};
-    res.json(results)
-    // res.render('pages/db', results );
-    client.release();
-  } catch (err) {
-    console.error(err);
-    res.send("Error " + err);
-  }
-}
 
 const getCollection = (request, response) => {
   console.log("oy");
@@ -243,5 +229,5 @@ module.exports = {
   addToCollection,
   deleteCollectionItem,
   updateCollectionItem,
-  testGet
+  
 };

@@ -50,7 +50,7 @@ app.get('/collection/:name/:id', db.getCollectionItemById)
 app.post('/collection/:name', db.addToCollection)
 app.put('/collection/:name/:id', db.updateCollectionItem)
 app.delete('/collection/:name/:id', db.deleteCollectionItem)
-app.get('test-get/:name', db.testGet)
+ 
 
 app.listen(port, () => {
   console.log(`App running on port ${port}.`)
