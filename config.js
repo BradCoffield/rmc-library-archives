@@ -12,7 +12,7 @@ const {Pool} = require('pg')
 // })
 
 
-THIS IS THE POOL THAT WORKS FOR LIVE
+// THIS IS THE POOL THAT WORKS FOR LIVE
 
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
