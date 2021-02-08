@@ -1,5 +1,9 @@
 const { pool } = require("./config");
- 
+
+
+//I feel like write routes that do the populate heroku. 4 different ones and include the json in the file itself. or actually should be able to require it as above
+
+
 const getCollection = (request, response) => {
   console.log("oy");
   const name = request.params.name;

@@ -35,3 +35,5 @@ yarn-error.log*
 .env
 
 populate-archives-database.js
+
+check-local.js

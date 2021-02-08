@@ -1,0 +1,850 @@
+[
+  {
+    "UID": 1,
+    "number": "CP001",
+    "school": "College of Montana",
+    "contents": "Publications",
+    "date": "1883-1916",
+    "notes": ""
+  },
+  {
+    "UID": 2,
+    "number": "CP002",
+    "school": "Montana Wesleyan College",
+    "contents": "Catalog",
+    "date": "1891-1924",
+    "notes": ""
+  },
+  {
+    "UID": 3,
+    "number": "CP004",
+    "school": "Montana Wesleyan College",
+    "contents": "Publications",
+    "date": "1891-1924",
+    "notes": ""
+  },
+  {
+    "UID": 4,
+    "number": "CP005",
+    "school": "Intermountain Union College",
+    "contents": "Catalog",
+    "date": "1924-1937",
+    "notes": ""
+  },
+  {
+    "UID": 5,
+    "number": "CP006",
+    "school": "Intermountain Union College",
+    "contents": "Bulletin",
+    "date": "1924-0937",
+    "notes": ""
+  },
+  {
+    "UID": 6,
+    "number": "CP007",
+    "school": "Billings Polytechnic Institute",
+    "contents": "Promotional Materials",
+    "date": "",
+    "notes": ""
+  },
+  {
+    "UID": 7,
+    "number": "CP009",
+    "school": "Billings Polytechnic Institute",
+    "contents": "Bulletin",
+    "date": "1911-1926",
+    "notes": ""
+  },
+  {
+    "UID": 8,
+    "number": "CP010",
+    "school": "Billings Polytechnic Institute",
+    "contents": "Billings Polytechnic Bulletin",
+    "date": "1908-1935",
+    "notes": ""
+  },
+  {
+    "UID": 9,
+    "number": "CP011",
+    "school": "Billings Polytechnic Institute",
+    "contents": "Billings Polytechnic Bulletin",
+    "date": "1934-1947",
+    "notes": ""
+  },
+  {
+    "UID": 10,
+    "number": "CP012",
+    "school": "Billings Polytechnic Institute",
+    "contents": "Billings Polytechnic Aeronautics Dept.",
+    "date": "1940-1942",
+    "notes": ""
+  },
+  {
+    "UID": 11,
+    "number": "CP013",
+    "school": "Billings Polytechnic Institute",
+    "contents": "Billings Polytechnic/ Billings Business College",
+    "date": "1930-1940",
+    "notes": ""
+  },
+  {
+    "UID": 12,
+    "number": "CP014",
+    "school": "Rocky Mountain College",
+    "contents": "Catalog",
+    "date": "1947-1957",
+    "notes": ""
+  },
+  {
+    "UID": 13,
+    "number": "CP015",
+    "school": "Rocky Mountain College",
+    "contents": "Catalog",
+    "date": "1957-1972",
+    "notes": ""
+  },
+  {
+    "UID": 14,
+    "number": "CP016",
+    "school": "Rocky Mountain College",
+    "contents": "Catalog",
+    "date": "1972-1990",
+    "notes": ""
+  },
+  {
+    "UID": 15,
+    "number": "CP017",
+    "school": "Rocky Mountain College",
+    "contents": "Catalog",
+    "date": "1990-2003",
+    "notes": ""
+  },
+  {
+    "UID": 16,
+    "number": "CP018",
+    "school": "Rocky Mountain College",
+    "contents": "Interim",
+    "date": "1969-1974",
+    "notes": ""
+  },
+  {
+    "UID": 17,
+    "number": "CP019",
+    "school": "Rocky Mountain College",
+    "contents": "Class Schedules",
+    "date": "1964-2002",
+    "notes": ""
+  },
+  {
+    "UID": 18,
+    "number": "CP019a",
+    "school": "Rocky Mountain College",
+    "contents": "Summer Session Schedules/Reports/Letters",
+    "date": "1971-1976;1950-",
+    "notes": ""
+  },
+  {
+    "UID": 19,
+    "number": "CP020",
+    "school": "Rocky Mountain College",
+    "contents": "2nd century fund materials",
+    "date": "",
+    "notes": ""
+  },
+  {
+    "UID": 20,
+    "number": "CP096a",
+    "school": "",
+    "contents": "Library",
+    "date": "",
+    "notes": ""
+  },
+  {
+    "UID": 21,
+    "number": "CP022",
+    "school": "Rocky Mountain College",
+    "contents": "General Promotional Materials Volume 1 - Recruitment",
+    "date": "",
+    "notes": ""
+  },
+  {
+    "UID": 22,
+    "number": "CP023",
+    "school": "Rocky Mountain College",
+    "contents": "General Promotional Materials Volume 2 - Miscellaneous",
+    "date": "",
+    "notes": ""
+  },
+  {
+    "UID": 23,
+    "number": "CP026",
+    "school": "Rocky Mountain College",
+    "contents": "Centennial Advancement Binder (red one)",
+    "date": "",
+    "notes": ""
+  },
+  {
+    "UID": 24,
+    "number": "CP024",
+    "school": "Rocky Mountain College",
+    "contents": "News Releases",
+    "date": "",
+    "notes": ""
+  },
+  {
+    "UID": 25,
+    "number": "CP025",
+    "school": "Rocky Mountain College",
+    "contents": "Presidents\\' Commission",
+    "date": "1971-1972",
+    "notes": ""
+  },
+  {
+    "UID": 26,
+    "number": "CP090",
+    "school": "Rocky Mountain College",
+    "contents": "Athletics Program",
+    "date": "1945-1975",
+    "notes": ""
+  },
+  {
+    "UID": 27,
+    "number": "CP028",
+    "school": "Rocky Mountain College",
+    "contents": "Nutter Cracker",
+    "date": "1945-1972",
+    "notes": ""
+  },
+  {
+    "UID": 28,
+    "number": "CP029",
+    "school": "Rocky Mountain College",
+    "contents": "Rocky Mountain Echo/ The Rimrock Echo",
+    "date": "1947-1957/ 1949-1950",
+    "notes": ""
+  },
+  {
+    "UID": 29,
+    "number": "CP030",
+    "school": "Rocky Mountain College",
+    "contents": "Rocky Mountain Echo",
+    "date": "1951-1957",
+    "notes": ""
+  },
+  {
+    "UID": 30,
+    "number": "CP030a",
+    "school": "Rocky Mountain College",
+    "contents": "Echoette",
+    "date": "1954",
+    "notes": ""
+  },
+  {
+    "UID": 31,
+    "number": "CP031",
+    "school": "Rocky Mountain College",
+    "contents": "Rocky Mountain Echo",
+    "date": "1957-1962",
+    "notes": ""
+  },
+  {
+    "UID": 32,
+    "number": "CP036",
+    "school": "Rocky Mountain College",
+    "contents": "Monitor VOL.11 - VOL.23",
+    "date": "1975-1987",
+    "notes": ""
+  },
+  {
+    "UID": 33,
+    "number": "CP035",
+    "school": "Rocky Mountain College",
+    "contents": "Monitor VOL.1-Vol.10",
+    "date": "1965-1974",
+    "notes": ""
+  },
+  {
+    "UID": 34,
+    "number": "CP034",
+    "school": "Rocky Mountain College",
+    "contents": "Rocky Mountain Echo",
+    "date": "1969-1971",
+    "notes": ""
+  },
+  {
+    "UID": 35,
+    "number": "CP032",
+    "school": "Rocky Mountain College",
+    "contents": "Rocky Mountain Echo",
+    "date": "1962-1967",
+    "notes": ""
+  },
+  {
+    "UID": 36,
+    "number": "CP033",
+    "school": "Rocky Mountain College",
+    "contents": "Rocky Mountain Echo",
+    "date": "1967-1969",
+    "notes": ""
+  },
+  {
+    "UID": 37,
+    "number": "CP037",
+    "school": "Rocky Mountain College",
+    "contents": "Noon Needle",
+    "date": "1969-1971",
+    "notes": ""
+  },
+  {
+    "UID": 38,
+    "number": "CP038",
+    "school": "Rocky Mountain College",
+    "contents": "Noon Needle",
+    "date": "1971-1973",
+    "notes": ""
+  },
+  {
+    "UID": 39,
+    "number": "CP039",
+    "school": "Rocky Mountain College",
+    "contents": "Noon Needle",
+    "date": "1973-1975",
+    "notes": ""
+  },
+  {
+    "UID": 40,
+    "number": "CP040",
+    "school": "Rocky Mountain College",
+    "contents": "Noon Needle",
+    "date": "1975-1979",
+    "notes": ""
+  },
+  {
+    "UID": 41,
+    "number": "CP041",
+    "school": "Rocky Mountain College",
+    "contents": "Noon Needle",
+    "date": "1979-1982",
+    "notes": ""
+  },
+  {
+    "UID": 42,
+    "number": "CP042",
+    "school": "Rocky Mountain College",
+    "contents": "Bear Tracks:On campus living student handbook",
+    "date": "1956-1981",
+    "notes": ""
+  },
+  {
+    "UID": 43,
+    "number": "CP043",
+    "school": "Rocky Mountain College",
+    "contents": "Soliloquy and Similar Publications",
+    "date": "1962-1984",
+    "notes": ""
+  },
+  {
+    "UID": 44,
+    "number": "CP044",
+    "school": "Rocky Mountain College",
+    "contents": "Soliloquy",
+    "date": "1985-1989/1997-",
+    "notes": ""
+  },
+  {
+    "UID": 45,
+    "number": "CP044a",
+    "school": "Rocky Mountain College",
+    "contents": "Soliloquy",
+    "date": "2000-2004",
+    "notes": ""
+  },
+  {
+    "UID": 46,
+    "number": "CP045",
+    "school": "Rocky Mountain College",
+    "contents": "Alliance",
+    "date": "1989-90",
+    "notes": ""
+  },
+  {
+    "UID": 47,
+    "number": "CP046",
+    "school": "Rocky Mountain College",
+    "contents": "Rocky Mountain Review/Patron/Rocket/Topics/The Mountaineer",
+    "date": "1952-1971 misc.",
+    "notes": "Review-1963-71;Patron-1952;Rocket-1954;Topics-1957-58;Mount.-1954-56"
+  },
+  {
+    "UID": 48,
+    "number": "CP046a",
+    "school": "Rocky Mountain College",
+    "contents": "Center for Indian studies occasional papers vol.1",
+    "date": "1971-1973",
+    "notes": ""
+  },
+  {
+    "UID": 49,
+    "number": "CP047",
+    "school": "Rocky Mountain College",
+    "contents": "Rocky Roadsign",
+    "date": "1967-1970",
+    "notes": ""
+  },
+  {
+    "UID": 50,
+    "number": "CP047a",
+    "school": "Rocky Mountain College",
+    "contents": "Crucible",
+    "date": "1979-1981",
+    "notes": ""
+  },
+  {
+    "UID": 51,
+    "number": "CP047b",
+    "school": "Rocky Mountain College",
+    "contents": "Connection",
+    "date": "1973-1981",
+    "notes": ""
+  },
+  {
+    "UID": 52,
+    "number": "CP048",
+    "school": "Rocky Mountain College",
+    "contents": "Rocky View",
+    "date": "1988-1994",
+    "notes": ""
+  },
+  {
+    "UID": 53,
+    "number": "CP048a",
+    "school": "Rocky Mountain College",
+    "contents": "Rocky Jounal",
+    "date": "1994-1995",
+    "notes": ""
+  },
+  {
+    "UID": 54,
+    "number": "CP050",
+    "school": "Rocky Mountain College",
+    "contents": "Top of the Rock",
+    "date": "1996-2000",
+    "notes": ""
+  },
+  {
+    "UID": 55,
+    "number": "CP051",
+    "school": "Rocky Mountain College",
+    "contents": "Rocky desktop",
+    "date": "1987-1988",
+    "notes": ""
+  },
+  {
+    "UID": 56,
+    "number": "CP051",
+    "school": "Rocky Mountain College",
+    "contents": "Rocky desktop",
+    "date": "1987-1988",
+    "notes": ""
+  },
+  {
+    "UID": 57,
+    "number": "CP051a",
+    "school": "Rocky Mountain College",
+    "contents": "Rocky highlighter",
+    "date": "1983-1987",
+    "notes": ""
+  },
+  {
+    "UID": 58,
+    "number": "CP052",
+    "school": "Rocky Mountain College",
+    "contents": "Rocky Crest",
+    "date": "1982-1991",
+    "notes": ""
+  },
+  {
+    "UID": 59,
+    "number": "CP053",
+    "school": "Rocky Mountain College",
+    "contents": "Rocky Crest",
+    "date": "1991-2000",
+    "notes": ""
+  },
+  {
+    "UID": 60,
+    "number": "CP054",
+    "school": "Rocky Mountain College",
+    "contents": "RMC Scene: Faculty and student newsletter",
+    "date": "1968-1998",
+    "notes": ""
+  },
+  {
+    "UID": 61,
+    "number": "CP055",
+    "school": "Rocky Mountain College",
+    "contents": "Student Directory",
+    "date": "1950-1969",
+    "notes": ""
+  },
+  {
+    "UID": 62,
+    "number": "CP084",
+    "school": "Rocky Mountain College",
+    "contents": "Aviation Program",
+    "date": "",
+    "notes": ""
+  },
+  {
+    "UID": 63,
+    "number": "CP102",
+    "school": "Rocky Mountain College",
+    "contents": "PA Program",
+    "date": "",
+    "notes": ""
+  },
+  {
+    "UID": 64,
+    "number": "CP056",
+    "school": "Rocky Mountain College",
+    "contents": "Student directoy, box lisings, misc stats",
+    "date": "1969-1979",
+    "notes": ""
+  },
+  {
+    "UID": 65,
+    "number": "CP057",
+    "school": "Rocky Mountain College",
+    "contents": "Student directory, box listings, misc stats",
+    "date": "1980-1987",
+    "notes": ""
+  },
+  {
+    "UID": 66,
+    "number": "CP058",
+    "school": "Rocky Mountain College",
+    "contents": "ASRMC minutes/Constitutions",
+    "date": "47-43, 83-85/ 36-76",
+    "notes": ""
+  },
+  {
+    "UID": 67,
+    "number": "CP061",
+    "school": "Rocky Mountain College",
+    "contents": "Special Activities - Misc.",
+    "date": "",
+    "notes": ""
+  },
+  {
+    "UID": 68,
+    "number": "CP062",
+    "school": "Rocky Mountain College",
+    "contents": "Special Activities - Candlelight Dinner",
+    "date": "",
+    "notes": ""
+  },
+  {
+    "UID": 69,
+    "number": "CP065",
+    "school": "Rocky Mountain College",
+    "contents": "Convocation",
+    "date": "1967-",
+    "notes": ""
+  },
+  {
+    "UID": 70,
+    "number": "CP066",
+    "school": "Rocky Mountain College",
+    "contents": "Commencement and Baccalaureate",
+    "date": "1948-1997",
+    "notes": ""
+  },
+  {
+    "UID": 71,
+    "number": "CP067",
+    "school": "Rocky Mountain College",
+    "contents": "Commencement and Baccalaureate",
+    "date": "1998-",
+    "notes": ""
+  },
+  {
+    "UID": 72,
+    "number": "CP049a",
+    "school": "Rocky Mountain College",
+    "contents": "Rocky Today",
+    "date": "2001-",
+    "notes": ""
+  },
+  {
+    "UID": 73,
+    "number": "CP072",
+    "school": "Rocky Mountain College",
+    "contents": "Accreditation / Self evaluation for RMC",
+    "date": "1958, 1990-1997",
+    "notes": ""
+  },
+  {
+    "UID": 74,
+    "number": "CP103",
+    "school": "Rocky Mountain College",
+    "contents": "Accreditation/ self study binder",
+    "date": "1995-1997",
+    "notes": ""
+  },
+  {
+    "UID": 75,
+    "number": "CP074",
+    "school": "Rocky Mountain College",
+    "contents": "Outreach - RMC continuing education",
+    "date": "2000-",
+    "notes": ""
+  },
+  {
+    "UID": 76,
+    "number": "CP075",
+    "school": "Rocky Mountain College",
+    "contents": "Classmates",
+    "date": "1985-1992",
+    "notes": ""
+  },
+  {
+    "UID": 77,
+    "number": "CP075a",
+    "school": "Rocky Mountain College",
+    "contents": "New Horizon",
+    "date": "1989",
+    "notes": ""
+  },
+  {
+    "UID": 78,
+    "number": "CP104",
+    "school": "Rocky Mountain College",
+    "contents": "Noel Levitz survey binder",
+    "date": "",
+    "notes": ""
+  },
+  {
+    "UID": 79,
+    "number": "CP076",
+    "school": "Rocky Mountain College",
+    "contents": "Development Funds",
+    "date": "1954-1986",
+    "notes": ""
+  },
+  {
+    "UID": 80,
+    "number": "CP091",
+    "school": "Rocky Mountain College",
+    "contents": "Athletics Programs",
+    "date": "1984-1989",
+    "notes": ""
+  },
+  {
+    "UID": 81,
+    "number": "CP092",
+    "school": "Rocky Mountain College",
+    "contents": "Athletics Programs",
+    "date": "1990-1994",
+    "notes": ""
+  },
+  {
+    "UID": 82,
+    "number": "CP093",
+    "school": "Rocky Mountain College",
+    "contents": "Athletics Programs",
+    "date": "1995-1999",
+    "notes": ""
+  },
+  {
+    "UID": 83,
+    "number": "CP094",
+    "school": "Rocky Mountain College",
+    "contents": "Athletics Programs",
+    "date": "2000-2004",
+    "notes": ""
+  },
+  {
+    "UID": 84,
+    "number": "CP060",
+    "school": "Rocky Mountain College",
+    "contents": "Activity Calender",
+    "date": "1982-1985",
+    "notes": ""
+  },
+  {
+    "UID": 85,
+    "number": "CP059",
+    "school": "Rocky Mountain College",
+    "contents": "Center for Indian Studies",
+    "date": "",
+    "notes": ""
+  },
+  {
+    "UID": 86,
+    "number": "CP097",
+    "school": "Rocky Mountain College",
+    "contents": "Music Department 1",
+    "date": "1931-1999",
+    "notes": ""
+  },
+  {
+    "UID": 87,
+    "number": "CP049",
+    "school": "Rocky Mountain College",
+    "contents": "Rocky Today",
+    "date": "1989-2000",
+    "notes": ""
+  },
+  {
+    "UID": 88,
+    "number": "CP096",
+    "school": "Rocky Mountain College",
+    "contents": "Educational Resource Center",
+    "date": "",
+    "notes": ""
+  },
+  {
+    "UID": 89,
+    "number": "CP095",
+    "school": "Rocky Mountain College",
+    "contents": "Drama Department",
+    "date": "1924-1969",
+    "notes": ""
+  },
+  {
+    "UID": 90,
+    "number": "CP098",
+    "school": "Rocky Mountain College",
+    "contents": "Music Department 2",
+    "date": "2000-",
+    "notes": ""
+  },
+  {
+    "UID": 91,
+    "number": "CP099",
+    "school": "Rocky Mountain College",
+    "contents": "Alumni Association",
+    "date": "1948 -",
+    "notes": ""
+  },
+  {
+    "UID": 92,
+    "number": "CP073",
+    "school": "Rocky Mountain College",
+    "contents": "Center for Continuing Education New Horizons",
+    "date": "1969 - 1984",
+    "notes": ""
+  },
+  {
+    "UID": 93,
+    "number": "CP077",
+    "school": "Rocky Mountain College",
+    "contents": "Faculty Records",
+    "date": "1950 - 1965",
+    "notes": ""
+  },
+  {
+    "UID": 94,
+    "number": "CP078",
+    "school": "Rocky Mountain College",
+    "contents": "Faculty Records",
+    "date": "1965 - 1968",
+    "notes": ""
+  },
+  {
+    "UID": 95,
+    "number": "CP079",
+    "school": "Rocky Mountain College",
+    "contents": "Faculty Records",
+    "date": "1968 - 1976",
+    "notes": ""
+  },
+  {
+    "UID": 96,
+    "number": "CP080",
+    "school": "Rocky Mountain College",
+    "contents": "Faculty Records",
+    "date": "1974 - 1982",
+    "notes": ""
+  },
+  {
+    "UID": 97,
+    "number": "CP081",
+    "school": "Rocky Mountain College",
+    "contents": "Faculty Records",
+    "date": "1982 - 1988",
+    "notes": ""
+  },
+  {
+    "UID": 98,
+    "number": "CP082",
+    "school": "Rocky Mountain College",
+    "contents": "Faculty Records",
+    "date": "1988 - 1995",
+    "notes": ""
+  },
+  {
+    "UID": 99,
+    "number": "CP083",
+    "school": "Rocky Mountain College",
+    "contents": "Faculty Records",
+    "date": "1995 -",
+    "notes": ""
+  },
+  {
+    "UID": 100,
+    "number": "CP100",
+    "school": "Rocky Mountain College",
+    "contents": "American Indian Affairs Division",
+    "date": "",
+    "notes": ""
+  },
+  {
+    "UID": 101,
+    "number": "CP101",
+    "school": "Rocky Mountain College",
+    "contents": "Technology",
+    "date": "",
+    "notes": ""
+  },
+  {
+    "UID": 102,
+    "number": "CP017a",
+    "school": "Rocky Mountain College",
+    "contents": "Catalog",
+    "date": "2003-",
+    "notes": ""
+  },
+  {
+    "UID": 103,
+    "number": "CP074a",
+    "school": "Rocky Mountain College",
+    "contents": "Outreach Tabloids",
+    "date": "1992-2003",
+    "notes": ""
+  },
+  {
+    "UID": 104,
+    "number": "CP105",
+    "school": "Rocky Mountain College",
+    "contents": "Faculty Compositions",
+    "date": "",
+    "notes": ""
+  },
+  {
+    "UID": 105,
+    "number": "CP095a",
+    "school": "Rocky Mountain College",
+    "contents": "Drama Department Box 2",
+    "date": "1970-",
+    "notes": ""
+  },
+  {
+    "UID": 107,
+    "number": "",
+    "school": "NULL",
+    "contents": "NULL",
+    "date": "NULL",
+    "notes": "NULL"
+  }
+]
