@@ -1,6 +1,6 @@
 const axios = require("axios");
 const fs = require("fs");
-const { pool } = require("./config");
+const { pool } = require("../config");
 const pgp = require("pg-promise")({
   /* initialization options */
   capSQL: true // capitalize all generated SQL
