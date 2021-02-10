@@ -1,8 +1,8 @@
 <template>
   <q-page padding>
-  <!-- <q-page class="flex flex-center"> -->
+    <!-- <q-page class="flex flex-center"> -->
     <div class="q-pa-md">
-       <q-card class="q-pa-md bg-dark q-mb-xl q-mt-xl text-primary header-card">
+      <q-card class="q-pa-md bg-dark q-mb-xl q-mt-xl text-primary header-card">
         <h2>Photos</h2>
       </q-card>
       <q-table
@@ -12,25 +12,33 @@
         row-key="id"
         :pagination="initialPagination"
         :filter="filter"
- 
+        :grid="$q.screen.lt.md"
+        wrap-cells="true"
       >
-            <template v-slot:top-right>
-            <q-space />
-            <q-input outlined bg-color="primary" debounce="300" color="grey-14" v-model="filter" label="Search">
-              <template v-slot:append>
-                <q-icon name="search" color="grey-14" />
-              </template>
-            </q-input>
-          </template>
-        <template v-slot:header="props">
+        <template v-slot:top-right>
+          <q-space />
+          <q-input
+            outlined
+            bg-color="primary"
+            debounce="300"
+            color="grey-14"
+            v-model="filter"
+            label="Search"
+          >
+            <template v-slot:append>
+              <q-icon name="search" color="grey-14" />
+            </template>
+          </q-input>
+        </template>
+        <!-- <template v-slot:header="props">
           <q-tr :props="props">
-            <q-th style="width:200px"/>
+            <q-th style="width:200px" />
             <q-th v-for="col in props.cols" :key="col.name" :props="props">
               {{ col.label }}
             </q-th>
           </q-tr>
-        </template>
-
+        </template> -->
+        <!-- 
         <template v-slot:body="props">
           <q-tr :props="props">
             <q-td style="width:150px">
@@ -98,7 +106,7 @@
               </div>
             </q-td>
           </q-tr>
-        </template>
+        </template> -->
       </q-table>
     </div>
   </q-page>
@@ -111,7 +119,7 @@ export default {
 
   data() {
     return {
-        filter: "",
+      filter: "",
       columns: [
         {
           label: "File Name",
@@ -119,18 +127,12 @@ export default {
           sortable: true,
           field: "filename",
           align: "left",
-        //   classes: 'bg-accent ellipsis',
+          //   classes: 'bg-accent ellipsis',
           style: "max-width: 200px"
           // headerClasses: 'bg-secondary text-bold text-fs14p q-ma-sm'
           // headerClasses: ' text-italic '
         },
-        {
-          label: "Location",
-          name: "filelocation",
-          field: "filelocation",
-          sortable: true,
-          align: "left"
-        },
+    
         {
           label: "Date",
           name: "date",
@@ -144,11 +146,26 @@ export default {
           field: "institution",
           sortable: true,
           align: "left"
+        },   {
+          label: "Subjects",
+          name: "subjects",
+          field: "subjects",
+          sortable: true,
+          align: "left"
         },
         {
           label: "Notes",
           name: "notes",
           field: "notes",
+          sortable: true,
+          align: "left",
+             style: "max-width: 200px"
+        },
+     
+            {
+          label: "Archives Location",
+          name: "filelocation",
+          field: "filelocation",
           sortable: true,
           align: "left"
         },
@@ -231,8 +248,76 @@ export default {
       console.log(rawData);
       rawData.forEach(photo => {
         // this.data.push(photo);
+        // console.log(photo.subject8)
         let re = /(\\)/g;
         let re2 = /(NULL)/;
+        let reNameStuff = /(,;)/
+        let subject1,
+          subject2,
+          subject3,
+          subject4,
+          subject5,
+          subject6,
+          subject7,
+          subject8;
+
+        if (photo.subject1 && photo.subject1 != "NULL") {
+          subject1 = photo.subject1.replace(re, "").replace(re2, "");
+        } else if (photo.subject1 == "NULL") {
+          subject1 = null;
+        }
+
+        if (photo.subject2 && photo.subject2 != "NULL") {
+          subject2 = photo.subject2.replace(re, "").replace(re2, "");
+        } else {
+          subject2 = null;
+        }
+
+        if (photo.subject3 && photo.subject3 != "NULL") {
+          subject3 = photo.subject3.replace(re, "").replace(re2, "");
+        } else {
+          subject3 = null;
+        }
+
+        if (photo.subject4 && photo.subject4 != "NULL") {
+          subject4 = photo.subject4.replace(re, "").replace(re2, "");
+        } else {
+          subject4 = null;
+        }
+
+        if (photo.subject5 && photo.subject5 != "NULL") {
+          subject5 = photo.subject5.replace(re, "").replace(re2, "");
+        } else {
+          subject5 = null;
+        }
+
+        if (photo.subject6 && photo.subject6 != "NULL") {
+          subject6 = photo.subject6.replace(re, "").replace(re2, "");
+        } else {
+          subject6 = null;
+        }
+        if (photo.subject7 && photo.subject7 != "NULL") {
+          subject7 = photo.subject7.replace(re, "").replace(re2, "");
+        } else if (photo.subject7 == "NULL") {
+          subject7 = null;
+        }
+
+        if (photo.subject8 && photo.subject8 != "NULL") {
+          subject8 = photo.subject8.replace(re, "").replace(re2, "");
+        } else {
+          subject8 = null;
+        }
+
+        let arrayOfSubjects = [
+          subject1,
+          subject2,
+          subject3,
+          subject4,
+          subject5,
+          subject6,
+          subject7,
+          subject8
+        ];
         this.data.push({
           date: photo.date.replace(re, ""),
           filelocation: photo.filelocation.replace(re, ""),
@@ -240,14 +325,8 @@ export default {
           id: photo.id,
           institution: photo.institution.replace(re, ""),
           notes: photo.notes.replace(re, ""),
-          subject1: photo.subject1.replace(re, "").replace(re2, ""),
-          subject2: photo.subject2.replace(re, "").replace(re2, ""),
-          subject3: photo.subject3.replace(re, "").replace(re2, ""),
-          subject4: photo.subject4.replace(re, "").replace(re2, ""),
-          subject5: photo.subject5.replace(re, "").replace(re2, ""),
-          subject6: photo.subject6.replace(re, "").replace(re2, ""),
-          subject7: photo.subject7.replace(re, "").replace(re2, ""),
-          subject8: photo.subject8.replace(re, "").replace(re2, "")
+
+          subjects: arrayOfSubjects.filter(Boolean).join("; ").replace(reNameStuff, ",")
         });
       });
     })();
