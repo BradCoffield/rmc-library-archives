@@ -2,7 +2,7 @@
   "name": "rmc-library-archives",
   "version": "0.0.1",
   "description": "A new archive.rocky.edu",
-  "productName": "RMC Library Archives",
+  "productName": "Archives | Rocky Mountain College",
   "author": "Brad Coffield <bcoffield@gmail.com>",
   "private": true,
   "scripts": {

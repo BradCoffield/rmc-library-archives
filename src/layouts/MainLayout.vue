@@ -172,10 +172,10 @@
             no-caps
             size="26px"
             class="GPL__side-btn"
-            to="/list-cheatsheets"
+            to="/physical-collections/photos"
           >
             <q-icon size="22px" name="calendar_view_day" />
-            <div class="GPL__side-btn__label">Cheatsheets</div>
+            <div class="GPL__side-btn__label">Photos</div>
           </q-btn>
 
           <q-btn
@@ -266,7 +266,7 @@ export default {
       search: "",
       storage: 0.26,
       links1: [
-        { icon: "list", text: "List All", destination: "/list-cheatsheets" },
+        { icon: "list", text: "Photos", destination: "/physical-collections/photos" },
         {
           icon: "add_circle",
           text: "Create New",

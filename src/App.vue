@@ -5,6 +5,11 @@
 </template>
 <script>
 export default {
-  name: 'App'
-}
+  name: "App"
+};
 </script>
+<style lang="scss">
+
+
+
+</style>

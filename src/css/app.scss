@@ -1,0 +1,36 @@
+// app global css in Sass form
+// .q-table__title {
+//   font-size: 28px;
+// }
+// .q-table tbody td {
+//   font-size: 14px !important;
+// }
+
+.fs14p {
+  font-size: 14px;
+}
+
+.q-page {
+  margin: 0 3rem;
+}
+h2 {
+  font-size: 48px;
+  font-weight: bold;
+  // border-bottom: 1px dotted;
+}
+
+table.q-table tbody td {
+  font-size: 16px !important;
+}
+table.q-table thead th {
+  font-size: 18px !important;
+}
+
+.header-card {max-width: 350px;}
+
+.q-layout {padding-bottom: 50px;}
+
+.ch-input input {
+  // height: 350px;
+  font-size: 18px;
+  }
