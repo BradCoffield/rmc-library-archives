@@ -13,7 +13,6 @@
         />
 
         <q-toolbar-title shrink class="row items-center no-wrap">
-          <!-- <img src="https://cdn.quasar.dev/img/layout-gallery/logo-google.svg"> -->
           <q-btn flat to="/" class="q-ml-sm  "
             >Rocky Mountain College Archives</q-btn
           >
@@ -22,15 +21,6 @@
         <q-space />
 
         <q-space />
-
-        <!-- <div class="q-gutter-sm row items-center no-wrap">
-          <template v-if="!this.$store.state.store.user"
-            ><q-btn flat label="Sign In" to="/login"></q-btn
-          ></template>
-          <template v-if="this.$store.state.store.user">
-            <q-btn flat label="Sign Out" @click="signOut"></q-btn>
-          </template>
-        </div> -->
       </q-toolbar>
     </q-header>
 
@@ -51,7 +41,11 @@
         <!-- <q-separator   /> -->
         <!-- This is where we are populating the drawer navigation -->
         <q-list padding>
-          <q-item><span class="text-h5 text-grey-7">Physical Collections</span></q-item>
+          <q-item
+            ><span class="text-h5 text-grey-7"
+              >Physical Collections</span
+            ></q-item
+          >
           <q-item
             v-for="link in links1"
             :key="link.text"
@@ -68,7 +62,11 @@
           </q-item>
 
           <q-separator class="q-my-md" />
-          <q-item><span class="text-h5 text-grey-7">Digital Collections</span></q-item>
+          <q-item
+            ><span class="text-h5 text-grey-7"
+              >Digital Collections</span
+            ></q-item
+          >
           <q-item
             v-for="link in links2"
             :key="link.text"
@@ -85,7 +83,11 @@
           </q-item>
 
           <q-separator class="q-my-md" />
-          <q-item><span class="text-h5 text-grey-7">Additional Information</span></q-item>
+          <q-item
+            ><span class="text-h5 text-grey-7"
+              >Additional Information</span
+            ></q-item
+          >
           <q-item
             v-for="link in links3"
             :key="link.text"
@@ -100,59 +102,6 @@
               <q-item-label>{{ link.text }}</q-item-label>
             </q-item-section>
           </q-item>
-<!-- 
-          <q-separator class="q-my-md" />
-          <q-item
-            ><span class="text-h5 text-grey-7">Instruction Videos</span></q-item
-          >
-          <q-item
-            v-for="link in links4"
-            :key="link.text"
-            clickable
-            :to="link.destination"
-            class="GPL__drawer-item"
-          >
-            <q-item-section avatar>
-              <q-icon :name="link.icon" />
-            </q-item-section>
-            <q-item-section>
-              <q-item-label>{{ link.text }}</q-item-label>
-            </q-item-section>
-          </q-item>
-
-          <q-separator class="q-my-md" />
-          <q-item><span class="text-h5 text-grey-7">eBooks</span></q-item>
-          <q-item
-            v-for="link in links5"
-            :key="link.text"
-            clickable
-            :to="link.destination"
-            class="GPL__drawer-item"
-          >
-            <q-item-section avatar>
-              <q-icon :name="link.icon" />
-            </q-item-section>
-            <q-item-section>
-              <q-item-label>{{ link.text }}</q-item-label>
-            </q-item-section>
-          </q-item>
-
-          <q-separator class="q-my-md" />
-          <q-item><span class="text-h5 text-grey-7">Custom Boxes</span></q-item>
-          <q-item
-            v-for="link in links6"
-            :key="link.text"
-            clickable
-            :to="link.destination"
-            class="GPL__drawer-item"
-          >
-            <q-item-section avatar>
-              <q-icon :name="link.icon" />
-            </q-item-section>
-            <q-item-section>
-              <q-item-label>{{ link.text }}</q-item-label>
-            </q-item-section>
-          </q-item> -->
 
           <q-separator class="q-my-md" />
         </q-list>
@@ -160,10 +109,8 @@
     </q-drawer>
 
     <q-page-container class="">
-    <!-- <q-page-container class="GPL__page-container"> -->
+      <!-- <q-page-container class="GPL__page-container"> -->
       <router-view />
-
-    
     </q-page-container>
   </q-layout>
 </template>
@@ -179,13 +126,17 @@ export default {
       search: "",
       storage: 0.26,
       links1: [
-        { icon: "camera_alt", text: "Photos", destination: "/physical-collections/photos" },
+        {
+          icon: "camera_alt",
+          text: "Photos",
+          destination: "/physical-collections/photos"
+        },
         {
           icon: "history_edu",
           text: "Historic Collections",
           destination: "/physical-collections/historic-collections"
         },
-              {
+        {
           icon: "auto_stories",
           text: "College Publications",
           destination: "/physical-collections/college-publications"
@@ -195,10 +146,13 @@ export default {
           text: "Personal Collections",
           destination: "/physical-collections/personal-collections"
         }
-  
       ],
       links2: [
-        { icon: "photo_album", text: "Yearbooks", destination: "/digital-collections/yearbooks" }
+        {
+          icon: "photo_album",
+          text: "Yearbooks",
+          destination: "/digital-collections/yearbooks"
+        }
       ],
       links3: [
         {
@@ -237,8 +191,11 @@ export default {
         }
       ],
       links6: [
-        { icon: "select_all", text: "Custom Boxes", destination: "/custom-boxes" },
-   
+        {
+          icon: "select_all",
+          text: "Custom Boxes",
+          destination: "/custom-boxes"
+        }
       ]
     };
   },

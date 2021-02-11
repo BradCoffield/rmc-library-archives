@@ -1,5 +1,6 @@
 <template>
   <div class=" ">
+     
     <q-table
       title=""
       :data="data"
@@ -32,13 +33,13 @@
 <script>
 export default {
   name: "PhysicalCollectionsTable",
-  props: { name: String, columns: Array, data: Array },
+  props: { name: String, columns: Array, data: Array, sortBy: String },
   data() {
     return {
       filter: "",
       wrapCells: true,
       initialPagination: {
-        sortBy: "date",
+        sortBy: this.sortBy,
         descending: false,
         page: 1,
         rowsPerPage: 25

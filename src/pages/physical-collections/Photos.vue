@@ -2,24 +2,29 @@
   <q-page padding>
     <div class="q-pa-md">
       <q-card class="q-pa-md bg-dark q-mb-xl q-mt-xl text-primary header-card">
-        <h2>Photos</h2>
-        <span> Total items: {{data.length}}</span>
+        <h2>{{ pageTitle }}</h2>
+        <span> Total items: {{ data.length }}</span>
       </q-card>
-    <PCTable name="Photos" :columns="columns" :data="data"></PCTable>
-    
+      <PCTable
+        :name="pageTitle"
+        :columns="columns"
+        :data="data"
+        sortBy="date"
+      ></PCTable>
     </div>
   </q-page>
 </template>
 
 <script>
 import PCTable from "components/PhysicalCollectionsTable.vue";
-import getArchivesAPI from "assets/getArchivesAPI.js"
+import getArchivesAPI from "assets/getArchivesAPI.js";
 export default {
   name: "collections_photos",
-   components: { PCTable },
+  components: { PCTable },
   data() {
     return {
       filter: "",
+      pageTitle: "Photos",
       columns: [
         {
           label: "File Name",
@@ -32,7 +37,7 @@ export default {
           // headerClasses: 'bg-secondary text-bold text-fs14p q-ma-sm'
           // headerClasses: ' text-italic '
         },
-    
+
         {
           label: "Date",
           name: "date",
@@ -46,7 +51,8 @@ export default {
           field: "institution",
           sortable: true,
           align: "left"
-        },   {
+        },
+        {
           label: "Subjects",
           name: "subjects",
           field: "subjects",
@@ -60,17 +66,17 @@ export default {
           field: "notes",
           sortable: true,
           align: "left",
-             style: "max-width: 200px"
+          style: "max-width: 200px"
         },
-     
-            {
+
+        {
           label: "Archives Location",
           name: "filelocation",
           field: "filelocation",
           sortable: true,
           align: "left"
-        },
-        
+        }
+
         // { name: "actions", label: "Subjects", field: "", align: "center" }
       ],
       data: [],
@@ -86,14 +92,16 @@ export default {
   created() {
     console.log("photos");
     (async () => {
-      let res = await getArchivesAPI("photos");
+      let res = await getArchivesAPI(
+        this.pageTitle.replace(" ", "").toLowerCase()
+      );
 
       let rawData = res.data;
       console.log(rawData);
       rawData.forEach(photo => {
         let re = /(\\)/g;
         let re2 = /(NULL)/;
-        let reNameStuff = /(,;)/
+        let reNameStuff = /(,;)/;
         let subject1,
           subject2,
           subject3,
@@ -168,7 +176,10 @@ export default {
           institution: photo.institution.replace(re, ""),
           notes: photo.notes.replace(re, ""),
 
-          subjects: arrayOfSubjects.filter(Boolean).join("; ").replace(reNameStuff, ",")
+          subjects: arrayOfSubjects
+            .filter(Boolean)
+            .join("; ")
+            .replace(reNameStuff, ",")
         });
       });
     })();
