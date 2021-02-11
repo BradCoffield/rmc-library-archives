@@ -5,6 +5,10 @@
 // .q-table tbody td {
 //   font-size: 14px !important;
 // }
+ 
+body {font-family: 'Roboto Condensed', "-apple-system", "Helvetica Neue", Helvetica, Arial, sans-serif;}
+h1, h2, h3, h4, h5, h6 {font-family: 'Roboto Slab', serif;}
+
 
 .fs14p {
   font-size: 14px;
@@ -26,11 +30,20 @@ table.q-table thead th {
   font-size: 18px !important;
 }
 
-.header-card {max-width: 350px;}
+.header-card {max-width: 300px;font-family: 'Roboto Slab', serif;}
 
 .q-layout {padding-bottom: 50px;}
 
 .ch-input input {
   // height: 350px;
   font-size: 18px;
+  }
+
+  .sans-serif {font-family: 'Roboto Condensed', sans-serif;}
+
+  .slab {font-family: 'Roboto Slab', serif;}
+
+
+  .q-field__control-container, .q-table__bottom-item{
+    font-size: 14px;
   }
