@@ -12,8 +12,7 @@
 
 <script>
 import PCTable from "components/PhysicalCollectionsTable.vue";
-import { axios } from "boot/axios";
-// import getArchivesAPI from "assets/getArchivesAPI.js"
+import getArchivesAPI from "assets/getArchivesAPI.js"
  
 
 export default {
@@ -23,14 +22,10 @@ export default {
     console.log("photos");
     
     (async () => {
-      let res = await axios.get(
-        "https://rmc-library-archives.herokuapp.com/collection/photos/"
-      );
-
+      let res = await getArchivesAPI("photos");
       let rawData = res.data;
-      console.log(rawData);
+    //   console.log(rawData);
       rawData.forEach(photo => {
-        // this.data.push(photo);
         let re = /(\\)/g;
         let re2 = /(NULL)/;
         this.data.push({
