@@ -4,9 +4,11 @@
     <div class="q-pa-md">
       <q-card class="q-pa-md bg-dark q-mb-xl q-mt-xl text-primary header-card">
         <h2>Photos</h2>
+        <span> Total items: {{data.length}}</span>
       </q-card>
+    
       <q-table
-        title="Photos"
+        title=""
         :data="data"
         :columns="columns"
         row-key="id"

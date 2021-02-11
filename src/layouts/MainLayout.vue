@@ -44,14 +44,14 @@
       <q-scroll-area class="fit">
         <q-toolbar class="GPL__toolbar bg-dark">
           <q-toolbar-title class="row items-center text-grey-8 bg-dark q-pa-sm">
-            <span class=" text-white">Library Cheatsheets</span>
+            <span class=" text-white">RMC Archives</span>
           </q-toolbar-title>
         </q-toolbar>
 
         <!-- <q-separator   /> -->
         <!-- This is where we are populating the drawer navigation -->
         <q-list padding>
-          <q-item><span class="text-h5 text-grey-7">Cheatsheets</span></q-item>
+          <q-item><span class="text-h5 text-grey-7">Physical Collections</span></q-item>
           <q-item
             v-for="link in links1"
             :key="link.text"
@@ -68,7 +68,7 @@
           </q-item>
 
           <q-separator class="q-my-md" />
-          <q-item><span class="text-h5 text-grey-7">API Searches</span></q-item>
+          <q-item><span class="text-h5 text-grey-7">Digital Collections</span></q-item>
           <q-item
             v-for="link in links2"
             :key="link.text"
@@ -85,7 +85,7 @@
           </q-item>
 
           <q-separator class="q-my-md" />
-          <q-item><span class="text-h5 text-grey-7">Weblinks</span></q-item>
+          <q-item><span class="text-h5 text-grey-7">Additional Information</span></q-item>
           <q-item
             v-for="link in links3"
             :key="link.text"
@@ -100,7 +100,7 @@
               <q-item-label>{{ link.text }}</q-item-label>
             </q-item-section>
           </q-item>
-
+<!-- 
           <q-separator class="q-my-md" />
           <q-item
             ><span class="text-h5 text-grey-7">Instruction Videos</span></q-item
@@ -152,7 +152,7 @@
             <q-item-section>
               <q-item-label>{{ link.text }}</q-item-label>
             </q-item-section>
-          </q-item>
+          </q-item> -->
 
           <q-separator class="q-my-md" />
         </q-list>
@@ -162,95 +162,7 @@
     <q-page-container class="GPL__page-container">
       <router-view />
 
-      <q-page-sticky v-if="$q.screen.gt.sm" expand position="left">
-        <div class="fit q-pt-xl q-px-sm column">
-          <q-btn
-            round
-            flat
-            color="grey-9"
-            stack
-            no-caps
-            size="26px"
-            class="GPL__side-btn"
-            to="/physical-collections/photos"
-          >
-            <q-icon size="22px" name="calendar_view_day" />
-            <div class="GPL__side-btn__label">Photos</div>
-          </q-btn>
-
-          <q-btn
-            round
-            flat
-            color="grey-9"
-            stack
-            no-caps
-            size="26px"
-            class="GPL__side-btn"
-            to="/api-searches"
-          >
-            <q-icon size="22px" name="subject" />
-            <div class="GPL__side-btn__label">API Searches</div>
-            <!-- <q-badge floating color="red" text-color="white" style="top: 8px; right: 16px">
-              1
-            </q-badge> -->
-          </q-btn>
-
-          <q-btn
-            round
-            flat
-            color="grey-9"
-            stack
-            no-caps
-            size="26px"
-            class="GPL__side-btn"
-            to="/weblinks/list-weblinks"
-          >
-            <q-icon size="22px" name="insert_link" />
-            <div class="GPL__side-btn__label">Weblinks</div>
-          </q-btn>
-
-          <q-btn
-            round
-            flat
-            color="grey-9"
-            stack
-            no-caps
-            size="26px"
-            class="GPL__side-btn"
-            to="/videos/list-instruction-videos"
-          >
-            <q-icon size="22px" name="video_library" />
-            <div class="GPL__side-btn__label">Instruction Videos</div>
-          </q-btn>
-          <q-btn
-            round
-            flat
-            color="grey-9"
-            stack
-            no-caps
-            size="26px"
-            class="GPL__side-btn"
-            to="/ebooks/list-ebooks"
-          >
-            <q-icon size="22px" name="menu_book" />
-            <div class="GPL__side-btn__label">eBooks</div>
-          </q-btn>
-
-          <q-btn
-            round
-            flat
-            color="grey-9"
-            stack
-            no-caps
-            size="26px"
-            class="GPL__side-btn"
-            to="/custom-boxes"
-          >
-            <q-icon size="22px" name="select_all" />
-            <div class="GPL__side-btn__label">Custom Boxes</div>
-          </q-btn>
-        </div>
-      </q-page-sticky>
+    
     </q-page-container>
   </q-layout>
 </template>
@@ -266,15 +178,26 @@ export default {
       search: "",
       storage: 0.26,
       links1: [
-        { icon: "list", text: "Photos", destination: "/physical-collections/photos" },
+        { icon: "camera_alt", text: "Photos", destination: "/physical-collections/photos" },
         {
-          icon: "add_circle",
-          text: "Create New",
-          destination: "/create-cheatsheet"
+          icon: "history_edu",
+          text: "Historic Collections",
+          destination: "/physical-collections/historic-collections"
+        },
+              {
+          icon: "auto_stories",
+          text: "College Publications",
+          destination: "/physical-collections/college-publications"
+        },
+        {
+          icon: "people_alt",
+          text: "Personal Collections",
+          destination: "/physical-collections/personal-collections"
         }
+  
       ],
       links2: [
-        { icon: "list", text: "List APIs", destination: "/api-searches" }
+        { icon: "photo_album", text: "Yearbooks", destination: "/digital-collections/yearbooks" }
       ],
       links3: [
         {
