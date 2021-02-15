@@ -4,25 +4,7 @@ const routes = [
     component: () => import("layouts/MainLayout.vue"),
     children: [
       { path: "", component: () => import("pages/Index.vue") },
-      {
-        path: "/collections/physical/photos/view-all",
-        component: () => import("pages/physical-collections/PhotosTable.vue")
-      },
-      {
-        path: "/collections/physical/historic-collections/view-all",
-        component: () =>
-          import("pages/physical-collections/HistoricCollectionsTable.vue")
-      },
-      {
-        path: "/collections/physical/personal-collections/view-all",
-        component: () =>
-          import("pages/physical-collections/PersonalCollectionsTable.vue")
-      },
-      {
-        path: "/collections/physical/college-publications/view-all",
-        component: () =>
-          import("pages/physical-collections/CollegePublicationsTable.vue")
-      },
+     
       {
         path: "/collections/search",
         component: () => import("pages/physical-collections/Search.vue")
@@ -35,17 +17,31 @@ const routes = [
   },
   {
     path: "/collections/physical",
-    component: () => import("layouts/TestingLayout.vue"),
+    component: () => import("layouts/PhysicalCollectionsLayout.vue"),
     children: [
       {
         path: "/",
         component: () => import("pages/physical-collections/PhysicalCollectionsLanding.vue")
       },
       {
-        path: "photostable",
+        path: "photos/view-all",
+        component: () => import("pages/physical-collections/PhotosTable.vue")
+      },
+      {
+        path: "historic-collections/view-all",
         component: () =>
           import("pages/physical-collections/HistoricCollectionsTable.vue")
-      }
+      },
+      {
+        path: "personal-collections/view-all",
+        component: () =>
+          import("pages/physical-collections/PersonalCollectionsTable.vue")
+      },
+      {
+        path: "college-publications/view-all",
+        component: () =>
+          import("pages/physical-collections/CollegePublicationsTable.vue")
+      },
     ]
   },
 

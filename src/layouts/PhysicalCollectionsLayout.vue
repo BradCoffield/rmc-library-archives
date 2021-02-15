@@ -110,7 +110,7 @@
 
     <q-page padding>
       <q-page-container class="">
-        <!-- <q-page-container class="GPL__page-container"> -->
+ 
         <div class="q-pa-md">
           <q-card
             class="q-pa-md bg-dark q-mb-xl q-mt-xl text-primary header-card"

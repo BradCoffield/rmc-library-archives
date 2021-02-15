@@ -1,6 +1,13 @@
 <template>
-  <q-page padding>
-    <div class="q-pa-md">
+  <q-page>
+    <PCTable
+      :name="pageTitle"
+      :columns="columns"
+      :data="data"
+      sortBy="contents"
+      :loading="loading"
+    ></PCTable>
+    <!-- <div class="q-pa-md">
       <q-card class="q-pa-md bg-dark q-mb-xl q-mt-xl text-primary header-card">
         <h2>{{ pageTitle }}</h2>
         <span> Total items: {{ data.length }}</span>
@@ -12,7 +19,7 @@
         sortBy="contents"
         :loading="loading"
       ></PCTable>
-    </div>
+    </div> -->
   </q-page>
 </template>
 
@@ -34,9 +41,9 @@ export default {
           field: "firstname",
           align: "left",
           //   classes: 'bg-accent ellipsis',
-            style: "max-width: 100px"
+          style: "max-width: 100px"
           // headerClasses: 'bg-secondary text-bold text-fs14p q-ma-sm'
-        //   headerClasses: ' text-italic '
+          //   headerClasses: ' text-italic '
         },
 
         {
@@ -81,7 +88,7 @@ export default {
           id: item.id,
           number: item.number.replace(re, "")
         });
-        this.loading = false
+        this.loading = false;
       });
     })();
   }

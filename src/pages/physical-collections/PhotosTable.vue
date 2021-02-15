@@ -1,6 +1,13 @@
 <template>
-  <q-page padding>
-    <div class="q-pa-md">
+  <q-page>
+    <PCTable
+      :name="pageTitle"
+      :columns="columns"
+      :data="data"
+      sortBy="date"
+      :loading="loading"
+    ></PCTable>
+    <!-- <div class="q-pa-md">
       <q-card class="q-pa-md bg-dark q-mb-xl q-mt-xl text-primary header-card">
         <h2>{{ pageTitle }}</h2>
         <span> Total items: {{ data.length }}</span>
@@ -12,7 +19,7 @@
         sortBy="date"
         :loading="loading"
       ></PCTable>
-    </div>
+    </div> -->
   </q-page>
 </template>
 
@@ -182,7 +189,7 @@ export default {
             .join("; ")
             .replace(reNameStuff, ",")
         });
-        this.loading = false
+        this.loading = false;
       });
     })();
   }
