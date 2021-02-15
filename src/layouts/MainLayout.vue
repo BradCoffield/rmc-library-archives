@@ -129,22 +129,22 @@ export default {
         {
           icon: "camera_alt",
           text: "Photos",
-          destination: "/physical-collections/photos"
+          destination: "/physical-collections/photos/view-all"
         },
         {
           icon: "history_edu",
           text: "Historic Collections",
-          destination: "/physical-collections/historic-collections"
+          destination: "/physical-collections/historic-collections/view-all"
         },
         {
           icon: "auto_stories",
           text: "College Publications",
-          destination: "/physical-collections/college-publications"
+          destination: "/physical-collections/college-publications/view-all"
         },
         {
           icon: "people_alt",
           text: "Personal Collections",
-          destination: "/physical-collections/personal-collections"
+          destination: "/physical-collections/personal-collections/view-all"
         }
       ],
       links2: [

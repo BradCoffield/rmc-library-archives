@@ -10,6 +10,7 @@
         :columns="columns"
         :data="data"
         sortBy="date"
+        :loading="loading"
       ></PCTable>
     </div>
   </q-page>
@@ -23,7 +24,7 @@ export default {
   components: { PCTable },
   data() {
     return {
-      filter: "",
+      loading: true,
       pageTitle: "Photos",
       columns: [
         {
@@ -181,6 +182,7 @@ export default {
             .join("; ")
             .replace(reNameStuff, ",")
         });
+        this.loading = false
       });
     })();
   }

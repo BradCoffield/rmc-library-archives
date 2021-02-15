@@ -5,7 +5,7 @@
         <h2>{{ pageTitle }}</h2>
         <span> Total items: {{ data.length }}</span>
       </q-card>
-      <PCTable :name="pageTitle" :columns="columns" :data="data" sortBy="contents" ></PCTable>
+      <PCTable :name="pageTitle" :columns="columns" :data="data" sortBy="contents" :loading="loading" ></PCTable>
     </div>
   </q-page>
 </template>
@@ -18,7 +18,8 @@ export default {
   components: { PCTable },
   data() {
     return {
-      filter: "",
+      // filter: "",
+      loading: true,
       pageTitle: "Historic Collections",
       columns: [
         {
@@ -93,6 +94,7 @@ export default {
 
           subject:  item.subject.replace(re, ""),
         });
+        this.loading = false
       });
     })();
   }

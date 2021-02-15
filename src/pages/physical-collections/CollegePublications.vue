@@ -5,7 +5,7 @@
         <h2>{{ pageTitle }}</h2>
         <span> Total items: {{ data.length }}</span>
       </q-card>
-      <PCTable :name="pageTitle" :columns="columns" :data="data" sortBy="contents" ></PCTable>
+      <PCTable :name="pageTitle" :columns="columns" :data="data" sortBy="contents" :loading="loading" ></PCTable>
     </div>
   </q-page>
 </template>
@@ -21,6 +21,7 @@ export default {
       filter: "",
     //   pageTitle fuels a lot of things, including the api call
       pageTitle: "College Publications",
+      loading: true,
       columns: [
         {
           label: "Contents",
@@ -95,6 +96,7 @@ export default {
 
           school:  item.school.replace(re, ""),
         });
+        this.loading = false
       });
     })();
   }

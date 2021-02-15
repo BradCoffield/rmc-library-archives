@@ -10,6 +10,7 @@
       :filter="filter"
       :grid="$q.screen.lt.md"
       :wrap-cells="wrapCells"
+      :loading="loading"
     >
       <template v-slot:top-right>
         <q-space />
@@ -33,7 +34,7 @@
 <script>
 export default {
   name: "PhysicalCollectionsTable",
-  props: { name: String, columns: Array, data: Array, sortBy: String },
+  props: { name: String, columns: Array, data: Array, sortBy: String, loading: Boolean },
   data() {
     return {
       filter: "",

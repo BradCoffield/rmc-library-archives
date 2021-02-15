@@ -10,6 +10,7 @@
         :columns="columns"
         :data="data"
         sortBy="contents"
+        :loading="loading"
       ></PCTable>
     </div>
   </q-page>
@@ -23,7 +24,7 @@ export default {
   components: { PCTable },
   data() {
     return {
-      filter: "",
+      loading: true,
       pageTitle: "Personal Collections",
       columns: [
         {
@@ -80,6 +81,7 @@ export default {
           id: item.id,
           number: item.number.replace(re, "")
         });
+        this.loading = false
       });
     })();
   }
