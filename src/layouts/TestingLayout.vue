@@ -108,17 +108,27 @@
       </q-scroll-area>
     </q-drawer>
 
-    <q-page-container class="">
-      <!-- <q-page-container class="GPL__page-container"> -->
-      <router-view />
-    </q-page-container>
+    <q-page padding>
+      <q-page-container class="">
+        <!-- <q-page-container class="GPL__page-container"> -->
+        <div class="q-pa-md">
+          <q-card
+            class="q-pa-md bg-dark q-mb-xl q-mt-xl text-primary header-card"
+          >
+            <h2>testtitle</h2>
+          </q-card>
+        </div>
+
+        <router-view />
+      </q-page-container>
+    </q-page>
   </q-layout>
 </template>
 
 <script>
 import { Screen } from "quasar";
 export default {
-  name: "ArchivesMainLayout",
+  name: "ArchivesCollectionsLayout",
 
   data() {
     return {
