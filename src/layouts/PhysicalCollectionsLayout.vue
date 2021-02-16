@@ -108,20 +108,20 @@
       </q-scroll-area>
     </q-drawer>
 
-    <q-page padding>
+
       <q-page-container class="">
- 
+     <q-page padding>
         <div class="q-pa-md">
           <q-card
             class="q-pa-md bg-dark q-mb-xl q-mt-xl text-primary header-card"
           >
-            <h2>testtitle</h2>
+            <h2>{{pageTitle}}</h2>
           </q-card>
         </div>
 
         <router-view />
-      </q-page-container>
-    </q-page>
+     </q-page>  </q-page-container>
+   
   </q-layout>
 </template>
 
@@ -132,6 +132,7 @@ export default {
 
   data() {
     return {
+      
       leftDrawerOpen: false,
       search: "",
       storage: 0.26,
@@ -214,7 +215,16 @@ export default {
       console.log("signOut");
       this.$fireAuth.signOut();
     }
-  }
+  },
+  created(){
+    console.log(this.$store.state.pageTitle);
+    this.pageTitle = this.$store.state.pageTitle
+  },
+   computed: {
+    pageTitle() {
+      return this.$store.state.pageTitle;
+    }
+  },
 };
 </script>
 

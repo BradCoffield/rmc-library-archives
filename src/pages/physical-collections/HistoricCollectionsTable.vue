@@ -73,8 +73,9 @@ export default {
     };
   },
   created() {
-    console.log("photos");
+   
     (async () => {
+      this.$store.commit('SET_PAGE_TITLE', this.pageTitle)
       let res = await getArchivesAPI(
         this.pageTitle.replace(" ", "").toLowerCase()
       );

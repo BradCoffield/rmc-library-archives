@@ -1,9 +1,9 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+import Vue from "vue";
+import Vuex from "vuex";
 
 // import example from './module-example'
 
-Vue.use(Vuex)
+Vue.use(Vuex);
 
 /*
  * If not building with SSR mode, you can
@@ -14,16 +14,55 @@ Vue.use(Vuex)
  * with the Store instance.
  */
 
-export default function (/* { ssrContext } */) {
-  const Store = new Vuex.Store({
-    modules: {
-      // example
-    },
+// export default function (/* { ssrContext } */) {
+//   const Store = new Vuex.Store({
+//     modules: {
+//       // example
+//     },
+//     state: {
+//       count: 0,
+//       pageTitle: "College Publications"
+//     },
+//     mutations: {
+//       increment (state) {
+//         state.count++
+//       },
+//       SET_PAGE_TITLE (state, title){
+//         state.pageTitle = title
+//       }
+//     },
+//     actions:{},
+//     getters:{},
 
-    // enable strict mode (adds overhead!)
-    // for dev mode only
-    strict: process.env.DEBUGGING
-  })
+//     // enable strict mode (adds overhead!)
+//     // for dev mode only
+//     strict: process.env.DEBUGGING
+//   })
 
-  return Store
-}
+//   return Store
+// }
+
+const state = {
+  pageTitle: "",
+  collectionItemCount: ""
+};
+
+const getters = {};
+
+const mutations = {
+  SET_ITEM_COUNT(state, count) {
+    state.collectionItemCount = count;
+  },
+  SET_PAGE_TITLE(state, title) {
+    state.pageTitle = title;
+  }
+};
+
+const actions = {};
+
+export default new Vuex.Store({
+  state,
+  getters,
+  mutations,
+  actions
+});

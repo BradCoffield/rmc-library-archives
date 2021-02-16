@@ -78,10 +78,17 @@ export default {
       data: []
     };
   },
+   computed: {
+    // pageTitle() {
+    //   return this.$store.state.pageTitle;
+    // }
+  },
   created() {
-    console.log("photos");
+  
+    
     (async () => {
-      let res = await getArchivesAPI(
+    this.$store.commit('SET_PAGE_TITLE', this.pageTitle)
+    let res = await getArchivesAPI(
         this.pageTitle.replace(" ", "").toLowerCase()
       );
 
