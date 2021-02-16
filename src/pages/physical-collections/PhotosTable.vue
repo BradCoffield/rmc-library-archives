@@ -190,6 +190,7 @@ export default {
             .join("; ")
             .replace(reNameStuff, ",")
         });
+         this.$store.commit('SET_ITEM_COUNT', this.data.length)
         this.loading = false;
       });
     })();

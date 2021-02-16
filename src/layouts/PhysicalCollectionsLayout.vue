@@ -116,6 +116,7 @@
             class="q-pa-md bg-dark q-mb-xl q-mt-xl text-primary header-card"
           >
             <h2>{{pageTitle}}</h2>
+            <span> Total items: {{ itemCount }}</span>
           </q-card>
         </div>
 
@@ -223,6 +224,9 @@ export default {
    computed: {
     pageTitle() {
       return this.$store.state.pageTitle;
+    },
+    itemCount() {
+      return this.$store.state.collectionItemCount;
     }
   },
 };

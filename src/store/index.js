@@ -44,7 +44,7 @@ Vue.use(Vuex);
 
 const state = {
   pageTitle: "",
-  collectionItemCount: ""
+  collectionItemCount: "."
 };
 
 const getters = {};

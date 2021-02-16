@@ -96,6 +96,7 @@ export default {
 
           subject:  item.subject.replace(re, ""),
         });
+         this.$store.commit('SET_ITEM_COUNT', this.data.length)
         this.loading = false
       });
     })();

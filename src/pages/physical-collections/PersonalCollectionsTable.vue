@@ -89,6 +89,7 @@ export default {
           id: item.id,
           number: item.number.replace(re, "")
         });
+         this.$store.commit('SET_ITEM_COUNT', this.data.length)
         this.loading = false;
       });
     })();

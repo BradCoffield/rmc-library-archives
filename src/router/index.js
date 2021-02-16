@@ -2,7 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 import routes from './routes'
-
+import Store  from '../store/index.js'
 Vue.use(VueRouter)
 
 /*
@@ -27,6 +27,7 @@ export default function (/* { store, ssrContext } */) {
   })
   Router.beforeEach((to, from, next) => {
    console.log("eh I changed!")
+   Store.commit('SET_ITEM_COUNT', "")
    next()
   })
 
