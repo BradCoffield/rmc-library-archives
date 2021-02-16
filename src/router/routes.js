@@ -19,10 +19,10 @@ const routes = [
     path: "/collections/physical",
     component: () => import("layouts/PhysicalCollectionsLayout.vue"),
     children: [
-      {
-        path: "/",
-        component: () => import("pages/physical-collections/PhysicalCollectionsLanding.vue")
-      },
+      // {
+      //   path: "/",
+      //   component: () => import("pages/physical-collections/PhysicalCollectionsLanding.vue")
+      // },
       {
         path: "photos/view-all",
         component: () => import("pages/physical-collections/PhotosTable.vue")

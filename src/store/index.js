@@ -44,7 +44,29 @@ Vue.use(Vuex);
 
 const state = {
   pageTitle: "",
-  collectionItemCount: "."
+  collectionItemCount: "",
+  physicalCollectionsMetadata: [
+    {
+      name: "College Publications",
+      thumbnail: "something.jpg",
+      briefDescription: "string"
+    },
+    {
+      name: "Historic Collections",
+      thumbnail: "something.jpg",
+      briefDescription: "string"
+    },
+    {
+      name: "Personal Collections",
+      thumbnail: "something.jpg",
+      briefDescription: "string"
+    },
+    {
+      name: "Photos",
+      thumbnail: "something.jpg",
+      briefDescription: "string"
+    },
+  ]
 };
 
 const getters = {};

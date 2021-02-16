@@ -116,7 +116,7 @@
             class="q-pa-md bg-dark q-mb-xl q-mt-xl text-primary header-card"
           >
             <h2>{{pageTitle}}</h2>
-            <span> Total items: {{ itemCount }}</span>
+            <span v-if="showItemsBoolean"> Total items: {{ itemCount }}</span>
           </q-card>
         </div>
 
@@ -129,11 +129,11 @@
 <script>
 import { Screen } from "quasar";
 export default {
-  name: "ArchivesCollectionsLayout",
+  name: "PhysicalCollectionsLayout",
 
   data() {
     return {
-      
+      showItemsBoolean: false,
       leftDrawerOpen: false,
       search: "",
       storage: 0.26,
@@ -219,7 +219,7 @@ export default {
   },
   created(){
     console.log(this.$store.state.pageTitle);
-    this.pageTitle = this.$store.state.pageTitle
+    // this.pageTitle = this.$store.state.pageTitle
   },
    computed: {
     pageTitle() {
