@@ -1,30 +1,106 @@
 <template>
   <q-layout view="lHh Lpr fff" class="bg-primary">
-    <q-header elevated class="bg-dark text-grey-1" height-hint="64">
-      <q-toolbar class="GPL__toolbar" style=" ">
+       <q-header elevated class="" height-hint="90">
+      <q-toolbar id="primary-sticky-toolbar" class="GPL__toolbar" style="">
+        <q-space />
+      <a href="/" style="display:block;display: 0 auto;width:150px; "> <q-img
+            :src="'/Archives_Logo3.svg'"
+            id="archives-logo"
+            class="q-ml-md"
+          
+          /></a>
+         
+   
+        <q-space />
+
         <q-btn
           flat
           dense
-          round
+        color="white"
           @click="leftDrawerOpen = !leftDrawerOpen"
           aria-label="Menu"
           icon="menu"
           class="q-mx-md"
         />
-
-        <q-toolbar-title shrink class="row items-center no-wrap">
-          <q-btn flat to="/" class="q-ml-sm  "
-            >Rocky Mountain College Archives</q-btn
-          >
-        </q-toolbar-title>
-
-        <q-space />
-
-        <q-space />
       </q-toolbar>
     </q-header>
+    <q-img :src="'/Montana College Deer Lodge.jpg'" id="nav-img" img-style="height:200px">
+      <div class="absolute-full text-subtitle2 flex flex-center q-mt-xl">
+        <span class="text-h3 slab q-mt-xl">
+          Rocky Mountain College Archives
+        </span>
+      </div></q-img
+    >
+    <q-toolbar   id="sub-toolbar" class="gt-sm" >
+      <q-space />
+
+        <q-btn flat label="Physical Collections" class="q-mr-sm q-ml-sm lt-md">
+        <q-menu>
+          <q-list style="min-width: 100px">
+            <q-item clickable v-close-popup>
+              <q-item-section>New tab</q-item-section>
+            </q-item>
+            <q-item clickable v-close-popup>
+              <q-item-section>New incognito tab</q-item-section>
+            </q-item>
+          </q-list>
+        </q-menu>
+      </q-btn>
+
+      <q-btn flat label="Physical Collections" class="q-mr-sm q-ml-sm gt-sm">
+        <q-menu>
+          <q-list style="min-width: 100px">
+            <q-item clickable v-close-popup>
+              <q-item-section>New tab</q-item-section>
+            </q-item>
+            <q-item clickable v-close-popup>
+              <q-item-section>New incognito tab</q-item-section>
+            </q-item>
+          </q-list>
+        </q-menu>
+      </q-btn>
+      <q-btn flat label="Digital Collections" class="q-mr-sm q-ml-sm gt-sm">
+        <q-menu>
+          <q-list style="min-width: 100px">
+            <q-item clickable v-close-popup>
+              <q-item-section>New tab</q-item-section>
+            </q-item>
+            <q-item clickable v-close-popup>
+              <q-item-section>New incognito tab</q-item-section>
+            </q-item>
+          </q-list>
+        </q-menu>
+      </q-btn>
+      <q-btn flat label="Additional Information" class="q-mr-sm q-ml-sm gt-sm">
+        <q-menu>
+          <q-list style="min-width: 100px">
+            <q-item clickable v-close-popup>
+              <q-item-section>New tab</q-item-section>
+            </q-item>
+            <q-item clickable v-close-popup>
+              <q-item-section>New incognito tab</q-item-section>
+            </q-item>
+          </q-list>
+        </q-menu>
+      </q-btn>
+      <q-btn flat label="Contact Us" class="q-mr-sm q-ml-sm gt-sm">
+        <q-menu>
+          <q-list style="min-width: 100px">
+            <q-item clickable v-close-popup>
+              <q-item-section>New tab</q-item-section>
+            </q-item>
+            <q-item clickable v-close-popup>
+              <q-item-section>New incognito tab</q-item-section>
+            </q-item>
+          </q-list>
+        </q-menu>
+      </q-btn>
+
+      <q-space />
+    </q-toolbar>
 
     <q-drawer
+    side="right"
       v-model="leftDrawerOpen"
       bordered
       elevated

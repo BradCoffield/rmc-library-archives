@@ -3,17 +3,20 @@
     <q-header elevated class="" height-hint="90">
       <q-toolbar id="primary-sticky-toolbar" class="GPL__toolbar" style="">
         <q-space />
-        <q-img
-          :src="'/Archives_Logo3.svg'"
-          id="archives-logo"
-          class="q-ml-md"
-        />
+      <a href="/" style="display:block;display: 0 auto;width:150px; "> <q-img
+            :src="'/Archives_Logo3.svg'"
+            id="archives-logo"
+            class="q-ml-md"
+          
+          /></a>
+         
+   
         <q-space />
 
         <q-btn
           flat
           dense
-          round
+        color="white"
           @click="leftDrawerOpen = !leftDrawerOpen"
           aria-label="Menu"
           icon="menu"
