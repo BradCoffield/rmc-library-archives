@@ -26,9 +26,9 @@
       img-style="height:200px"
     >
       <div class="absolute-full text-subtitle2 flex flex-center q-mt-xl">
-        <span class="text-h3 slab q-mt-xl">
-          Rocky Mountain College Archives
-        </span>
+        <h1 class="text-h3 slab q-mt-xl">
+          Heritage Archives
+        </h1>
       </div></q-img
     >
     <q-toolbar id="sub-toolbar" class="gt-sm">
@@ -101,7 +101,7 @@
 
     <nav-drawer :navDrawerOpenStatus="navDrawerOpenStatus"></nav-drawer>
 
-    <q-page-container class="">
+    <q-page-container style="padding-top:50px" class="">
       <!-- <q-page-container class="GPL__page-container"> -->
       <router-view />
     </q-page-container>
