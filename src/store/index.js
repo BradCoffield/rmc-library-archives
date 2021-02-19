@@ -48,25 +48,38 @@ const state = {
   physicalCollectionsMetadata: [
     {
       name: "College Publications",
+      icon: "auto_stories",
       thumbnail: "something.jpg",
-      briefDescription: "string"
+      briefDescription: "string",
+      longDescription:"Minim non cupidatat proident culpa est est sit excepteur non. Reprehenderit nostrud non Lorem veniam magna id. Ad ad non consequat ipsum Lorem ullamco nisi nulla dolore ad. Ullamco nostrud ea est exercitation officia dolore duis dolore enim enim non adipisicing ea reprehenderit. Nulla mollit tempor ad officia laborum elit eu consectetur do occaecat nostrud do sunt commodo.",
+      route: "/collections/physical/college-publications"
     },
     {
       name: "Historic Collections",
+      icon: "history_edu",
       thumbnail: "something.jpg",
-      briefDescription: "string"
+      briefDescription: "string",
+      longDescription:"Minim non cupidatat proident culpa est est sit excepteur non. Reprehenderit nostrud non Lorem veniam magna id. Ad ad non consequat ipsum Lorem ullamco nisi nulla dolore ad. Ullamco nostrud ea est exercitation officia dolore duis dolore enim enim non adipisicing ea reprehenderit. Nulla mollit tempor ad officia laborum elit eu consectetur do occaecat nostrud do sunt commodo.",
+      route: "/collections/physical/historic-collections"
     },
     {
       name: "Personal Collections",
+      icon: "people_alt",
       thumbnail: "something.jpg",
-      briefDescription: "string"
+      briefDescription: "string",
+      longDescription:"Minim non cupidatat proident culpa est est sit excepteur non. Reprehenderit nostrud non Lorem veniam magna id. Ad ad non consequat ipsum Lorem ullamco nisi nulla dolore ad. Ullamco nostrud ea est exercitation officia dolore duis dolore enim enim non adipisicing ea reprehenderit. Nulla mollit tempor ad officia laborum elit eu consectetur do occaecat nostrud do sunt commodo.",
+      route: "/collections/physical/personal-collections"
     },
     {
       name: "Photos",
+      icon: "camera_alt",
       thumbnail: "something.jpg",
-      briefDescription: "string"
+      briefDescription: "More than six thousand photos throughout the history of Rocky Mountain College and its precedent institutions.",
+      longDescription:"Minim non cupidatat proident culpa est est sit excepteur non. Reprehenderit nostrud non Lorem veniam magna id. Ad ad non consequat ipsum Lorem ullamco nisi nulla dolore ad. Ullamco nostrud ea est exercitation officia dolore duis dolore enim enim non adipisicing ea reprehenderit. Nulla mollit tempor ad officia laborum elit eu consectetur do occaecat nostrud do sunt commodo.",
+      route: "/collections/physical/photos"
     },
-  ]
+  ],
+  digitalCollectionsMetadata:[]
 };
 
 const getters = {};

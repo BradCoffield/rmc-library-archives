@@ -1,7 +1,7 @@
 <template>
   <q-page class="q-pa-lg" id="primary-page-wrap" style="">
     <!-- <h2 class="text-center text-uppercase">Preserving our history</h2> -->
-    
+
     <h2 class="text-left text-uppercase">OVERVIEW</h2>
     <div class="row">
       <div class="col-md-8">
@@ -21,6 +21,7 @@
           programs, school-related publications, publications of alumni
           yearbooks, and records of organizations and offices on campus.
         </p>
+    
       </div>
 
       <div class="col-md-4">
@@ -43,13 +44,9 @@
       <div class="col-12">
         <h3 class="text-uppercase">Physical</h3>
       </div>
-      <div class="col-md-3 col-xs-12 col-sm-6" >
+      <div class="col-md-3 col-xs-12 col-sm-6">
         <div class="q-pa-md ">
-          <q-img
-            :src="'https://via.placeholder.com/350x200'"
-            alt=""
-          
-          >
+          <q-img :src="'https://via.placeholder.com/350x200'" alt="">
             <div class="absolute-bottom text-subtitle1 text-center">
               Photos
             </div>
@@ -58,11 +55,7 @@
       </div>
       <div class="col-md-3 col-xs-12 col-sm-6">
         <div class="q-pa-md  ">
-          <q-img
-            :src="'https://via.placeholder.com/350x200'"
-            alt=""
-             
-          >
+          <q-img :src="'https://via.placeholder.com/350x200'" alt="">
             <div class="absolute-bottom text-subtitle1 text-center">
               Historic Collections
             </div>
@@ -71,11 +64,7 @@
       </div>
       <div class="col-md-3 col-xs-12 col-sm-6">
         <div class=" q-pa-md ">
-          <q-img
-            :src="'https://via.placeholder.com/350x200'"
-            alt=""
-             
-          >
+          <q-img :src="'https://via.placeholder.com/350x200'" alt="">
             <div class="absolute-bottom text-subtitle1 text-center">
               College Publications
             </div>
@@ -84,13 +73,9 @@
       </div>
       <div class="col-md-3 col-xs-12 col-sm-6">
         <div class="q-pa-md  ">
-          <q-img
-            :src="'https://via.placeholder.com/350x200'"
-            alt=""
-             
-          >
+          <q-img :src="'https://via.placeholder.com/350x200'" alt="">
             <div class="absolute-bottom text-subtitle1 text-center">
-              Personal Collections  
+              Personal Collections
             </div>
           </q-img>
         </div>
@@ -100,11 +85,7 @@
       </div>
       <div class="col-md-3 col-xs-12 col-sm-6">
         <div class=" q-pa-md ">
-          <q-img
-            :src="'https://via.placeholder.com/350x200'"
-            alt=""
-             
-          >
+          <q-img :src="'https://via.placeholder.com/350x200'" alt="">
             <div class="absolute-bottom text-subtitle1 text-center">
               Yearbooks
             </div>
@@ -113,11 +94,7 @@
       </div>
       <div class="col-md-3 col-xs-12 col-sm-6">
         <div class=" q-pa-md ">
-          <q-img
-            :src="'https://via.placeholder.com/350x200'"
-            alt=""
-             
-          >
+          <q-img :src="'https://via.placeholder.com/350x200'" alt="">
             <div class="absolute-bottom text-subtitle1 text-center">
               Rocky.edu Homepages
             </div>
@@ -134,6 +111,10 @@ export default {
   name: "PageIndex",
   created() {
     console.log("hiiiiiiiiiiiii");
-  }
+  },
+  data() {
+    return {};
+  },
+  
 };
 </script>

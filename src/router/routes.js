@@ -14,7 +14,7 @@ const routes = [
         component: () => import("pages/digital-collections/Yearbooks.vue")
       },
       {
-        path: "/collections/physical/photos-new",
+        path: "/collections/physical/photos",
         component: () => import("pages/physical-collections/Photos.vue")
       },
       {
