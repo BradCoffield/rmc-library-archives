@@ -8,9 +8,11 @@
       @click="leftDrawerOpen = false"
     >
       <q-scroll-area class="fit">
-        <q-toolbar class="GPL__toolbar bg-dark">
-          <q-toolbar-title class="row items-center text-grey-8 bg-dark q-pa-sm">
-            <span class=" text-white">RMC Archives</span>
+        <q-toolbar class="GPL__toolbar  bg-darknoise">
+          <q-toolbar-title class="row items-center text-grey-8 bg-darknoise q-pa-sm">
+               <a href="/" style="display:block;display: 0 auto;width:150px; ">
+          <q-img :src="'/Archives_Logo3.svg'" id="archives-logo" class="q-ml-md"
+        /></a>
           </q-toolbar-title>
         </q-toolbar>
 
