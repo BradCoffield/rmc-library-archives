@@ -1,7 +1,7 @@
 <template>
   <q-page class="q-pa-lg" id="primary-page-wrap" style="">
     <!-- <h2 class="text-center text-uppercase">Preserving our history</h2> -->
-    Well, some sort of content here and invitation into the collections.
+    
     <h2 class="text-left text-uppercase">OVERVIEW</h2>
     <div class="row">
       <div class="col-md-8">
@@ -48,7 +48,7 @@
           <q-img
             :src="'https://via.placeholder.com/350x200'"
             alt=""
-            img-style="height:200px;"
+          
           >
             <div class="absolute-bottom text-subtitle1 text-center">
               Photos
@@ -61,7 +61,7 @@
           <q-img
             :src="'https://via.placeholder.com/350x200'"
             alt=""
-            img-style="height:200px"
+             
           >
             <div class="absolute-bottom text-subtitle1 text-center">
               Historic Collections
@@ -74,7 +74,7 @@
           <q-img
             :src="'https://via.placeholder.com/350x200'"
             alt=""
-            img-style="height:200px"
+             
           >
             <div class="absolute-bottom text-subtitle1 text-center">
               College Publications
@@ -87,7 +87,7 @@
           <q-img
             :src="'https://via.placeholder.com/350x200'"
             alt=""
-            img-style="height:200px"
+             
           >
             <div class="absolute-bottom text-subtitle1 text-center">
               Personal Collections  
@@ -103,7 +103,7 @@
           <q-img
             :src="'https://via.placeholder.com/350x200'"
             alt=""
-            img-style="height:200px"
+             
           >
             <div class="absolute-bottom text-subtitle1 text-center">
               Yearbooks
@@ -116,7 +116,7 @@
           <q-img
             :src="'https://via.placeholder.com/350x200'"
             alt=""
-            img-style="height:200px"
+             
           >
             <div class="absolute-bottom text-subtitle1 text-center">
               Rocky.edu Homepages

@@ -24,14 +24,14 @@
         />
       </q-toolbar>
     </q-header>
-    <q-img :src="'/Montana College Deer Lodge.jpg'" id="nav-img" img-style="height:200px">
+    <q-img :src="'/Montana College Deer Lodge.jpg'" id="nav-img"  >
       <div class="absolute-full text-subtitle2 flex flex-center q-mt-xl">
         <span class="text-h3 slab q-mt-xl">
           Rocky Mountain College Archives
         </span>
       </div></q-img
     >
-    <q-toolbar   id="sub-toolbar" class="gt-sm" >
+    <q-toolbar   id="secondary-toolbar" class="gt-sm" >
       <q-space />
 
         <q-btn flat label="Physical Collections" class="q-mr-sm q-ml-sm lt-md">

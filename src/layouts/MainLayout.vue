@@ -20,84 +20,15 @@
         />
       </q-toolbar>
     </q-header>
-    <q-img
-      :src="'/Montana College Deer Lodge.jpg'"
-      id="nav-img"
-      img-style="height:200px"
-    >
+    <q-img :src="'/Montana College Deer Lodge.jpg'" id="nav-img">
       <div class="absolute-full text-subtitle2 flex flex-center q-mt-xl">
         <h1 class="text-h3 slab q-mt-xl">
           Heritage Archives
         </h1>
       </div></q-img
     >
-    <q-toolbar id="sub-toolbar" class="gt-sm">
-      <q-space />
 
-      <q-btn flat label="Physical Collections" class="q-mr-sm q-ml-sm lt-md">
-        <q-menu>
-          <q-list style="min-width: 100px">
-            <q-item clickable v-close-popup>
-              <q-item-section>New tab</q-item-section>
-            </q-item>
-            <q-item clickable v-close-popup>
-              <q-item-section>New incognito tab</q-item-section>
-            </q-item>
-          </q-list>
-        </q-menu>
-      </q-btn>
-
-      <q-btn flat label="Physical Collections" class="q-mr-sm q-ml-sm gt-sm">
-        <q-menu>
-          <q-list style="min-width: 100px">
-            <q-item clickable v-close-popup>
-              <q-item-section>New tab</q-item-section>
-            </q-item>
-            <q-item clickable v-close-popup>
-              <q-item-section>New incognito tab</q-item-section>
-            </q-item>
-          </q-list>
-        </q-menu>
-      </q-btn>
-      <q-btn flat label="Digital Collections" class="q-mr-sm q-ml-sm gt-sm">
-        <q-menu>
-          <q-list style="min-width: 100px">
-            <q-item clickable v-close-popup>
-              <q-item-section>New tab</q-item-section>
-            </q-item>
-            <q-item clickable v-close-popup>
-              <q-item-section>New incognito tab</q-item-section>
-            </q-item>
-          </q-list>
-        </q-menu>
-      </q-btn>
-      <q-btn flat label="Additional Information" class="q-mr-sm q-ml-sm gt-sm">
-        <q-menu>
-          <q-list style="min-width: 100px">
-            <q-item clickable v-close-popup>
-              <q-item-section>New tab</q-item-section>
-            </q-item>
-            <q-item clickable v-close-popup>
-              <q-item-section>New incognito tab</q-item-section>
-            </q-item>
-          </q-list>
-        </q-menu>
-      </q-btn>
-      <q-btn flat label="Contact Us" class="q-mr-sm q-ml-sm gt-sm">
-        <q-menu>
-          <q-list style="min-width: 100px">
-            <q-item clickable v-close-popup>
-              <q-item-section>New tab</q-item-section>
-            </q-item>
-            <q-item clickable v-close-popup>
-              <q-item-section>New incognito tab</q-item-section>
-            </q-item>
-          </q-list>
-        </q-menu>
-      </q-btn>
-
-      <q-space />
-    </q-toolbar>
+    <secondary-toolbar></secondary-toolbar>
 
     <nav-drawer :navDrawerOpenStatus="navDrawerOpenStatus"></nav-drawer>
 
@@ -111,10 +42,11 @@
 <script>
 import { Screen } from "quasar";
 import NavDrawer from "components/NavDrawer";
+import SecondaryToolbar from "components/SecondaryToolbar";
 
 export default {
   name: "ArchivesMainLayout",
-  components: { NavDrawer },
+  components: { NavDrawer, SecondaryToolbar },
   data() {
     return {
       navDrawerOpenStatus: false,
