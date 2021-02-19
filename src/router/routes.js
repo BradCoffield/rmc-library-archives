@@ -4,15 +4,14 @@ const routes = [
     component: () => import("layouts/MainLayout.vue"),
     children: [
       { path: "", component: () => import("pages/Index.vue") },
-     
-      {
-        path: "/collections/search",
-        component: () => import("pages/physical-collections/Search.vue")
-      },
-      {
-        path: "/collections/digital/yearbooks",
-        component: () => import("pages/digital-collections/Yearbooks.vue")
-      },
+
+      // {
+      //   path: "/collections/search",
+      //   component: () => import("pages/physical-collections/Search.vue")
+      // },
+      // PHYSICAL COLLECTIONS
+
+      // PHOTOS
       {
         path: "/collections/physical/photos",
         component: () => import("pages/physical-collections/Photos.vue")
@@ -21,24 +20,46 @@ const routes = [
         path: "/collections/physical/photos/view-all",
         component: () => import("pages/physical-collections/PhotosTable.vue")
       },
+// HISTORIC COLLECTIONS
       {
         path: "/collections/physical/historic-collections/view-all",
         component: () =>
           import("pages/physical-collections/HistoricCollectionsTable.vue")
       },
       {
+        path: "/collections/physical/historic-collections",
+        component: () =>
+          import("pages/physical-collections/HistoricCollections.vue")
+      },
+      // PERSONAL COLLECTIONS
+      {
         path: "/collections/physical/personal-collections/view-all",
         component: () =>
           import("pages/physical-collections/PersonalCollectionsTable.vue")
       },
       {
+        path: "/collections/physical/personal-collections",
+        component: () =>
+          import("pages/physical-collections/PersonalCollections.vue")
+      },
+      // COLLEGE PUBLICATIONS
+      {
         path: "/collections/physical/college-publications/view-all",
         component: () =>
           import("pages/physical-collections/CollegePublicationsTable.vue")
       },
+      {
+        path: "/collections/physical/college-publications",
+        component: () =>
+          import("pages/physical-collections/CollegePublications.vue")
+      },
+      // DIGITAL COLLECTIONS
+      {
+        path: "/collections/digital/yearbooks",
+        component: () => import("pages/digital-collections/Yearbooks.vue")
+      }
     ]
   },
-  
 
   // Always leave this as last one,
   // but you can also remove it
