@@ -5,10 +5,21 @@
 // .q-table tbody td {
 //   font-size: 14px !important;
 // }
- 
-body {font-family: 'Roboto Condensed', "-apple-system", "Helvetica Neue", Helvetica, Arial, sans-serif;}
-h1, h2, h3, h4, h5, h6 {font-family: 'Roboto Slab', serif;}
 
+h1,
+body {
+  font-family: "Roboto Slab", "-apple-system", "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6,
+.q-btn__content {
+  font-family: "Roboto Condensed", serif;
+}
 
 .fs14p {
   font-size: 14px;
@@ -30,20 +41,94 @@ table.q-table thead th {
   font-size: 18px !important;
 }
 
-.header-card {max-width: 350px;font-family: 'Roboto Slab', serif;}
+.header-card {
+  max-width: 350px;
+  font-family: "Roboto Slab", serif;
+}
 
-.q-layout {padding-bottom: 50px;}
+.q-layout {
+  padding-bottom: 50px;
+}
 
 .ch-input input {
   // height: 350px;
   font-size: 18px;
+}
+
+.sans-serif {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.slab {
+  font-family: "Roboto Slab", serif;
+}
+
+.q-field__control-container,
+.q-table__bottom-item {
+  font-size: 14px;
+}
+
+// Let's get into real styling
+
+#primary-sticky-toolbar {
+  height: 100px;
+  background-color: $dark;
+  color: #000;
+
+  // background-color: #ebefec;
+  background-image: $noise}
+a {
+  color: $dark;
+  text-decoration: none;
+}
+#nav-img {
+  max-height: 400px;
+}
+
+#archives-logo {
+  max-width: 150px;
+  margin-top: 30px;
+  display: block;
+}
+
+#secondary-toolbar {
+  max-width: 900px;
+  display: flex;
+  margin: -38px auto 0;
+  height: 76px;
+
+  background-color: $dark;
+  background-image:$noise;
+  .q-btn {
+    font-size: 16px;
+    color: white;
+    letter-spacing: 0.7px;
   }
+}
+div.q-item--clickable {
+  font-size: 16px;
+}
 
-  .sans-serif {font-family: 'Roboto Condensed', sans-serif;}
+#primary-page-wrap {
+  max-width: 1450px;
+  display: block;
+  margin: 0 auto;
+}
+.little-lightbox {
+	box-shadow: 1px 1px 3px lightgray;
+	padding: 1rem;
+}
 
-  .slab {font-family: 'Roboto Slab', serif;}
-
-
-  .q-field__control-container, .q-table__bottom-item{
-    font-size: 14px;
-  }
+.q-item.q-router-link--active, .q-item--active {
+  color: gray
+}
+.callout-block {
+  padding: 1rem;
+  background-color: $accent;
+  margin:0 3rem;
+  background-image: $noise;
+}
+.bg-darknoise {
+  background-image: $noise;
+  background-color: $dark;
+}
