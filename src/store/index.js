@@ -49,7 +49,7 @@ const state = {
     {
       name: "College Publications",
       icon: "auto_stories",
-      thumbnail: "something.jpg",
+      thumbnail: "https://via.placeholder.com/350x200",
       briefDescription: "string",
       longDescription:"Minim non cupidatat proident culpa est est sit excepteur non. Reprehenderit nostrud non Lorem veniam magna id. Ad ad non consequat ipsum Lorem ullamco nisi nulla dolore ad. Ullamco nostrud ea est exercitation officia dolore duis dolore enim enim non adipisicing ea reprehenderit. Nulla mollit tempor ad officia laborum elit eu consectetur do occaecat nostrud do sunt commodo.",
       route: "/collections/physical/college-publications"
@@ -57,7 +57,7 @@ const state = {
     {
       name: "Historic Collections",
       icon: "history_edu",
-      thumbnail: "something.jpg",
+      thumbnail: "https://via.placeholder.com/350x200",
       briefDescription: "string",
       longDescription:"Minim non cupidatat proident culpa est est sit excepteur non. Reprehenderit nostrud non Lorem veniam magna id. Ad ad non consequat ipsum Lorem ullamco nisi nulla dolore ad. Ullamco nostrud ea est exercitation officia dolore duis dolore enim enim non adipisicing ea reprehenderit. Nulla mollit tempor ad officia laborum elit eu consectetur do occaecat nostrud do sunt commodo.",
       route: "/collections/physical/historic-collections"
@@ -65,7 +65,7 @@ const state = {
     {
       name: "Personal Collections",
       icon: "people_alt",
-      thumbnail: "something.jpg",
+      thumbnail: "https://via.placeholder.com/350x200",
       briefDescription: "string",
       longDescription:"Minim non cupidatat proident culpa est est sit excepteur non. Reprehenderit nostrud non Lorem veniam magna id. Ad ad non consequat ipsum Lorem ullamco nisi nulla dolore ad. Ullamco nostrud ea est exercitation officia dolore duis dolore enim enim non adipisicing ea reprehenderit. Nulla mollit tempor ad officia laborum elit eu consectetur do occaecat nostrud do sunt commodo.",
       route: "/collections/physical/personal-collections"
@@ -73,13 +73,39 @@ const state = {
     {
       name: "Photos",
       icon: "camera_alt",
-      thumbnail: "something.jpg",
+      thumbnail: "https://via.placeholder.com/350x200",
       briefDescription: "More than six thousand photos throughout the history of Rocky Mountain College and its precedent institutions.",
       longDescription:"Minim non cupidatat proident culpa est est sit excepteur non. Reprehenderit nostrud non Lorem veniam magna id. Ad ad non consequat ipsum Lorem ullamco nisi nulla dolore ad. Ullamco nostrud ea est exercitation officia dolore duis dolore enim enim non adipisicing ea reprehenderit. Nulla mollit tempor ad officia laborum elit eu consectetur do occaecat nostrud do sunt commodo.",
       route: "/collections/physical/photos"
     },
   ],
-  digitalCollectionsMetadata:[]
+  digitalCollectionsMetadata:[
+    {
+      name: "Digital Photos",
+      icon: "camera_alt",
+      thumbnail: "https://via.placeholder.com/350x200",
+      briefDescription: "More than six thousand photos throughout the history of Rocky Mountain College and its precedent institutions.",
+      longDescription:"Minim non cupidatat proident culpa est est sit excepteur non. Reprehenderit nostrud non Lorem veniam magna id. Ad ad non consequat ipsum Lorem ullamco nisi nulla dolore ad. Ullamco nostrud ea est exercitation officia dolore duis dolore enim enim non adipisicing ea reprehenderit. Nulla mollit tempor ad officia laborum elit eu consectetur do occaecat nostrud do sunt commodo.",
+      route: "/collections/physical/photos"
+    },
+    {
+      name: "Yearbooks",
+      icon: "camera_alt",
+      thumbnail: "https://via.placeholder.com/350x200",
+      briefDescription: "More than six thousand photos throughout the history of Rocky Mountain College and its precedent institutions.",
+      longDescription:"Minim non cupidatat proident culpa est est sit excepteur non. Reprehenderit nostrud non Lorem veniam magna id. Ad ad non consequat ipsum Lorem ullamco nisi nulla dolore ad. Ullamco nostrud ea est exercitation officia dolore duis dolore enim enim non adipisicing ea reprehenderit. Nulla mollit tempor ad officia laborum elit eu consectetur do occaecat nostrud do sunt commodo.",
+      route: "/collections/physical/photos"
+    },
+    {
+      name: "Rocky.edu Homepages",
+      icon: "camera_alt",
+      thumbnail: "https://via.placeholder.com/350x200",
+      briefDescription: "More than six thousand photos throughout the history of Rocky Mountain College and its precedent institutions.",
+      longDescription:"Minim non cupidatat proident culpa est est sit excepteur non. Reprehenderit nostrud non Lorem veniam magna id. Ad ad non consequat ipsum Lorem ullamco nisi nulla dolore ad. Ullamco nostrud ea est exercitation officia dolore duis dolore enim enim non adipisicing ea reprehenderit. Nulla mollit tempor ad officia laborum elit eu consectetur do occaecat nostrud do sunt commodo.",
+      route: "/collections/physical/photos"
+    },
+
+  ]
 };
 
 const getters = {};

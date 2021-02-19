@@ -38,11 +38,19 @@
     <q-btn flat label="Digital Collections" class="q-mr-sm q-ml-sm gt-sm">
       <q-menu>
         <q-list style="min-width: 100px">
-          <q-item clickable v-close-popup>
-            <q-item-section>New tab</q-item-section>
-          </q-item>
-          <q-item clickable v-close-popup>
-            <q-item-section>New incognito tab</q-item-section>
+                <q-item
+            v-for="link in digitalCollectionsMetadata"
+            :key="link.name"
+            clickable
+            :to="link.route"
+            class="GPL__drawer-item"
+          >
+            <q-item-section avatar>
+              <q-icon :name="link.icon" />
+            </q-item-section>
+            <q-item-section>
+              <q-item-label>{{ link.name }}</q-item-label>
+            </q-item-section>
           </q-item>
         </q-list>
       </q-menu>
@@ -78,12 +86,10 @@
 
 <script>
 export default {
-  computed: {
-    pageTitle() {
-      return this.$store.state.pageTitle;
-    },
-    physicalCollectionsMetadata() {
-      return this.$store.state.physicalCollectionsMetadata;
+  data(){
+    return{
+      physicalCollectionsMetadata: this.$store.state.physicalCollectionsMetadata,
+      digitalCollectionsMetadata: this.$store.state.digitalCollectionsMetadata,
     }
   }
 };

@@ -21,16 +21,16 @@
           programs, school-related publications, publications of alumni
           yearbooks, and records of organizations and offices on campus.
         </p>
-    
+   
       </div>
 
       <div class="col-md-4">
         <!-- <h3 class=" q-mb-md text-h5">Access &amp; Policies</h3> -->
-        <div class="callout-block">
-          <p class="text-body2">
+        <div class="callout-block sans-serif">
+          <p class=" ">
             The Heritage Archives are located in the DeRosier Educational
             Resource Center and may be accessed by appointment:
-            <em>Monday - Friday: 8:30 a.m. - 4:30 p.m.</em>
+            Monday - Friday: 8:30 a.m. - 4:30 p.m.
           </p>
           <p>
             <a href="mailto:library@rocky.edu">library@rocky.edu</a> |
@@ -44,64 +44,41 @@
       <div class="col-12">
         <h3 class="text-uppercase">Physical</h3>
       </div>
-      <div class="col-md-3 col-xs-12 col-sm-6">
-        <div class="q-pa-md ">
-          <q-img :src="'https://via.placeholder.com/350x200'" alt="">
-            <div class="absolute-bottom text-subtitle1 text-center">
-              Photos
-            </div>
-          </q-img>
+
+      <template v-for="link in physicalCollectionsMetadata">
+        <div class="col-md-3 col-xs-12 col-sm-6" :key="link.name">
+          <div class="q-pa-md ">
+            <router-link :to="link.route">
+              <q-img :src="'https://via.placeholder.com/350x200'" alt="" >
+                <div class="absolute-bottom text-subtitle1 text-center">
+                  {{ link.name }}
+                </div>
+              </q-img>
+            </router-link>
+          </div>
         </div>
+        </template>
+
+      
       </div>
-      <div class="col-md-3 col-xs-12 col-sm-6">
-        <div class="q-pa-md  ">
-          <q-img :src="'https://via.placeholder.com/350x200'" alt="">
-            <div class="absolute-bottom text-subtitle1 text-center">
-              Historic Collections
-            </div>
-          </q-img>
-        </div>
-      </div>
-      <div class="col-md-3 col-xs-12 col-sm-6">
-        <div class=" q-pa-md ">
-          <q-img :src="'https://via.placeholder.com/350x200'" alt="">
-            <div class="absolute-bottom text-subtitle1 text-center">
-              College Publications
-            </div>
-          </q-img>
-        </div>
-      </div>
-      <div class="col-md-3 col-xs-12 col-sm-6">
-        <div class="q-pa-md  ">
-          <q-img :src="'https://via.placeholder.com/350x200'" alt="">
-            <div class="absolute-bottom text-subtitle1 text-center">
-              Personal Collections
-            </div>
-          </q-img>
-        </div>
-      </div>
+       <div class="row  wrap">
       <div class="col-12">
         <h3 class="text-uppercase">Digital</h3>
       </div>
-      <div class="col-md-3 col-xs-12 col-sm-6">
-        <div class=" q-pa-md ">
-          <q-img :src="'https://via.placeholder.com/350x200'" alt="">
-            <div class="absolute-bottom text-subtitle1 text-center">
-              Yearbooks
-            </div>
-          </q-img>
+     <template v-for="link in digitalCollectionsMetadata">
+        <div class="col-md-3 col-xs-12 col-sm-6" :key="link.name">
+          <div class="q-pa-md ">
+            <router-link :to="link.route">
+              <q-img :src="'https://via.placeholder.com/350x200'" alt="" >
+                <div class="absolute-bottom text-subtitle1 text-center">
+                  {{ link.name }}
+                </div>
+              </q-img>
+            </router-link>
+          </div>
         </div>
-      </div>
-      <div class="col-md-3 col-xs-12 col-sm-6">
-        <div class=" q-pa-md ">
-          <q-img :src="'https://via.placeholder.com/350x200'" alt="">
-            <div class="absolute-bottom text-subtitle1 text-center">
-              Rocky.edu Homepages
-            </div>
-          </q-img>
-        </div>
-      </div>
-    </div>
+        </template>
+       </div>
   </q-page>
 </template>
 
@@ -113,8 +90,10 @@ export default {
     console.log("hiiiiiiiiiiiii");
   },
   data() {
-    return {};
-  },
-  
+    return {
+      physicalCollectionsMetadata: this.$store.state.physicalCollectionsMetadata,
+      digitalCollectionsMetadata: this.$store.state.digitalCollectionsMetadata
+    };
+  }
 };
 </script>
