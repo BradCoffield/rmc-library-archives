@@ -39,7 +39,7 @@
         </div>
       </div>
     </div>
-    <h2 class="text-left text-uppercase">Collections</h2>
+    <h2 class="text-left text-uppercase" style="margin-bottom:5px;">Collections</h2>
     <div class="row  wrap">
       <div class="col-12">
         <h3 class="text-uppercase">Physical</h3>

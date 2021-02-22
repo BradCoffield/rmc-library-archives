@@ -6,7 +6,7 @@
         <div class="q-ma-xl">
           <q-img :src="'https://via.placeholder.com/350x200'" alt="">
             <div class="absolute-bottom text-subtitle1 text-center">
-              Photos
+              {{collectionTitle}}
             </div>
           </q-img>
         </div>
@@ -23,11 +23,15 @@
             ipsum dolore. Laboris sunt eiusmod labore ipsum esse. Laboris mollit
             eiusmod commodo et non dolore officia officia aute sint.
           </p>
-          <q-btn
-          label="Browse and search the collection"
-          to="photos/view-all">
-
-          </q-btn>
+          <div id="view-collection-details-button">
+            <q-btn
+            label="Browse and search the collection"
+            to="photos/view-all"
+            
+            icon-right="keyboard_arrow_right"
+            padding="md">
+            </q-btn>
+          </div>
         </div>
       </div>
     </div>
@@ -35,7 +39,10 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data(){return{  collectionTitle: "Photos"}}
+
+};
 </script>
 
 <style></style>

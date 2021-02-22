@@ -133,3 +133,8 @@ div.q-item--clickable {
   background-image: $noise;
   background-color: $dark;
 }
+
+#view-collection-details-button{
+  margin-top: 2rem;
+  .q-btn__content{font-size: 18px;}
+}

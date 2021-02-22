@@ -1,13 +1,8 @@
 <template>
-  <q-page >
+ <q-page class="q-pa-lg" id="primary-page-wrap" style="">
+    <h2 class="text-center text-uppercase">Browse {{pageTitle}}</h2>
      <PCTable :name="pageTitle" :columns="columns" :data="data" sortBy="contents" :loading="loading" ></PCTable>
-    <!-- <div class="q-pa-md">
-      <q-card class="q-pa-md bg-dark q-mb-xl q-mt-xl text-primary header-card">
-        <h2>{{ pageTitle }}</h2>
-        <span> Total items: {{ data.length }}</span>
-      </q-card>
-      <PCTable :name="pageTitle" :columns="columns" :data="data" sortBy="contents" :loading="loading" ></PCTable>
-    </div> -->
+ 
   </q-page>
 </template>
 

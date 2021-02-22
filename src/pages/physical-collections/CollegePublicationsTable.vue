@@ -1,5 +1,6 @@
 <template>
-  <q-page>
+<q-page class="q-pa-lg" id="primary-page-wrap" style="">
+    <h2 class="text-center text-uppercase">Browse {{pageTitle}}</h2>
     <PCTable
       :name="pageTitle"
       :columns="columns"
