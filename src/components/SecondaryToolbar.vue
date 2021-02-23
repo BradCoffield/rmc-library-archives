@@ -55,29 +55,11 @@
         </q-list>
       </q-menu>
     </q-btn>
-    <q-btn flat label="Additional Information" class="q-mr-sm q-ml-sm gt-sm">
-      <q-menu>
-        <q-list style="min-width: 100px">
-          <q-item clickable v-close-popup>
-            <q-item-section>New tab</q-item-section>
-          </q-item>
-          <q-item clickable v-close-popup>
-            <q-item-section>New incognito tab</q-item-section>
-          </q-item>
-        </q-list>
-      </q-menu>
+    <q-btn flat label="Archives Policy" class="q-mr-sm q-ml-sm gt-sm" to="/archives-policy">
+ 
     </q-btn>
-    <q-btn flat label="Contact Us" class="q-mr-sm q-ml-sm gt-sm">
-      <q-menu>
-        <q-list style="min-width: 100px">
-          <q-item clickable v-close-popup>
-            <q-item-section>New tab</q-item-section>
-          </q-item>
-          <q-item clickable v-close-popup>
-            <q-item-section>New incognito tab</q-item-section>
-          </q-item>
-        </q-list>
-      </q-menu>
+    <q-btn flat label="Contact Us" class="q-mr-sm q-ml-sm gt-sm" to="/contact-us">
+    
     </q-btn>
 
     <q-space />

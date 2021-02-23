@@ -22,9 +22,11 @@
     </q-header>
     <q-img :src="'/Montana College Deer Lodge.jpg'" id="nav-img">
       <div class="absolute-full text-subtitle2 flex flex-center q-mt-xl">
-        <h1 class="text-h3 slab q-mt-xl">
-          Heritage Archives
-        </h1>
+        <a href="/" style="color:inherit">
+          <h1 class="text-h3 slab q-mt-xl">
+            Heritage Archives
+          </h1>
+        </a>
       </div></q-img
     >
 
