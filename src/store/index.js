@@ -86,7 +86,7 @@ const state = {
       thumbnail: "https://via.placeholder.com/350x200",
       briefDescription: "More than six thousand photos throughout the history of Rocky Mountain College and its precedent institutions.",
       longDescription:"Minim non cupidatat proident culpa est est sit excepteur non. Reprehenderit nostrud non Lorem veniam magna id. Ad ad non consequat ipsum Lorem ullamco nisi nulla dolore ad. Ullamco nostrud ea est exercitation officia dolore duis dolore enim enim non adipisicing ea reprehenderit. Nulla mollit tempor ad officia laborum elit eu consectetur do occaecat nostrud do sunt commodo.",
-      route: "/collections/physical/photos"
+      route: "/collections/digital/digital-photos"
     },
     {
       name: "Yearbooks",
@@ -94,7 +94,7 @@ const state = {
       thumbnail: "https://via.placeholder.com/350x200",
       briefDescription: "More than six thousand photos throughout the history of Rocky Mountain College and its precedent institutions.",
       longDescription:"Minim non cupidatat proident culpa est est sit excepteur non. Reprehenderit nostrud non Lorem veniam magna id. Ad ad non consequat ipsum Lorem ullamco nisi nulla dolore ad. Ullamco nostrud ea est exercitation officia dolore duis dolore enim enim non adipisicing ea reprehenderit. Nulla mollit tempor ad officia laborum elit eu consectetur do occaecat nostrud do sunt commodo.",
-      route: "/collections/physical/photos"
+      route: "/collections/digital/yearbooks"
     },
     {
       name: "Rocky.edu Homepages",
@@ -102,7 +102,7 @@ const state = {
       thumbnail: "https://via.placeholder.com/350x200",
       briefDescription: "More than six thousand photos throughout the history of Rocky Mountain College and its precedent institutions.",
       longDescription:"Minim non cupidatat proident culpa est est sit excepteur non. Reprehenderit nostrud non Lorem veniam magna id. Ad ad non consequat ipsum Lorem ullamco nisi nulla dolore ad. Ullamco nostrud ea est exercitation officia dolore duis dolore enim enim non adipisicing ea reprehenderit. Nulla mollit tempor ad officia laborum elit eu consectetur do occaecat nostrud do sunt commodo.",
-      route: "/collections/physical/photos"
+      route: "/collections/digital/rmc-homepages"
     },
 
   ]

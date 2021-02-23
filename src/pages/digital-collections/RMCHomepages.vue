@@ -4,8 +4,7 @@
     <div class="row wrap">
       <div class="col-xs-12 col-md-6 ">
         <div class="q-ma-xl">
-          <q-img :src="'RMC-Digitized-Yearbooks-1.png'" alt="">
-           <!-- <img src="RMC-Digitized-Yearbooks-1.png" style="max-width:550px" class="q-ma-xl" alt=""> -->
+          <q-img :src="'https://via.placeholder.com/350x200'" alt="">
             <div class="absolute-bottom text-subtitle1 text-center">
               {{ collectionTitle }}
             </div>
@@ -15,7 +14,7 @@
       <div class="col-xs-12 col-md-6">
         <div class="q-ma-xl">
           <p class="text-body1">
-            This is a bit of information about the collection. Eighty-two yearbooks from 1910 - 2012. Deserunt ut nulla
+            This is a bit of information about the collection. Deserunt ut nulla
             aliqua qui eiusmod deserunt tempor dolore amet ipsum dolore. Laboris
             sunt eiusmod labore ipsum esse. Laboris mollit eiusmod commodo et
             non dolore officia officia aute sint.
@@ -26,10 +25,10 @@
             eiusmod commodo et non dolore officia officia aute sint.
           </p>
           <div id="view-collection-details-button">
-            <a    href="https://mtmemory.org/digital/collection/p103401ccp2_ew1"
+            <a    href="https://photos.rocky.edu/"
                   target="_blank" style="color:inherit">
                 <q-btn
-                  label="View online yearbooks"
+                  label="Explore recent homepages"
                
                   icon-right="keyboard_arrow_right"
                   padding="md"
@@ -46,7 +45,7 @@
 <script>
 export default {
   data() {
-    return { collectionTitle: "Yearbooks" };
+    return { collectionTitle: "RMC Homepages" };
   }
 };
 </script>

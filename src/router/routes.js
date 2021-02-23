@@ -57,7 +57,15 @@ const routes = [
       {
         path: "/collections/digital/yearbooks",
         component: () => import("pages/digital-collections/Yearbooks.vue")
-      }
+      },
+      {
+        path: "/collections/digital/digital-photos",
+        component: () => import("pages/digital-collections/DigitalPhotos.vue")
+      },
+      {
+        path: "/collections/digital/rmc-homepages",
+        component: () => import("pages/digital-collections/RMCHomepages.vue")
+      },
     ]
   },
 
