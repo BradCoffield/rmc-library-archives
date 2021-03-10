@@ -21,7 +21,6 @@
           programs, school-related publications, publications of alumni
           yearbooks, and records of organizations and offices on campus.
         </p>
-   
       </div>
 
       <div class="col-md-4">
@@ -29,8 +28,8 @@
         <div class="callout-block sans-serif">
           <p class=" ">
             The Heritage Archives are located in the DeRosier Educational
-            Resource Center and may be accessed by appointment:
-            Monday - Friday: 8:30 a.m. - 4:30 p.m.
+            Resource Center and may be accessed by appointment: Monday - Friday:
+            8:30 a.m. - 4:30 p.m.
           </p>
           <p>
             <a href="mailto:library@rocky.edu">library@rocky.edu</a> |
@@ -39,7 +38,9 @@
         </div>
       </div>
     </div>
-    <h2 class="text-left text-uppercase" style="margin-bottom:5px;">Collections</h2>
+    <h2 class="text-left text-uppercase" style="margin-bottom:5px;">
+      Collections
+    </h2>
     <div class="row  wrap">
       <div class="col-12">
         <h3 class="text-uppercase">Physical</h3>
@@ -49,7 +50,7 @@
         <div class="col-md-3 col-xs-12 col-sm-6" :key="link.name">
           <div class="q-pa-md ">
             <router-link :to="link.route">
-              <q-img :src="'https://via.placeholder.com/350x200'" alt="" >
+              <q-img :src="link.thumbnail" alt="">
                 <div class="absolute-bottom text-subtitle1 text-center">
                   {{ link.name }}
                 </div>
@@ -57,19 +58,19 @@
             </router-link>
           </div>
         </div>
-        </template>
+      </template>
 
       
-      </div>
-       <div class="row  wrap">
+    </div>
+    <div class="row  wrap">
       <div class="col-12">
         <h3 class="text-uppercase">Digital</h3>
       </div>
-     <template v-for="link in digitalCollectionsMetadata">
+      <template v-for="link in digitalCollectionsMetadata">
         <div class="col-md-3 col-xs-12 col-sm-6" :key="link.name">
           <div class="q-pa-md ">
             <router-link :to="link.route">
-              <q-img :src="'https://via.placeholder.com/350x200'" alt="" >
+              <q-img :src="link.thumbnail" alt="">
                 <div class="absolute-bottom text-subtitle1 text-center">
                   {{ link.name }}
                 </div>
@@ -77,8 +78,8 @@
             </router-link>
           </div>
         </div>
-        </template>
-       </div>
+      </template>
+    </div>
   </q-page>
 </template>
 
@@ -91,7 +92,8 @@ export default {
   },
   data() {
     return {
-      physicalCollectionsMetadata: this.$store.state.physicalCollectionsMetadata,
+      physicalCollectionsMetadata: this.$store.state
+        .physicalCollectionsMetadata,
       digitalCollectionsMetadata: this.$store.state.digitalCollectionsMetadata
     };
   }

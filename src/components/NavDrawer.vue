@@ -46,7 +46,7 @@
         <q-item
           ><span class="text-h5 text-grey-7">Digital Collections</span></q-item
         >
-          <q-item
+        <q-item
           v-for="link in digitalCollectionsMetadata"
           :key="link.name"
           clickable
@@ -63,9 +63,7 @@
 
         <q-separator class="q-my-md" />
         <q-item
-          ><span class="text-h5 text-grey-7"
-            >Additional Information</span
-          ></q-item
+          ><span class="text-h5 text-grey-7">Additional Links</span></q-item
         >
         <q-item
           v-for="link in links3"
@@ -97,76 +95,16 @@ export default {
       physicalCollectionsMetadata: this.$store.state
         .physicalCollectionsMetadata,
       digitalCollectionsMetadata: this.$store.state.digitalCollectionsMetadata,
-      links1: [
-        {
-          icon: "camera_alt",
-          text: "Photos",
-          destination: "/collections/physical/photos/view-all"
-        },
-        {
-          icon: "history_edu",
-          text: "Historic Collections",
-          destination: "/collections/physical/historic-collections/view-all"
-        },
-        {
-          icon: "auto_stories",
-          text: "College Publications",
-          destination: "/collections/physical/college-publications/view-all"
-        },
-        {
-          icon: "people_alt",
-          text: "Personal Collections",
-          destination: "/collections/physical/personal-collections/view-all"
-        }
-      ],
-      links2: [
-        {
-          icon: "photo_album",
-          text: "Yearbooks",
-          destination: "/collections/digital/yearbooks"
-        }
-      ],
       links3: [
         {
-          icon: "list",
-          text: "List Weblinks",
-          destination: "/weblinks/list-weblinks"
+          icon: "note",
+          text: "Archives Policy",
+          destination: "/archives-policy"
         },
         {
-          icon: "link",
-          text: "Add Weblink",
-          destination: "/weblinks/add-weblink"
-        }
-      ],
-      links4: [
-        {
-          icon: "list",
-          text: "List Instruction Videos",
-          destination: "/videos/list-instruction-videos"
-        },
-        {
-          icon: "video_library",
-          text: "Add Instruction Video",
-          destination: "/videos/add-instruction-video"
-        }
-      ],
-      links5: [
-        {
-          icon: "list",
-          text: "List eBooks",
-          destination: "/ebooks/list-ebooks"
-        },
-        {
-          icon: "menu_book",
-          text: "Add eBook",
-          destination: "/ebooks/add-ebook"
-        }
-      ],
-      links6: [
-        {
-          icon: "select_all",
-          text: "Custom Boxes",
-          destination: "/custom-boxes"
+          icon: "insert_emoticon",
+          text: "Contact Us",
+          destination: "/contact-us"
         }
       ]
     };

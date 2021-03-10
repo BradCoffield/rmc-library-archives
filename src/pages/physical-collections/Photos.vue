@@ -4,9 +4,9 @@
     <div class="row wrap">
       <div class="col-xs-12 col-md-6 ">
         <div class="q-ma-xl">
-          <q-img :src="'https://via.placeholder.com/350x200'" alt="">
+          <q-img :src="collectionImage" alt="">
             <div class="absolute-bottom text-subtitle1 text-center">
-              {{collectionTitle}}
+              {{ thumbnailTitle }}
             </div>
           </q-img>
         </div>
@@ -40,8 +40,21 @@
 
 <script>
 export default {
-  data(){return{  collectionTitle: "Photos"}}
-
+  data(){return{  collectionTitle: "Photos",
+      physicalCollectionsMetadata: this.$store.state
+        .physicalCollectionsMetadata,
+      collectionImage: "",
+      thumbnailTitle: ""
+    };
+  },
+  created() {
+    this.physicalCollectionsMetadata.forEach(metadata => {
+      if (metadata.name == this.collectionTitle) {
+        this.collectionImage = metadata.thumbnail;
+        this.thumbnailTitle = metadata.thumbnailTitle;
+      }
+    });
+  }
 };
 </script>
 

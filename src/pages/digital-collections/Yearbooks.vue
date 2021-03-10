@@ -4,11 +4,11 @@
     <div class="row wrap">
       <div class="col-xs-12 col-md-6 ">
         <div class="q-ma-xl">
-          <q-img :src="'RMC-Digitized-Yearbooks-1.png'" alt="">
-           <!-- <img src="RMC-Digitized-Yearbooks-1.png" style="max-width:550px" class="q-ma-xl" alt=""> -->
+         <q-img :src="collectionImage" alt="">
             <div class="absolute-bottom text-subtitle1 text-center">
-              {{ collectionTitle }}
+              {{ thumbnailTitle }}
             </div>
+          </q-img>
           </q-img>
         </div>
       </div>
@@ -46,7 +46,20 @@
 <script>
 export default {
   data() {
-    return { collectionTitle: "Yearbooks" };
+    return { collectionTitle: "Online Yearbooks",
+      digitalCollectionsMetadata: this.$store.state
+        .digitalCollectionsMetadata,
+      collectionImage: "",
+      thumbnailTitle: ""
+    };
+  },
+  created() {
+    this.digitalCollectionsMetadata.forEach(metadata => {
+      if (metadata.name == this.collectionTitle) {
+        this.collectionImage = metadata.thumbnail;
+        this.thumbnailTitle = metadata.thumbnailTitle;
+      }
+    });
   }
 };
 </script>
