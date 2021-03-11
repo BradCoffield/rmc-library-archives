@@ -14,15 +14,7 @@
       <div class="col-xs-12 col-md-6">
         <div class="q-ma-xl">
           <p class="text-body1">
-            This is a bit of information about the collection. Deserunt ut nulla
-            aliqua qui eiusmod deserunt tempor dolore amet ipsum dolore. Laboris
-            sunt eiusmod labore ipsum esse. Laboris mollit eiusmod commodo et
-            non dolore officia officia aute sint.
-          </p>
-          <p class="text-body1">
-            Deserunt ut nulla aliqua qui eiusmod deserunt tempor dolore amet
-            ipsum dolore. Laboris sunt eiusmod labore ipsum esse. Laboris mollit
-            eiusmod commodo et non dolore officia officia aute sint.
+            Personal and professional papers and other materials related to a variety of important figures in the history of RMC. Including collections from Arthur DeRoser, Ernest T. Eaton, Alice Giddings-King, and Lewis &amp; Mary Eaton.
           </p>
           <div id="view-collection-details-button">
             <q-btn

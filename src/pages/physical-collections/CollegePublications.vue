@@ -14,15 +14,18 @@
       <div class="col-xs-12 col-md-6">
         <div class="q-ma-xl">
           <p class="text-body1">
-            This is a bit of information about the collection. Deserunt ut nulla
-            aliqua qui eiusmod deserunt tempor dolore amet ipsum dolore. Laboris
-            sunt eiusmod labore ipsum esse. Laboris mollit eiusmod commodo et
-            non dolore officia officia aute sint.
+            As you might expect, the Archives collects physical yearbooks from
+            Rocky Mountain College and it's antecedent institutions. Also in our
+            College Publications collection are materials that are the result of
+            student efforts like literary journals and dramatic production
+            programs.
           </p>
           <p class="text-body1">
-            Deserunt ut nulla aliqua qui eiusmod deserunt tempor dolore amet
-            ipsum dolore. Laboris sunt eiusmod labore ipsum esse. Laboris mollit
-            eiusmod commodo et non dolore officia officia aute sint.
+            In addition to these types of materials the Archives is also
+            responsible for collecting and maintaining important records and
+            artifacts that are created throughout the routine workings of the
+            college. These include course catalogs, faculty meeting minutes,
+            and accreditation process output.
           </p>
           <div id="view-collection-details-button">
             <q-btn
@@ -46,18 +49,17 @@ export default {
       collectionTitle: "College Publications",
       physicalCollectionsMetadata: this.$store.state
         .physicalCollectionsMetadata,
-      collectionImage:"",
-      thumbnailTitle:""
+      collectionImage: "",
+      thumbnailTitle: ""
     };
   },
-  created(){
-    this.physicalCollectionsMetadata.forEach((metadata) => {
-      if (metadata.name == this.collectionTitle){
-        this.collectionImage = metadata.thumbnail
-        this.thumbnailTitle = metadata.thumbnailTitle
+  created() {
+    this.physicalCollectionsMetadata.forEach(metadata => {
+      if (metadata.name == this.collectionTitle) {
+        this.collectionImage = metadata.thumbnail;
+        this.thumbnailTitle = metadata.thumbnailTitle;
       }
-      
-    })
+    });
   }
 };
 </script>

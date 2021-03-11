@@ -14,16 +14,9 @@
       <div class="col-xs-12 col-md-6">
         <div class="q-ma-xl">
           <p class="text-body1">
-            This is a bit of information about the collection. Deserunt ut nulla
-            aliqua qui eiusmod deserunt tempor dolore amet ipsum dolore. Laboris
-            sunt eiusmod labore ipsum esse. Laboris mollit eiusmod commodo et
-            non dolore officia officia aute sint.
+          The Archives Historic Collections includes materials on the now distant workings and history of Rocky Mountain College's antecedent institutions including Intermountain Union College and the College of Montana. It also includes documents related to the inception of RMC.
           </p>
-          <p class="text-body1">
-            Deserunt ut nulla aliqua qui eiusmod deserunt tempor dolore amet
-            ipsum dolore. Laboris sunt eiusmod labore ipsum esse. Laboris mollit
-            eiusmod commodo et non dolore officia officia aute sint.
-          </p>
+       
           <div id="view-collection-details-button">
             <q-btn
               label="Browse and search the collection"

@@ -9,21 +9,16 @@
               {{ thumbnailTitle }}
             </div>
           </q-img>
-          </q-img>
+        
         </div>
       </div>
       <div class="col-xs-12 col-md-6">
         <div class="q-ma-xl">
           <p class="text-body1">
-            This is a bit of information about the collection. Eighty-two yearbooks from 1910 - 2012. Deserunt ut nulla
-            aliqua qui eiusmod deserunt tempor dolore amet ipsum dolore. Laboris
-            sunt eiusmod labore ipsum esse. Laboris mollit eiusmod commodo et
-            non dolore officia officia aute sint.
+            Generously digitized by the Internet Archive and hosted by the Montana Memory Project this collection goes back to 1910 and has the vast majority of the yearbooks published in the interim.
           </p>
           <p class="text-body1">
-            Deserunt ut nulla aliqua qui eiusmod deserunt tempor dolore amet
-            ipsum dolore. Laboris sunt eiusmod labore ipsum esse. Laboris mollit
-            eiusmod commodo et non dolore officia officia aute sint.
+           You are able to flip through each page and really explore the history of the school in a fun way. Check it out!
           </p>
           <div id="view-collection-details-button">
             <a    href="https://mtmemory.org/digital/collection/p103401ccp2_ew1"

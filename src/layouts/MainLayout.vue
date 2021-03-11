@@ -20,6 +20,13 @@
         />
       </q-toolbar>
     </q-header>
+       <q-footer id="footer1"  >
+        <div style="max-width: 300px;margin:auto;font-size:18px">
+          <q-btn icon="house" type="a" href="https://www.rocky.edu/library" target="_blank" label="Back to RMC Library"  flat class="q-ma-md bg-darknoise" /> 
+        </div>
+   <!-- <secondary-toolbar></secondary-toolbar> -->
+      
+      </q-footer>
     <q-img :src="'/Montana College Deer Lodge.jpg'" id="nav-img">
       <div class="absolute-full text-subtitle2 flex flex-center q-mt-xl">
         <a href="/" style="color:inherit">

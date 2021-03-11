@@ -70,13 +70,20 @@ table.q-table thead th {
 
 // Let's get into real styling
 
-#primary-sticky-toolbar {
+#primary-sticky-toolbar,
+#footer1 {
   height: 100px;
   background-color: $dark;
-  color: #000;
-
-  // background-color: #ebefec;
-  background-image: $noise}
+  background-image: $noise;
+}
+#footer1 {
+  text-align: center;
+  // height:200px;
+  flex-direction: column;
+  display: flex;
+  flex-wrap: wrap;
+  #secondary-toolbar{ margin: 0px auto 0;}
+}
 a {
   color: $dark;
   text-decoration: none;
@@ -98,7 +105,7 @@ a {
   height: 76px;
 
   background-color: $dark;
-  background-image:$noise;
+  background-image: $noise;
   .q-btn {
     font-size: 16px;
     color: white;
@@ -115,17 +122,18 @@ div.q-item--clickable {
   margin: 0 auto;
 }
 .little-lightbox {
-	box-shadow: 1px 1px 3px lightgray;
-	padding: 1rem;
+  box-shadow: 1px 1px 3px lightgray;
+  padding: 1rem;
 }
 
-.q-item.q-router-link--active, .q-item--active {
-  color: gray
+.q-item.q-router-link--active,
+.q-item--active {
+  color: gray;
 }
 .callout-block {
   padding: 1rem;
   background-color: $accent;
-  margin:0 3rem;
+  margin: 0 3rem;
   background-image: $noise;
   font-size: 16px;
 }
@@ -134,7 +142,9 @@ div.q-item--clickable {
   background-color: $dark;
 }
 
-#view-collection-details-button{
+#view-collection-details-button {
   margin-top: 2rem;
-  .q-btn__content{font-size: 18px;}
+  .q-btn__content {
+    font-size: 18px;
+  }
 }

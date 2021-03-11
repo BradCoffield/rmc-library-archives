@@ -14,15 +14,10 @@
       <div class="col-xs-12 col-md-6">
         <div class="q-ma-xl">
           <p class="text-body1">
-            This is a bit of information about the collection. Deserunt ut nulla
-            aliqua qui eiusmod deserunt tempor dolore amet ipsum dolore. Laboris
-            sunt eiusmod labore ipsum esse. Laboris mollit eiusmod commodo et
-            non dolore officia officia aute sint.
+            An online collection of digital photos, including some digitized historical photos, that enables easy browsing and download.
           </p>
           <p class="text-body1">
-            Deserunt ut nulla aliqua qui eiusmod deserunt tempor dolore amet
-            ipsum dolore. Laboris sunt eiusmod labore ipsum esse. Laboris mollit
-            eiusmod commodo et non dolore officia officia aute sint.
+            This is a collection that is consistently expanded with photos from current Rocky events!
           </p>
           <div id="view-collection-details-button">
             <a    href="https://photos.rocky.edu/"

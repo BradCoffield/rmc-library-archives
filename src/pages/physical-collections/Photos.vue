@@ -14,14 +14,11 @@
       <div class="col-xs-12 col-md-6">
         <div class="q-ma-xl">
           <p class="text-body1">
-            This is a bit of information about the collection. Deserunt ut nulla aliqua qui eiusmod deserunt tempor dolore amet
-            ipsum dolore. Laboris sunt eiusmod labore ipsum esse. Laboris mollit
-            eiusmod commodo et non dolore officia officia aute sint.
+            More than six and a half thousand images! We have preserved photographs from throughout the history of Rocky Mountain College and its antecedent institutions.
           </p>
           <p class="text-body1">
-            Deserunt ut nulla aliqua qui eiusmod deserunt tempor dolore amet
-            ipsum dolore. Laboris sunt eiusmod labore ipsum esse. Laboris mollit
-            eiusmod commodo et non dolore officia officia aute sint.
+          A wide range of topics are included. From athletics, student events, and casual student life, to images of notable events and figures from the history of RMC.
+          
           </p>
           <div id="view-collection-details-button">
             <q-btn

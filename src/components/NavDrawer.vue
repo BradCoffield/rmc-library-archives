@@ -79,8 +79,12 @@
             <q-item-label>{{ link.text }}</q-item-label>
           </q-item-section>
         </q-item>
-
+     <div style="max-width: 90%;display:block;margin:2rem auto">
+       
+        <q-btn type="a" href="https://www.rocky.edu/library" target="_blank" label="Back to RMC Library"  style="color:white" icon="house" class="bg-darknoise full-width" />
+     </div>
         <q-separator class="q-my-md" />
+        
       </q-list>
     </q-scroll-area>
   </q-drawer>
@@ -105,7 +109,9 @@ export default {
           icon: "insert_emoticon",
           text: "Contact Us",
           destination: "/contact-us"
-        }
+        },
+   
+
       ]
     };
   }
