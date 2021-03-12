@@ -14,8 +14,10 @@
       <div class="col-xs-12 col-md-6">
         <div class="q-ma-xl">
           <p class="text-body1">
-          The Archives Historic Collections includes materials on the now distant workings and history of Rocky Mountain College's antecedent institutions including Intermountain Union College and the College of Montana. It also includes documents related to the inception of RMC.
-          </p>
+         The Archives Historic Collections includes materials on the now distant workings and history of
+Rocky Mountain College&#39;s antecedent institutions including Intermountain Union College,
+Wesleyan College and the College of Montana. It also includes historical documents of Rocky
+Mountain College including program development, athletics and community outreach.        </p>
        
           <div id="view-collection-details-button">
             <q-btn

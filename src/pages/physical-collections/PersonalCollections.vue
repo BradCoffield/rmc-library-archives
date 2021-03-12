@@ -14,8 +14,9 @@
       <div class="col-xs-12 col-md-6">
         <div class="q-ma-xl">
           <p class="text-body1">
-            Personal and professional papers and other materials related to a variety of important figures in the history of RMC. Including collections from Arthur DeRoser, Ernest T. Eaton, Alice Giddings-King, and Lewis &amp; Mary Eaton.
-          </p>
+            Personal and professional papers and other materials related to a variety of important figures in
+the history of RMC. Including collections from Arthur DeRosier, Lawrence Small, Ernest T.
+Eaton and Lewis &amp; Mary Eaton.        </p>
           <div id="view-collection-details-button">
             <q-btn
               label="Browse and search the collection"

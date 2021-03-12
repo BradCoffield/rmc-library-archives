@@ -74,17 +74,17 @@ const state = {
         "Minim non cupidatat proident culpa est est sit excepteur non. Reprehenderit nostrud non Lorem veniam magna id. Ad ad non consequat ipsum Lorem ullamco nisi nulla dolore ad. Ullamco nostrud ea est exercitation officia dolore duis dolore enim enim non adipisicing ea reprehenderit. Nulla mollit tempor ad officia laborum elit eu consectetur do occaecat nostrud do sunt commodo.",
       route: "/collections/digital/yearbooks"
     },
-    {
-      name: "Rocky.edu Homepages",
-      icon: "monitor",
-      thumbnail: "_RockyEDU Homepage 3102021.png",
-      thumbnailTitle: "Rocky.edu homepage, March 2021",
-      briefDescription:
-        "More than six thousand photos throughout the history of Rocky Mountain College and its precedent institutions.",
-      longDescription:
-        "Minim non cupidatat proident culpa est est sit excepteur non. Reprehenderit nostrud non Lorem veniam magna id. Ad ad non consequat ipsum Lorem ullamco nisi nulla dolore ad. Ullamco nostrud ea est exercitation officia dolore duis dolore enim enim non adipisicing ea reprehenderit. Nulla mollit tempor ad officia laborum elit eu consectetur do occaecat nostrud do sunt commodo.",
-      route: "/collections/digital/rmc-homepages"
-    }
+    // {
+    //   name: "Rocky.edu Homepages",
+    //   icon: "monitor",
+    //   thumbnail: "_RockyEDU Homepage 3102021.png",
+    //   thumbnailTitle: "Rocky.edu homepage, March 2021",
+    //   briefDescription:
+    //     "More than six thousand photos throughout the history of Rocky Mountain College and its precedent institutions.",
+    //   longDescription:
+    //     "Minim non cupidatat proident culpa est est sit excepteur non. Reprehenderit nostrud non Lorem veniam magna id. Ad ad non consequat ipsum Lorem ullamco nisi nulla dolore ad. Ullamco nostrud ea est exercitation officia dolore duis dolore enim enim non adipisicing ea reprehenderit. Nulla mollit tempor ad officia laborum elit eu consectetur do occaecat nostrud do sunt commodo.",
+    //   route: "/collections/digital/rmc-homepages"
+    // }
   ]
 };
 

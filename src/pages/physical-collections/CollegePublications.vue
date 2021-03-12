@@ -15,17 +15,17 @@
         <div class="q-ma-xl">
           <p class="text-body1">
             As you might expect, the Archives collects physical yearbooks from
-            Rocky Mountain College and it's antecedent institutions. Also in our
-            College Publications collection are materials that are the result of
-            student efforts like literary journals and dramatic production
-            programs.
+            Rocky Mountain College and it&#39;s antecedent institutions. Also in
+            our College Publications collection are materials that are the
+            result of student efforts like literary journals, newspapers and
+            dramatic production programs.
           </p>
           <p class="text-body1">
             In addition to these types of materials the Archives is also
             responsible for collecting and maintaining important records and
             artifacts that are created throughout the routine workings of the
-            college. These include course catalogs, faculty meeting minutes,
-            and accreditation process output.
+            college. These include course catalogs, faculty meeting minutes, and
+            accreditation process output.
           </p>
           <div id="view-collection-details-button">
             <q-btn
