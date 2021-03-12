@@ -4,9 +4,9 @@ const { pool } = require("./config");
 
 const getCollection = (request, response) => {
   console.log("oy");
-  const name = request.params.name;
+  const tableName = request.params.name;
   // console.log(req)
-  pool.query(`SELECT * FROM ${name} ORDER BY id ASC`, (error, results) => {
+  pool.query(`SELECT * FROM ${tableName} ORDER BY id ASC`, (error, results) => {
     if (error) {
       throw error;
     }
@@ -16,9 +16,9 @@ const getCollection = (request, response) => {
 
 const getCollectionItemById = (request, response) => {
   const id = parseInt(request.params.id);
-  const name = request.params.name;
+  const tableName = request.params.name;
 
-  pool.query(`SELECT * FROM ${name} WHERE id = $1`, [id], (error, results) => {
+  pool.query(`SELECT * FROM ${tableName} WHERE id = $1`, [id], (error, results) => {
     if (error) {
       throw error;
     }
@@ -27,9 +27,24 @@ const getCollectionItemById = (request, response) => {
 };
  
 const addToCollection = (request, response) => {
-  const name = request.params.name;
+  const tableName = request.params.name;
 
-  if (name == "personalcollections") {
+// const { number, name, date, contents, subject } = request.body;
+// console.log(number, name, date, contents, subject);
+
+// pool.query(
+//   "INSERT INTO historiccollections (number, name, date, contents, subject) VALUES ($1, $2, $3, $4, $5)",
+//   [number, name, date, contents, subject],
+//   (error, results) => {
+//     if (error) {
+//       throw error;
+//     }
+//     response.status(201).send(results);
+//   }
+// );
+
+
+  if (tableName == "personalcollections") {
     const { number, lastname, firstname } = request.body;
     pool.query(
       "INSERT INTO personalCollections (number, lastname, firstname) VALUES ($1, $2, $3)",
@@ -43,7 +58,7 @@ const addToCollection = (request, response) => {
       }
     );
   }
-  if (name == "historiccollections") {
+  if (tableName == "historiccollections") {
     const { number, name, date, contents, subject } = request.body;
     pool.query(
       "INSERT INTO historiccollections (number, name, date, contents, subject) VALUES ($1, $2, $3, $4, $5)",
@@ -57,7 +72,7 @@ const addToCollection = (request, response) => {
       }
     );
   }
-  if (name == "collegepublications") {
+  if (tableName == "collegepublications") {
     const { number, school, contents, date, notes } = request.body;
     pool.query(
       "INSERT INTO collegepublications (number, school, contents, date, notes) VALUES ($1, $2, $3, $4, $5)",
@@ -71,7 +86,7 @@ const addToCollection = (request, response) => {
       }
     );
   }
-  if (name == "photos") {
+  if (tableName == "photos") {
     const {
       filelocation,
       filename,
@@ -114,16 +129,16 @@ const addToCollection = (request, response) => {
     );
   } else {
     console.log("nah bruh");
-    response.status(201).send(`No table by that name.`);
+    response.status(201).send(`No table by that name..`);
   }
 };
  
 const updateCollectionItem = (request, response) => {
   const id = parseInt(request.params.id);
-  const name = request.params.name;
-  console.log("updateCollectionItemPath---  ", "id: ", id, "  name:  ", name, "  request.body---", request.body)
+  const tableName = request.params.name;
+  console.log("updateCollectionItemPath---  ", "id: ", id, "  name:",name, "  request.body---", request.body)
 
-  if (name == "personalcollections") {
+  if (tableName == "personalcollections") {
     const { number, lastname, firstname } = request.body;
     pool.query(
       "UPDATE personalCollections SET number = $1, lastname = $2, firstname = $3 WHERE id = $4",
@@ -137,21 +152,23 @@ const updateCollectionItem = (request, response) => {
       }
     );
   }
-  if (name == "historiccollections") {
-    const { number, name, date, contents, subject } = request.body;
+  if (tableName == "historiccollections") {
+    console.log("ey inside historiccollections")
+    const { number, name1, date, contents, subject } = request.body;
+    console.log("other name?", name);
     pool.query(
       "UPDATE historiccollections SET number = $1, name = $2, date = $3, contents = $4, subject = $5 WHERE id = $6",
-      [number, name, date, contents, subject, id],
+      [number, name1, date, contents, subject, id],
       (error, results) => {
         if (error) {
           throw error;
         }
         console.log(results);
-        response.status(201).send(`Historic Collection ${id} updated.`);
+        // response.status(201).send(`Historic Collection ${id} updated.`);
       }
     );
   }
-  if (name == "collegepublications") {
+  if (tableName == "collegepublications") {
     const { number, school, contents, date, notes } = request.body;
     pool.query(
       "UPDATE collegepublications SET number = $1, school = $2, contents = $3, date = $4, notes = $5 WHERE id = $6",
@@ -165,7 +182,7 @@ const updateCollectionItem = (request, response) => {
       }
     );
   }
-  if (name == "photos") {
+  if (tableName == "photos") {
     const {
       filelocation,
       filename,
@@ -207,20 +224,20 @@ const updateCollectionItem = (request, response) => {
       }
     );
   } else {
-    console.log("nah bruh");
+    console.log("nah bruh1");
     response.status(201).send(`No table by that name.`);
   }
 };
 
 const deleteCollectionItem = (request, response) => {
   const id = parseInt(request.params.id);
-  const name = request.params.name;
+  const tableName = request.params.name;
 
-  pool.query(`DELETE FROM ${name} WHERE id = $1`, [id], (error, results) => {
+  pool.query(`DELETE FROM ${tableName} WHERE id = $1`, [id], (error, results) => {
     if (error) {
       throw error;
     }
-    response.status(200).send(`Item deleted from ${name} with ID: ${id}`);
+    response.status(200).send(`Item deleted from ${tableName} with ID: ${id}`);
   });
 };
 
@@ -229,6 +246,5 @@ module.exports = {
   getCollectionItemById,
   addToCollection,
   deleteCollectionItem,
-  updateCollectionItem,
-  
+  updateCollectionItem,  
 };
