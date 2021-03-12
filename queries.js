@@ -121,6 +121,7 @@ const addToCollection = (request, response) => {
 const updateCollectionItem = (request, response) => {
   const id = parseInt(request.params.id);
   const name = request.params.name;
+  console.log("updateCollectionItemPath---  ", "id: ", id, "  name:  ", name, "  request.body---", request.body)
 
   if (name == "personalcollections") {
     const { number, lastname, firstname } = request.body;
