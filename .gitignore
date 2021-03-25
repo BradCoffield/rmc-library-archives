@@ -37,3 +37,5 @@ yarn-error.log*
 populate-archives-database.js
 
 check-local.js
+
+src/add-collections-to-firestore.js

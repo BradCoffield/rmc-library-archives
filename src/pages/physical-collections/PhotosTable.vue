@@ -28,7 +28,7 @@
 import PCTable from "components/PhysicalCollectionsTable.vue";
 import getArchivesAPI from "assets/getArchivesAPI.js";
 export default {
-  name: "collections_photos",
+  name: "Photos",
   components: { PCTable },
   data() {
     return {
@@ -103,12 +103,10 @@ export default {
     (async () => {
       this.$store.commit('SET_PAGE_TITLE', this.pageTitle)
       let res = await getArchivesAPI(
-        this.pageTitle.replace(" ", "").toLowerCase()
+        this.pageTitle.replace(" ", "_").toLowerCase()
       );
 
-      let rawData = res.data;
-      console.log(rawData);
-      rawData.forEach(photo => {
+    res.forEach(photo => {
         let re = /(\\)/g;
         let re2 = /(NULL)/;
         let reNameStuff = /(,;)/;

@@ -1,6 +1,6 @@
 <template>
-<q-page class="q-pa-lg" id="primary-page-wrap" style="">
-    <h2 class="text-center text-uppercase">Browse {{pageTitle}}</h2>
+  <q-page class="q-pa-lg" id="primary-page-wrap" style="">
+    <h2 class="text-center text-uppercase">Browse {{ pageTitle }}</h2>
     <PCTable
       :name="pageTitle"
       :columns="columns"
@@ -70,16 +70,13 @@ export default {
     };
   },
   created() {
-    
     (async () => {
-      this.$store.commit('SET_PAGE_TITLE', this.pageTitle)
+      this.$store.commit("SET_PAGE_TITLE", this.pageTitle);
       let res = await getArchivesAPI(
-        this.pageTitle.replace(" ", "").toLowerCase()
+        this.pageTitle.replace(" ", "_").toLowerCase()
       );
 
-      let rawData = res.data;
-      console.log(rawData);
-      rawData.forEach(item => {
+   res.forEach(item => {
         let re = /(\\)/g;
         // let re2 = /(NULL)/;
         // let reNameStuff = /(,;)/
@@ -90,7 +87,7 @@ export default {
           id: item.id,
           number: item.number.replace(re, "")
         });
-         this.$store.commit('SET_ITEM_COUNT', this.data.length)
+        this.$store.commit("SET_ITEM_COUNT", this.data.length);
         this.loading = false;
       });
     })();
