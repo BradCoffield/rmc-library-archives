@@ -4,8 +4,13 @@ const routes = [
     component: () => import("layouts/MainLayout.vue"),
     children: [
       { path: "", component: () => import("pages/Index.vue") },
+      { path: "/login", component: () => import("pages/Login.vue") },
+
       { path: "/contact-us", component: () => import("pages/ContactUs.vue") },
-      { path: "/archives-policy", component: () => import("pages/ArchivesPolicy.vue") },
+      {
+        path: "/archives-policy",
+        component: () => import("pages/ArchivesPolicy.vue")
+      },
 
       // {
       //   path: "/collections/search",
@@ -22,7 +27,7 @@ const routes = [
         path: "/collections/physical/photos/view-all",
         component: () => import("pages/physical-collections/PhotosTable.vue")
       },
-// HISTORIC COLLECTIONS
+      // HISTORIC COLLECTIONS
       {
         path: "/collections/physical/historic-collections/view-all",
         component: () =>
@@ -67,7 +72,7 @@ const routes = [
       {
         path: "/collections/digital/rmc-homepages",
         component: () => import("pages/digital-collections/RMCHomepages.vue")
-      },
+      }
     ]
   },
 
