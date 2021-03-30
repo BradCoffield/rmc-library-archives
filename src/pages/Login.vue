@@ -1,15 +1,16 @@
 <template>
   <q-page>
     <div>
-      <q-card class="q-pa-md bg-dark q-mb-xl q-mt-xl text-primary header-card">
-        <h2>Please Login</h2></q-card
+      <q-card class="q-pa-md   q-mb-xl q-mt-xl text-primary   bg-darknoise " style="text-align:center">
+        <h2>Archives Management Login</h2></q-card
       >
       <div v-if="!this.$store.state.user">
         <div id="firebaseui-auth-container"></div>
       </div>
       <div v-else>
-        You are logged in as {{ this.$store.state.user.displayName }}
-      </div>
+        <p>You are logged in as {{ this.$store.state.user.displayName }}</p>
+        <p>You may now <router-link to="/archives-management">Edit Collections</router-link>.</p>
+        </div>
     </div>
   </q-page>
 </template>

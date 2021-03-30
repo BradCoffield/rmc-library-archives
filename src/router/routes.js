@@ -1,3 +1,5 @@
+import store from "src/store";
+
 const routes = [
   {
     path: "/",
@@ -5,7 +7,6 @@ const routes = [
     children: [
       { path: "", component: () => import("pages/Index.vue") },
       { path: "/login", component: () => import("pages/Login.vue") },
-
       { path: "/contact-us", component: () => import("pages/ContactUs.vue") },
       {
         path: "/archives-policy",
@@ -72,7 +73,16 @@ const routes = [
       {
         path: "/collections/digital/rmc-homepages",
         component: () => import("pages/digital-collections/RMCHomepages.vue")
-      }
+      },
+      //EDITING COLLECTIONS
+      {
+        path: "/archives-management",
+        component: () => import("src/pages/archives-management/ArchivesManagement.vue")
+      },
+      {
+        path: "/edit-college-publications",
+        component: () => import("pages/archives-management/Edit_CollegePublications.vue")
+      },
     ]
   },
 

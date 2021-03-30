@@ -1,22 +1,25 @@
 <template>
- <q-page class="q-pa-lg" id="primary-page-wrap" style="">
-    <h2 class="text-center text-uppercase">Browse {{pageTitle}}</h2>
-     <PCTable :name="pageTitle" :columns="columns" :data="data" sortBy="contents" :loading="loading" ></PCTable>
- 
+<q-page class="q-pa-lg" id="primary-page-wrap" style="">
+    <h2 class="text-center text-uppercase">Archives Management Dashboard</h2>
+    <h3>Edit Physical Collections</h3>
+    <ul>
+        <li> <router-link to="/edit-college-publications">College Publications</router-link> </li>
+    </ul>
   </q-page>
 </template>
 
 <script>
-import PCTable from "components/PhysicalCollectionsTable.vue";
+import PCTable from "components/EditPhysicalCollectionsTable.vue";
 import getArchivesAPI from "assets/getArchivesAPI.js";
 export default {
-  name: "HistoricCollectionsTable",
+  name: "college_publications",
   components: { PCTable },
   data() {
     return {
-      // filter: "",
+      filter: "",
+      //   pageTitle fuels a lot of things, including the api call
+      pageTitle: "College Publications",
       loading: true,
-      pageTitle: "Historic Collections",
       columns: [
         {
           label: "Contents",
@@ -38,20 +41,20 @@ export default {
           align: "left"
         },
         {
-          label: "Name",
-          name: "name",
-          field: "name",
+          label: "Notes",
+          name: "notes",
+          field: "notes",
           sortable: true,
           align: "left"
         },
         {
-          label: "Subject",
-          name: "subject",
-          field: "subject",
+          label: "School",
+          name: "school",
+          field: "school",
           sortable: true,
-          align: "left",
-          style: "max-width: 500px"
+          align: "left"
         },
+
         {
           label: "Archives Location",
           name: "number",
@@ -59,22 +62,30 @@ export default {
           sortable: true,
           align: "left",
           style: "max-width: 200px"
-        }
-
+        },
+ { name: "actions", label: "Actions", field: "", align: "center" }
+  
         // { name: "actions", label: "Subjects", field: "", align: "center" }
       ],
-      data: [],
-  
+      data: []
     };
   },
+   computed: {
+    // pageTitle() {
+    //   return this.$store.state.pageTitle;
+    // }
+  },
   created() {
-   
+  
+    
     (async () => {
-      this.$store.commit('SET_PAGE_TITLE', this.pageTitle)
-      let res = await getArchivesAPI(
+    this.$store.commit('SET_PAGE_TITLE', this.pageTitle)
+    let res = await getArchivesAPI(
         this.pageTitle.replace(" ", "_").toLowerCase()
       );
-res.forEach(item => {
+
+      
+      res.forEach(item => {
         let re = /(\\)/g;
         // let re2 = /(NULL)/;
         // let reNameStuff = /(,;)/
@@ -82,14 +93,14 @@ res.forEach(item => {
         this.data.push({
           date: item.date.replace(re, ""),
           contents: item.contents.replace(re, ""),
-          name: item.name.replace(re, ""),
+          notes: item.notes.replace(re, ""),
           id: item.id,
           number: item.number.replace(re, ""),
 
-          subject:  item.subject.replace(re, ""),
+          school: item.school.replace(re, "")
         });
-         this.$store.commit('SET_ITEM_COUNT', this.data.length)
-        this.loading = false
+        this.$store.commit('SET_ITEM_COUNT', this.data.length)
+        this.loading = false;
       });
     })();
   }

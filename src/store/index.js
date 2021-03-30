@@ -1,10 +1,6 @@
 import Vue from "vue";
 import Vuex from "vuex";
 import { firebaseAuth, firebaseDb } from "boot/firebase";
-import { store } from "quasar/wrappers";
-
-// import example from './module-example'
-
 Vue.use(Vuex);
 
 const state = {
@@ -113,6 +109,7 @@ const mutations = {
 
   RESET_USER(state) {
     state.user = null;
+    this.$router.push("/login");
   },
   SET_ITEM_COUNT(state, count) {
     state.collectionItemCount = count;
@@ -136,7 +133,7 @@ const actions = {
         commit("SET_USER", user);
       } else {
         console.log("No user now");
-        this.$router.push("/");
+        // this.$router.push("/login");
         commit("RESET_USER", false);
         // store.dispatch('updateAuthState', {authUser: false})
         // User is signed out.
@@ -146,6 +143,7 @@ const actions = {
 };
 
 export default new Vuex.Store({
+  namespaced: true,
   state,
   getters,
   mutations,

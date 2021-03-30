@@ -6,11 +6,12 @@
 <script>
 import { mapActions } from "vuex";
 export default {
-   methods: {
-     ...mapActions('store', ['handleAuthStateChanged'])
-   },
+  //  methods: {
+  //    ...mapActions('store', ['handleAuthStateChanged'])
+  //  },
    mounted(){
-     this.handleAuthStateChanged()
+    //  this.handleAuthStateChanged()
+    this.$store.dispatch('handleAuthStateChanged')
    }
 };
 </script>
