@@ -1,29 +1,23 @@
 <template>
   <q-page class="q-pa-lg" id="primary-page-wrap" style="">
     <h2 class="text-center text-uppercase">Edit {{ pageTitle }}</h2>
-    <PCTable
+    <EditTable
       :name="pageTitle"
       :columns="columns"
       :data="data"
       sortBy="contents"
       :loading="loading"
-    ></PCTable>
-    <!-- <div class="q-pa-md">
-      <q-card class="q-pa-md bg-dark q-mb-xl q-mt-xl text-primary header-card">
-        <h2>{{ pageTitle }}</h2>
-        <span> Total items: {{ data.length }}</span>
-      </q-card>
-      <PCTable :name="pageTitle" :columns="columns" :data="data" sortBy="contents" :loading="loading" ></PCTable>
-    </div> -->
+    ></EditTable>
   </q-page>
 </template>
 
 <script>
-import PCTable from "components/EditPhysicalCollectionsTable.vue";
+import EditTable from "components/EditPhysicalCollectionsTable.vue";
 import getArchivesAPI from "assets/getArchivesAPI.js";
+import DeleteDialog from "components/DeleteDialog.vue";
 export default {
   name: "college_publications",
-  components: { PCTable },
+  components: { EditTable },
   data() {
     return {
       filter: "",
@@ -74,20 +68,20 @@ export default {
           style: "max-width: 200px"
         },
         { name: "actions", label: "Actions", field: "", align: "center" }
-
-        // { name: "actions", label: "Subjects", field: "", align: "center" }
       ],
       data: []
     };
   },
-  computed: {
-    // pageTitle() {
-    //   return this.$store.state.pageTitle;
-    // }
+  methods: {
+      deleteItem(item) {
+      console.log(item);
+      this.deleteItemData = item;
+      this.showDeleteDialog = true;
+    }
   },
   created() {
+    console.log("edit collge publications.vue");
     (async () => {
-      this.$store.commit("SET_PAGE_TITLE", this.pageTitle);
       let res = await getArchivesAPI(
         this.pageTitle.replace(" ", "_").toLowerCase()
       );

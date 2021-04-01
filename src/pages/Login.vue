@@ -8,8 +8,8 @@
         <div id="firebaseui-auth-container"></div>
       </div>
       <div v-else>
-        <p>You are logged in as {{ this.$store.state.user.displayName }}</p>
-        <p>You may now <router-link to="/archives-management">Edit Collections</router-link>.</p>
+        <p class="text-body1">You are logged in as {{ this.$store.state.user.displayName }}</p>
+        <p class="text-body1"><router-link to="/archives-management">Archives Management</router-link></p>
         </div>
     </div>
   </q-page>

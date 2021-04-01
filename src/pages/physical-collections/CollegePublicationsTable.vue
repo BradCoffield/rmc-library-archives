@@ -98,7 +98,7 @@ export default {
         let re = /(\\)/g;
         // let re2 = /(NULL)/;
         // let reNameStuff = /(,;)/
-
+  
         this.data.push({
           date: item.date.replace(re, ""),
           contents: item.contents.replace(re, ""),

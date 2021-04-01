@@ -11,13 +11,13 @@
           <q-btn
             flat
             label="Create Another"
-            color="secondary"
+            color="grey-8"
             v-close-popup
             @click="clearForm"
           />
         </template>
-        <q-btn flat label="Active Subs" color="secondary" v-close-popup to="/active-submissions" />
-        <q-btn flat label="Go Home" color="secondary" v-close-popup to="/" />
+ 
+        <q-btn flat label="Close" color="grey-8" v-close-popup  />
         
       </q-card-actions>
     </q-card>

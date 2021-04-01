@@ -149,3 +149,12 @@ div.q-item--clickable {
     font-size: 18px;
   }
 }
+
+#management-buttons{
+  list-style-type: none;
+  display: flex;
+  padding-left: 0px;
+  // li {
+  //   display: inline-block;
+  // }
+}

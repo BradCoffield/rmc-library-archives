@@ -83,6 +83,11 @@ const routes = [
         path: "/edit-college-publications",
         component: () => import("pages/archives-management/Edit_CollegePublications.vue")
       },
+      {
+        path: "/add-college-publications",
+        component: () => import("pages/archives-management/add-items-forms/Add_CollegePublications.vue")
+      },
+      
     ]
   },
 

@@ -12,7 +12,7 @@
         </q-card-section>
 
         <q-card-actions align="right">
-          <q-btn flat label="Cancel" color="secondary" v-close-popup />
+          <q-btn flat label="Cancel" color="grey-8" v-close-popup />
           <q-btn
             flat
             label="Delete"
@@ -33,7 +33,7 @@
         </q-card-section>
 
         <q-card-actions align="right">
-          <q-btn flat label="Close" color="secondary" v-close-popup />
+          <q-btn flat label="Close" color="gray-8" v-close-popup />
         </q-card-actions>
       </q-card>
     </q-dialog>
@@ -69,7 +69,7 @@ export default {
     return {
       deleteSuccess: false,
       deleteFailure: false,
-       ref: this.$firestore.collection("submissions")
+       ref: this.$firestore.collection("college_publications")
     };
   },
   methods: {

@@ -116,7 +116,7 @@ export default {
       });
     },
     deleteItem(item) {
-      console.log(item);
+      console.log("in edit table component",item);
       this.deleteItemData = item;
       this.showDeleteDialog = true;
     }
