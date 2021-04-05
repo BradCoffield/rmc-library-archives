@@ -14,7 +14,7 @@
 <script>
 import EditTable from "components/EditPhysicalCollectionsTable.vue";
 import getArchivesAPI from "assets/getArchivesAPI.js";
-import DeleteDialog from "components/DeleteDialog.vue";
+ 
 export default {
   name: "college_publications",
   components: { EditTable },

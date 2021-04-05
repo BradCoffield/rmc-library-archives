@@ -76,6 +76,7 @@
     <delete-dialog
       :show="showDeleteDialog"
       :item="deleteItemData"
+      :collectionName="collectionFormatted"
     ></delete-dialog>
   </div>
 </template>
@@ -91,7 +92,13 @@ export default {
     columns: Array,
     data: Array,
     sortBy: String,
-    loading: Boolean
+    loading: Boolean,
+    collection: String
+  },
+  computed: {
+    collectionFormatted() {
+       return "college_publications"
+    }
   },
   data() {
     return {
@@ -99,6 +106,7 @@ export default {
       showDeleteDialog: false,
       deleteItemData: {},
       wrapCells: true,
+      // collectionFormatted: this.collection.replace(" ", "_").toLowerCase(),
       initialPagination: {
         sortBy: this.sortBy,
         descending: false,
@@ -107,6 +115,7 @@ export default {
       }
     };
   },
+  
   methods: {
     editItem(item) {
       console.log(item.key);

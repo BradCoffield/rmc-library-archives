@@ -54,6 +54,7 @@
 
 <script>
 export default {
+  name: "DeleteDialog",
   props: {
     show: {
       type: Boolean,
@@ -63,6 +64,7 @@ export default {
       type: Object,
       required: false
     },
+    collectionName:{type: String, required: false}
  
   },
   data() {
