@@ -86,6 +86,14 @@ const routes = [
           import("pages/archives-management/Edit_CollegePublications.vue")
       },
       {
+        path: "/edit-college-publications-item",
+        name: 'edit-college-publications-item',
+        component: () =>
+          import(
+            "pages/archives-management/edit-items-forms/EditForm_CollegePublications.vue"
+          )
+      },
+      {
         path: "/add-college-publications",
         component: () =>
           import(

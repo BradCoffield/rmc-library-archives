@@ -28,17 +28,6 @@
       </template>
       <template v-slot:body-cell-actions="props">
         <q-td :props="props">
-          <!-- <q-btn
-                dense
-                round
-                flat
-                color="grey"
-                @click="viewItem(props)"
-                icon="preview"
-                ><q-tooltip content-style="font-size: 16px"
-                  >View Details</q-tooltip
-                ></q-btn
-              > -->
           <q-btn
             dense
             round
@@ -48,17 +37,7 @@
             icon="edit"
             ><q-tooltip content-style="font-size: 16px">Edit</q-tooltip></q-btn
           >
-          <!-- <q-btn
-                dense
-                round
-                flat
-                color="grey"
-                @click="reviewItem(props)"
-                icon="rate_review"
-                ><q-tooltip content-style="font-size: 16px"
-                  >Rate Submission</q-tooltip
-                ></q-btn
-              > -->
+
           <q-btn
             dense
             round
@@ -97,7 +76,6 @@ export default {
   },
   computed: {
     // collectionFormatted() {
-      
     //    return "college_publications"
     // }
   },
@@ -116,17 +94,27 @@ export default {
       }
     };
   },
-  
+
   methods: {
     editItem(item) {
-      console.log(item.key);
-      this.$router.push({
-        name: "edit-submission",
-        params: { id: item.key }
+      console.log("edit item");
+      console.log(item, this.collection);
+     
+      if (this.collection == "College Publications") {
+        console.log("ehhh", item.uid, item.key, item.id);
+        this.$router.push({
+        name: "edit-college-publications-item",
+        params: { id: item.uid || item.key }
       });
+      }
+      // console.log(item.key);
+      // this.$router.push({
+      //   name: "edit-submission",
+      //   params: { id: item.key }
+      // });
     },
     deleteItem(item) {
-      console.log("in edit table component",item);
+      console.log("in edit table component", item, item.key);
       this.deleteItemData = item;
       this.showDeleteDialog = true;
     }
