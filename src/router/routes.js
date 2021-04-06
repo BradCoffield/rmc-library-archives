@@ -77,21 +77,33 @@ const routes = [
       //EDITING COLLECTIONS
       {
         path: "/archives-management",
-        component: () => import("src/pages/archives-management/ArchivesManagement.vue")
+        component: () =>
+          import("src/pages/archives-management/ArchivesManagement.vue")
       },
       {
         path: "/edit-college-publications",
-        component: () => import("pages/archives-management/Edit_CollegePublications.vue")
+        component: () =>
+          import("pages/archives-management/Edit_CollegePublications.vue")
       },
       {
         path: "/add-college-publications",
-        component: () => import("pages/archives-management/add-items-forms/Add_CollegePublications.vue")
+        component: () =>
+          import(
+            "pages/archives-management/add-items-forms/Add_CollegePublications.vue"
+          )
       },
       {
         path: "/add-historic-collections",
-        component: () => import("pages/archives-management/add-items-forms/Add_HistoricCollections.vue")
+        component: () =>
+          import(
+            "pages/archives-management/add-items-forms/Add_HistoricCollections.vue"
+          )
       },
-      
+      {
+        path: "/edit-historic-collections",
+        component: () =>
+          import("pages/archives-management/Edit_HistoricCollections.vue")
+      }
     ]
   },
 

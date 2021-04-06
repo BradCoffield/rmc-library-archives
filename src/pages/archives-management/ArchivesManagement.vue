@@ -7,9 +7,9 @@
         <template v-if="this.$store.state.user">
           <ul id="management-buttons">
              
-            <li>
+            <!-- <li>
               <q-btn flat label="Archivist Sign Out" @click="signOut"></q-btn>
-            </li>
+            </li> -->
           </ul>
         </template>
     <h3>Edit Physical Collections</h3>
@@ -17,6 +17,22 @@
       <li>
         <router-link to="/edit-college-publications"
           >College Publications</router-link
+        >
+      </li>
+      <li>
+        <router-link to="/edit-historic-collections"
+          >Historic Collections</router-link
+        >
+      </li>
+    </ul>
+    <h3>Add Items to Physical Collections</h3>
+    <ul>
+      <li>
+        <router-link to="/add-college-publications"
+          >College Publications</router-link
+        ></li><li>
+        <router-link to="/add-historic-collections"
+          >Historic Collections</router-link
         >
       </li>
     </ul>
