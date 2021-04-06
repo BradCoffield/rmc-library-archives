@@ -87,6 +87,10 @@ const routes = [
         path: "/add-college-publications",
         component: () => import("pages/archives-management/add-items-forms/Add_CollegePublications.vue")
       },
+      {
+        path: "/add-historic-collections",
+        component: () => import("pages/archives-management/add-items-forms/Add_HistoricCollections.vue")
+      },
       
     ]
   },
