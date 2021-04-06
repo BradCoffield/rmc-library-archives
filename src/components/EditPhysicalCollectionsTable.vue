@@ -76,7 +76,7 @@
     <delete-dialog
       :show="showDeleteDialog"
       :item="deleteItemData"
-      :collectionName="collectionFormatted"
+      :collectionName="collection"
     ></delete-dialog>
   </div>
 </template>
@@ -96,9 +96,10 @@ export default {
     collection: String
   },
   computed: {
-    collectionFormatted() {
-       return "college_publications"
-    }
+    // collectionFormatted() {
+      
+    //    return "college_publications"
+    // }
   },
   data() {
     return {

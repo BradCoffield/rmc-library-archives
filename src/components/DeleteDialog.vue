@@ -71,7 +71,7 @@ export default {
     return {
       deleteSuccess: false,
       deleteFailure: false,
-       ref: this.$firestore.collection("college_publications")
+       ref: this.$firestore.collection(this.collectionName.replace(" ", "_").toLowerCase())
     };
   },
   methods: {

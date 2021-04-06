@@ -7,6 +7,7 @@
       :data="data"
       sortBy="contents"
       :loading="loading"
+      :collection="pageTitle"
     ></EditTable>
   </q-page>
 </template>
