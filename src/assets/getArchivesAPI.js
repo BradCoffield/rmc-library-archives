@@ -8,7 +8,10 @@ export default async collectionName => {
   snapshot.forEach(doc => {
     // console.log(doc.id);
     // console.log(doc.id, "=>", doc.data());
-    theData.push(doc.data());
+    let temp = doc.data()
+    temp.id = doc.id
+    // console.log( temp);
+    theData.push(temp);
   });
   return theData;
 };
