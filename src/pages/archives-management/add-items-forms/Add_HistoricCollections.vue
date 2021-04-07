@@ -23,11 +23,7 @@
           standout="bg-dark text-white"
         ></q-input>
 
-        <q-input
-          v-model="item.notes"
-          label="Notes"
-          standout="bg-dark text-white"
-        ></q-input>
+ 
         <q-input
           v-model="item.subject"
           label="Subject"
@@ -80,7 +76,7 @@ export default {
       item: {
         date: "",
         contents: "",
-        notes: "",
+ 
         id: "",
         number: "",
         subject: "",
@@ -117,7 +113,7 @@ export default {
       this.successDialogShow = false;
       this.item.date = "";
       this.item.contents = "";
-      this.item.notes = "";
+ 
       this.item.id = "";
       this.item.number = "";
       this.item.school = "";

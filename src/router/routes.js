@@ -117,11 +117,40 @@ const routes = [
           )
       },
       {
+        path: "/edit-historic-collections",
+        component: () =>
+          import(
+            "src/pages/archives-management/EditTable_HistoricCollections.vue"
+          )
+      },
+      {
         path: "/edit-historic-collections-item",
         name: "edit-historic-collections-item",
         component: () =>
           import(
             "pages/archives-management/edit-items-forms/EditForm_HistoricCollections.vue"
+          )
+      },
+      {
+        path: "/add-personal-collections",
+        component: () =>
+          import(
+            "pages/archives-management/add-items-forms/Add_PersonalCollections.vue"
+          )
+      },
+      {
+        path: "/edit-personal-collections",
+        component: () =>
+          import(
+            "src/pages/archives-management/EditTable_PersonalCollections.vue"
+          )
+      },
+      {
+        path: "/edit-personal-collections-item",
+        name: "edit-personal-collections-item",
+        component: () =>
+          import(
+            "pages/archives-management/edit-items-forms/EditForm_PersonalCollections.vue"
           )
       }
     ]

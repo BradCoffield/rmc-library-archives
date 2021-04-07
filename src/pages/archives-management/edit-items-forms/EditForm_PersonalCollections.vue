@@ -1,34 +1,23 @@
 <template>
   <q-page>
-    <h2 class="text-center text-uppercase">Edit Historic Collections Item</h2>
+    <h2 class="text-center text-uppercase">Edit Personal Collections Item</h2>
 
     <q-card class=" q-mt-xl">
       <q-form @submit="sendSub" @reset="onReset" class="   q-pa-xl">
         <q-input
-          v-model="item.contents"
-          label="Contents"
+          v-model="item.firstname"
+          label="First Name"
           required
           standout="bg-dark text-white"
         ></q-input>
 
         <q-input
-          v-model="item.name"
-          label="Name"
+          v-model="item.lastname"
+          label="Last Name"
           standout="bg-dark text-white"
         ></q-input>
 
-        <q-input
-          v-model="item.date"
-          label="Date"
-          standout="bg-dark text-white"
-        ></q-input>
-
-  
-        <q-input
-          v-model="item.subject"
-          label="Subject"
-          standout="bg-dark text-white"
-        ></q-input>
+    
         <q-input
           v-model="item.number"
           label="Archive Location"
@@ -63,42 +52,35 @@
 import SuccessDialog from "components/SuccessDialog.vue";
 import ErrorDialog from "components/ErrorDialog.vue";
 export default {
-  name: "EditFormHistoricCollections",
+  name: "EditFormPersonalCollections",
   components: { SuccessDialog, ErrorDialog },
   data() {
     return {
-      pageTitle: "Historic Collections",
+      pageTitle: "Personal Collections",
       successDialogShow: false,
       errorDialogShow: false,
 
       item: {
-        date: "",
-        contents: "",
-    
+        firstname: "",
+        lastname: "",
         id: "",
-        number: "",
-        subject: "",
-        name: ""
+        number: ""
       }
     };
   },
   created() {
     console.log(this.$route.params.id);
     this.$firestore
-      .collection("historic_collections")
+      .collection("personal_collections")
       .doc(this.$route.params.id)
       .get()
       .then(doc => {
         if (doc.exists) {
           let thang = doc.data();
-          this.item.date = thang.date;
-          this.item.contents = thang.contents;
-      
+          this.item.lastname = thang.lastname;
+          this.item.firstname = thang.firstname;
           this.item.id = thang.id;
           this.item.number = thang.number;
-          this.item.subject = thang.subject;
-          this.item.name = thang.name;
-         
         } else {
           alert("No such document!");
         }
@@ -132,7 +114,7 @@ export default {
       this.successDialogShow = false;
       this.item.date = "";
       this.item.contents = "";
-    
+      this.item.notes = "";
       this.item.id = "";
       this.item.number = "";
       this.item.school = "";

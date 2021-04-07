@@ -1,34 +1,25 @@
 <template>
   <q-page>
-    <h2 class="text-center text-uppercase">Edit Historic Collections Item</h2>
+    <h2 class="text-center text-uppercase">Add to Personal Collections</h2>
 
     <q-card class=" q-mt-xl">
       <q-form @submit="sendSub" @reset="onReset" class="   q-pa-xl">
         <q-input
-          v-model="item.contents"
-          label="Contents"
+          v-model="item.firstname"
+          label="First Name"
+          required
+          standout="bg-dark text-white"
+        ></q-input>
+        <q-input
+          v-model="item.lastname"
+          label="Last Name"
           required
           standout="bg-dark text-white"
         ></q-input>
 
-        <q-input
-          v-model="item.name"
-          label="Name"
-          standout="bg-dark text-white"
-        ></q-input>
+     
 
-        <q-input
-          v-model="item.date"
-          label="Date"
-          standout="bg-dark text-white"
-        ></q-input>
-
-  
-        <q-input
-          v-model="item.subject"
-          label="Subject"
-          standout="bg-dark text-white"
-        ></q-input>
+    
         <q-input
           v-model="item.number"
           label="Archive Location"
@@ -60,50 +51,27 @@
   </q-page>
 </template>
 <script>
+import { nanoid } from "nanoid";
 import SuccessDialog from "components/SuccessDialog.vue";
 import ErrorDialog from "components/ErrorDialog.vue";
 export default {
-  name: "EditFormHistoricCollections",
+  name: "AddPersonalCollection",
   components: { SuccessDialog, ErrorDialog },
   data() {
     return {
-      pageTitle: "Historic Collections",
+      pageTitle: "Personal Collections",
       successDialogShow: false,
       errorDialogShow: false,
 
       item: {
-        date: "",
-        contents: "",
-    
+        firstname: "",
+        lastname: "",
         id: "",
-        number: "",
-        subject: "",
-        name: ""
+        number: ""
       }
     };
   },
-  created() {
-    console.log(this.$route.params.id);
-    this.$firestore
-      .collection("historic_collections")
-      .doc(this.$route.params.id)
-      .get()
-      .then(doc => {
-        if (doc.exists) {
-          let thang = doc.data();
-          this.item.date = thang.date;
-          this.item.contents = thang.contents;
-      
-          this.item.id = thang.id;
-          this.item.number = thang.number;
-          this.item.subject = thang.subject;
-          this.item.name = thang.name;
-         
-        } else {
-          alert("No such document!");
-        }
-      });
-  },
+  created() {},
   methods: {
     getDate() {
       let date = new Date();
@@ -113,7 +81,7 @@ export default {
       let here = this;
       evt.preventDefault();
       //we need an id created so have a key for table later
-
+      this.item.id = nanoid();
       this.$firestore
         .collection(this.pageTitle.replace(" ", "_").toLowerCase())
         .doc(this.item.id)
@@ -132,7 +100,7 @@ export default {
       this.successDialogShow = false;
       this.item.date = "";
       this.item.contents = "";
-    
+      this.item.notes = "";
       this.item.id = "";
       this.item.number = "";
       this.item.school = "";

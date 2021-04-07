@@ -24,6 +24,11 @@
           >Historic Collections</router-link
         >
       </li>
+      <li>
+        <router-link to="/edit-personal-collections"
+          >Personal Collections</router-link
+        >
+      </li>
     </ul>
     <h3>Add Items to Physical Collections</h3>
     <ul>
@@ -34,6 +39,9 @@
         <router-link to="/add-historic-collections"
           >Historic Collections</router-link
         >
+      </li>
+      <li>
+        <router-link to="/add-personal-collections">Personal Collections</router-link>
       </li>
     </ul>
   </q-page>

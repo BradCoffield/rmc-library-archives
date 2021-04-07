@@ -114,6 +114,13 @@ export default {
         params: { id: item.key || item.id }
       });
       }
+      if (this.collection == "Personal Collections") {
+        console.log("ehhh", item.uid, item.key, item.id);
+        this.$router.push({
+        name: "edit-personal-collections-item",
+        params: { id: item.key || item.id }
+      });
+      }
 
      
     },
