@@ -107,11 +107,15 @@ export default {
         params: { id: item.uid || item.key }
       });
       }
-      // console.log(item.key);
-      // this.$router.push({
-      //   name: "edit-submission",
-      //   params: { id: item.key }
-      // });
+      if (this.collection == "Historic Collections") {
+        console.log("ehhh", item.uid, item.key, item.id);
+        this.$router.push({
+        name: "edit-historic-collections-item",
+        params: { id: item.key || item.id }
+      });
+      }
+
+     
     },
     deleteItem(item) {
       console.log("in edit table component", item, item.key);
