@@ -111,7 +111,7 @@ export default {
       let here = this;
       evt.preventDefault();
       //we need an id created so have a key for table later
-      this.item.id = nanoid();
+      
       this.$firestore
         .collection(this.pageTitle.replace(" ", "_").toLowerCase())
         .doc(this.item.id)

@@ -15,7 +15,7 @@
 <script>
 import EditTable from "components/EditPhysicalCollectionsTable.vue";
 import getArchivesAPI from "assets/getArchivesAPI.js";
- 
+
 export default {
   name: "college_publications",
   components: { EditTable },
@@ -74,7 +74,7 @@ export default {
     };
   },
   methods: {
-      deleteItem(item) {
+    deleteItem(item) {
       console.log(item);
       this.deleteItemData = item;
       this.showDeleteDialog = true;
@@ -91,7 +91,7 @@ export default {
         let re = /(\\)/g;
         // let re2 = /(NULL)/;
         // let reNameStuff = /(,;)/
-// console.log(item);
+        // console.log(item);
         this.data.push({
           date: item.date.replace(re, ""),
           contents: item.contents.replace(re, ""),
