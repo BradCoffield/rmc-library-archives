@@ -152,6 +152,28 @@ const routes = [
           import(
             "pages/archives-management/edit-items-forms/EditForm_PersonalCollections.vue"
           )
+      },
+      {
+        path: "/add-photos",
+        component: () =>
+          import(
+            "pages/archives-management/add-items-forms/Add_Photos.vue"
+          )
+      },
+      {
+        path: "/edit-photos",
+        component: () =>
+          import(
+            "src/pages/archives-management/EditTable_Photos.vue"
+          )
+      },
+      {
+        path: "/edit-photos-item",
+        name: "edit-photos-item",
+        component: () =>
+          import(
+            "pages/archives-management/edit-items-forms/EditForm_Photos.vue"
+          )
       }
     ]
   },
