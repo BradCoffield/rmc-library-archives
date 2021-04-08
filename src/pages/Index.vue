@@ -59,8 +59,6 @@
           </div>
         </div>
       </template>
-
-      
     </div>
     <div class="row  wrap">
       <div class="col-12">
@@ -85,10 +83,18 @@
 
 <script>
 // import { axios } from "boot/axios";
+import { firebaseDb } from "../boot/firebase";
 export default {
   name: "PageIndex",
   created() {
     console.log("hiiiiiiiiiiiii");
+    // (async () => {
+    //   let ref = firebaseDb.collection("personal_collections");
+    //   const snapshot = await ref.get();
+    //   snapshot.forEach(doc => {
+    //     console.log(doc.id, "=>", doc.data());
+    //   });
+    // })();
   },
   data() {
     return {

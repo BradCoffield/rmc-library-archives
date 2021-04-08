@@ -4,8 +4,15 @@
   </div>
 </template>
 <script>
+import { mapActions } from "vuex";
 export default {
-  name: "App"
+  //  methods: {
+  //    ...mapActions('store', ['handleAuthStateChanged'])
+  //  },
+   mounted(){
+    //  this.handleAuthStateChanged()
+    this.$store.dispatch('handleAuthStateChanged')
+   }
 };
 </script>
 <style lang="scss">

@@ -77,6 +77,7 @@ table.q-table thead th {
   background-image: $noise;
 }
 #footer1 {
+  height:150px;
   text-align: center;
   // height:200px;
   flex-direction: column;
@@ -147,4 +148,13 @@ div.q-item--clickable {
   .q-btn__content {
     font-size: 18px;
   }
+}
+
+#management-buttons{
+  list-style-type: none;
+  display: flex;
+  padding-left: 0px;
+  // li {
+  //   display: inline-block;
+  // }
 }

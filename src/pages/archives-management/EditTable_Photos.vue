@@ -1,39 +1,30 @@
 <template>
- <q-page class="q-pa-lg" id="primary-page-wrap" style="">
-    <h2 class="text-center text-uppercase">Browse {{pageTitle}}</h2>
-    <PCTable
+  <q-page class="q-pa-lg" id="primary-page-wrap" style="">
+    <h2 class="text-center text-uppercase">Edit {{ pageTitle }}</h2>
+    <EditTable
       :name="pageTitle"
       :columns="columns"
       :data="data"
-      sortBy="date"
+      sortBy="contents"
       :loading="loading"
-    ></PCTable>
-    <!-- <div class="q-pa-md">
-      <q-card class="q-pa-md bg-dark q-mb-xl q-mt-xl text-primary header-card">
-        <h2>{{ pageTitle }}</h2>
-        <span> Total items: {{ data.length }}</span>
-      </q-card>
-      <PCTable
-        :name="pageTitle"
-        :columns="columns"
-        :data="data"
-        sortBy="date"
-        :loading="loading"
-      ></PCTable>
-    </div> -->
+      :collection="pageTitle"
+    ></EditTable>
   </q-page>
 </template>
 
 <script>
-import PCTable from "components/PhysicalCollectionsTable.vue";
+import EditTable from "components/EditPhysicalCollectionsTable.vue";
 import getArchivesAPI from "assets/getArchivesAPI.js";
+
 export default {
-  name: "Photos",
-  components: { PCTable },
+  name: "EditTablePhotos",
+  components: { EditTable },
   data() {
     return {
-      loading: true,
+      filter: "",
+      //   pageTitle fuels a lot of things, including the api call
       pageTitle: "Photos",
+      loading: true,
       columns: [
         {
           label: "File Name",
@@ -41,10 +32,7 @@ export default {
           sortable: true,
           field: "filename",
           align: "left",
-          //   classes: 'bg-accent ellipsis',
           style: "max-width: 200px"
-          // headerClasses: 'bg-secondary text-bold text-fs14p q-ma-sm'
-          // headerClasses: ' text-italic '
         },
 
         {
@@ -84,29 +72,33 @@ export default {
           field: "filelocation",
           sortable: true,
           align: "left"
-        }
-
-        // { name: "actions", label: "Subjects", field: "", align: "center" }
+        },
+        { name: "actions", label: "Actions", field: "", align: "center" }
       ],
-      data: [],
-      initialPagination: {
-        sortBy: "id",
-        descending: false,
-        page: 1,
-        rowsPerPage: 25
-        // rowsNumber: xx if getting data from a server
-      }
+      data: []
     };
   },
+  methods: {
+    deleteItem(item) {
+      console.log(item);
+      this.deleteItemData = item;
+      this.showDeleteDialog = true;
+    }
+  },
   created() {
- 
+    console.log("edit photos");
     (async () => {
-      this.$store.commit('SET_PAGE_TITLE', this.pageTitle)
+
+//       let snapshot = await this.$firestore.collection("photos").get({ source: 'cache' }
+// if (!snapshot.exists) {
+//     snapshot = await documentRef.get({ source: 'server' })
+// }
+
       let res = await getArchivesAPI(
         this.pageTitle.replace(" ", "_").toLowerCase()
       );
 
-    res.forEach(photo => {
+      res.forEach(photo => {
         let re = /(\\)/g;
         let re2 = /(NULL)/;
         let reNameStuff = /(,;)/;
@@ -189,7 +181,7 @@ export default {
             .join("; ")
             .replace(reNameStuff, ",")
         });
-         this.$store.commit('SET_ITEM_COUNT', this.data.length)
+        this.$store.commit("SET_ITEM_COUNT", this.data.length);
         this.loading = false;
       });
     })();
