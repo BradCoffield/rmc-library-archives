@@ -10,7 +10,7 @@
 import PCTable from "components/PhysicalCollectionsTable.vue";
 import getArchivesAPI from "assets/getArchivesAPI.js";
 export default {
-  name: "Historic Collections",
+  name: "HistoricCollectionsTable",
   components: { PCTable },
   data() {
     return {
