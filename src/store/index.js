@@ -109,7 +109,8 @@ const mutations = {
 
   RESET_USER(state) {
     state.user = null;
-    this.$router.push("/login");
+    // this.$router.push("/login");
+    // this.$router.push("/");
   },
   SET_ITEM_COUNT(state, count) {
     state.collectionItemCount = count;
@@ -128,9 +129,10 @@ const actions = {
         console.log(firebaseAuth.currentUser.email);
         console.log(firebaseAuth.currentUser.uid);
         console.log(firebaseAuth.currentUser.photoURL);
-        console.log(user.displayName); //i should probably use this that is passed to the function
-        // this.$router.push("/")
+        console.log(user.displayName); //I should probably use this that is passed to the function
+
         commit("SET_USER", user);
+        // this.$router.push("/");
       } else {
         console.log("No user now");
         // this.$router.push("/login");

@@ -92,6 +92,7 @@ export default {
     signOut() {
       console.log("signOut");
       this.$fireAuth.signOut();
+      this.$router.push('/')
     }
   }
 };
