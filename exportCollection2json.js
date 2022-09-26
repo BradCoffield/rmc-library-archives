@@ -3,7 +3,8 @@ const fs = require("fs");
 const app = express();
 const port = 3000;
 var admin = require("firebase-admin");
-const serviceAccount = require("./serviceAccountKey.json"); // serviceAccountKey found from firebase console project setting
+const serviceAccount = require("./serviceAccountKey.json"); // serviceAccountKey found from firebase console project setting 
+//https://console.firebase.google.com/u/0/project/rmc-archives/settings/serviceaccounts/adminsdk
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount)
   //   databaseURL: "" // database URL found from firebase console project setting
