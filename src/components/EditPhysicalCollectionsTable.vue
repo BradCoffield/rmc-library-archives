@@ -98,31 +98,31 @@ export default {
   methods: {
     editItem(item) {
       console.log("edit item");
-      console.log(item, this.collection);
+      console.log("OOO", item, this.collection);
      
       if (this.collection == "College Publications") {
-        console.log("ehhh", item.uid, item.key, item.id);
+        console.log("ehhhCP", item.uid, item.key, item.id);
         this.$router.push({
         name: "edit-college-publications-item",
-        params: { id: item.uid || item.key }
+        params: { id: item.key || item.uid }
       });
       }
       if (this.collection == "Historic Collections") {
-        console.log("ehhh", item.uid, item.key, item.id);
+        console.log("ehhhHC", item.uid, item.key, item.id);
         this.$router.push({
         name: "edit-historic-collections-item",
         params: { id: item.key || item.id }
       });
       }
       if (this.collection == "Personal Collections") {
-        console.log("ehhh", item.uid, item.key, item.id);
+        console.log("ehhhPC", item.uid, item.key, item.id);
         this.$router.push({
         name: "edit-personal-collections-item",
         params: { id: item.key || item.id }
       });
       }
       if (this.collection == "Photos") {
-        console.log("ehhh", item.uid, item.key, item.id);
+        console.log("ehhhPH", item.uid, item.key, item.id);
         this.$router.push({
         name: "edit-photos-item",
         params: { id: item.key || item.id }

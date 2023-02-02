@@ -84,6 +84,7 @@ export default {
   },
   created() {
     console.log(this.$route.params.id);
+       let paramsID = this.$route.params.id;
     this.$firestore
       .collection("historic_collections")
       .doc(this.$route.params.id)
@@ -94,7 +95,7 @@ export default {
           this.item.date = thang.date;
           this.item.contents = thang.contents;
       
-          this.item.id = thang.id;
+                this.item.id = paramsID;
           this.item.number = thang.number;
           this.item.subject = thang.subject;
           this.item.name = thang.name;

@@ -70,6 +70,7 @@ export default {
   },
   created() {
     console.log(this.$route.params.id);
+       let paramsID = this.$route.params.id;
     this.$firestore
       .collection("personal_collections")
       .doc(this.$route.params.id)
@@ -79,7 +80,7 @@ export default {
           let thang = doc.data();
           this.item.lastname = thang.lastname;
           this.item.firstname = thang.firstname;
-          this.item.id = thang.id;
+             this.item.id = paramsID;
           this.item.number = thang.number;
         } else {
           alert("No such document!");

@@ -132,6 +132,7 @@ export default {
   created() {
  
     console.log(this.$route.params.id);
+       let paramsID = this.$route.params.id;
     this.$firestore
       .collection("photos")
       .doc(this.$route.params.id)
@@ -142,7 +143,7 @@ export default {
           this.item.date
         this.item.filelocation = thang.filelocation
         this.item.filename = thang.filename
-        this.item.id = thang.id
+             this.item.id = paramsID;
         this.item.institution = thang.institution
         this.item.notes = thang.notes
         this.item.subject1 = thang.subject1

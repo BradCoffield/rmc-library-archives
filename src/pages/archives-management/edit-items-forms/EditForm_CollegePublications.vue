@@ -83,7 +83,8 @@ export default {
     };
   },
   created() {
-    console.log(this.$route.params.id);
+    console.log("gh1hh", this.$route.params.id);
+    let paramsID = this.$route.params.id;
     this.$firestore
       .collection("college_publications")
       .doc(this.$route.params.id)
@@ -94,9 +95,11 @@ export default {
           this.item.date = thang.date;
           this.item.contents = thang.contents;
           this.item.notes = thang.notes;
-          this.item.id = thang.id;
+          this.item.id = paramsID;
+          // this.item.id = thang.id;
           this.item.number = thang.number;
           this.item.school = thang.school;
+          console.log("ITEM--",this.item)
         } else {
           alert("No such document!");
         }

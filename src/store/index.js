@@ -125,10 +125,10 @@ const actions = {
     firebaseAuth.onAuthStateChanged(user => {
       if (user) {
         // User is signed in.
-        console.log(firebaseAuth.currentUser.displayName);
-        console.log(firebaseAuth.currentUser.email);
-        console.log(firebaseAuth.currentUser.uid);
-        console.log(firebaseAuth.currentUser.photoURL);
+        // console.log(firebaseAuth.currentUser.displayName);
+        // console.log(firebaseAuth.currentUser.email);
+        // console.log(firebaseAuth.currentUser.uid);
+        // console.log(firebaseAuth.currentUser.photoURL);
         console.log(user.displayName); //I should probably use this that is passed to the function
 
         commit("SET_USER", user);
