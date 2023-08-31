@@ -21,7 +21,7 @@
            You are able to flip through each page and really explore the history of the school in a fun way. Check it out!
           </p>
           <div id="view-collection-details-button">
-            <a    href="https://mtmemory.org/digital/collection/p103401ccp2_ew1"
+            <a    href="https://www.mtmemory.org/nodes/view/6293"
                   target="_blank" style="color:inherit">
                 <q-btn
                   label="View online yearbooks"
